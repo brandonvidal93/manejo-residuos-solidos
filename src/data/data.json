@@ -1,19 +1,19 @@
 {
   "coverPage": {
     "type"            : "startPage",
-    "units"           : 6,
-    "title"           : "Seguridad de <br> la información",
+    "units"           : 1,
+    "title"           : "Manejo de residuos<br>sólidos en Grupo Familia",
     "subTitle"        : "",
     "module"          : "",
     "courseName"      : "Para comenzar, haz clic en el siguiente botón:",
     "logoCourse"      : "img/cover/logo-1.png",
     "logoFooter"      : "img/cover/logo-2.png",
     "background": {
-      "bg"            : "img/cover/fondo-cover.jpg",
-      "bgDnDStart"    : "img/cover/bg-DnD.png"
+      "bg"            : "img/cover/fondo-cover.png",
+      "bgBtn"    : "img/cover/bgBtn-1.png"
     },
     "footer": {
-      "label"         : "Seguridad de la información"
+      "label"         : "Manejo de residuos sólidos"
     }
   },
 
@@ -47,10 +47,6 @@
         "img2"    : "img/1/n-6-2.png"
       },
       {
-        "text1"   : "El menú del curso lo encontrará en la parte izquierda de la pantalla.",
-        "img1"    : "img/1/n-7.png"
-      },
-      {
         "text1"   : "",
         "img1"    : ""
       }
@@ -71,7 +67,7 @@
   "page2": {
     "type"    : "pageCourse",
     "title"   : "Hola",
-    "text"    : "En esta era digital la mayor parte de nuestra información se encuentra en línea y por lo general la forma en que trabajamos, aprendemos, nos comunicamos, nos relacionamos, entre otros; dependen de una conexión a la red. Tener conciencia frente a los riesgos que amenazan nuestra información es parte fundamental de los controles que se necesitan para evitar ser víctimas de la inseguridad digital. <br><br>Presta mucha atención a los diferentes temas que desarrollaremos alrededor del curso. <span class = 'color-14'>¡Bienvenidos!</span>",
+    "text"    : "Uno de los impactos más sentidos en la actualidad es la generación de residuos sólidos, los cuales surgen del uso desmedido de los recursos. La finalidad de este curso es aprender a separar adecuadamente los residuos para aprovechar el potencial de muchos de ellos y evitar que terminen en un relleno sanitario.<br><br>Presta mucha atención a los diferentes temas que desarrollaremos alrededor del curso. <span class = 'titulo1'><b>¡Bienvenidos!</b></span>",
     "resources": {
       "img1": "img/2/npc-1.png"
     },
@@ -81,69 +77,21 @@
         "autoPlay"    : true
       },
       "subtitles": {
-        "1"           : "En esta era digital la mayor parte de nuestra información se",
-        "3"           : "encuentra en línea y por lo general la forma en que ",
-        "6"           : "trabajamos, aprendemos, nos comunicamos, nos relacionamos,",
-        "10"          : "entre otros; dependen de una conexión a la red.",
-        "13"          : "Tener conciencia frente a los riesgos que amenazan nuestra",
-        "16"          : "información es parte fundamental de los controles que se",
-        "19"          : "necesitan para evitar ser víctimas de la inseguridad digital.",
-        "23"          : "Presta mucha atención a los diferentes temas que ",
-        "25"          : "desarrollaremos alrededor del curso. ¡Bienvenidos!"
-      },
-      "layers": [
-        {
-          "label"     : "Candidatos a cargos",
-          "color"     : "#1FBDED",
-          "time"      : 30
-        },
-        {
-          "label"     : "Empleados, exempleados",
-          "color"     : "#0C62A5",
-          "time"      : 32
-        },
-        {
-          "label"     : "Pensionados",
-          "color"     : "#04386D",
-          "time"      : 34
-        },
-        {
-          "label"     : "Accionistas",
-          "color"     : "#FBB03B",
-          "time"      : 35
-        },
-        {
-          "label"     : "Proveedores",
-          "color"     : "#F15A24",
-          "time"      : 36
-        },
-        {
-          "label"     : "Consumidores",
-          "color"     : "#93278F",
-          "time"      : 38
-        },
-        {
-          "label"     : "Recicladores",
-          "color"     : "#620B5F",
-          "time"      : 39
-        },
-        {
-          "label"     : "Usuarios",
-          "color"     : "#9E0B5D",
-          "time"      : 40
-        },
-        {
-          "label"     : "Clientes",
-          "color"     : "#8CC63F",
-          "time"      : 41
-        }
-      ]
+        "1"           : "Uno de los impactos más sentidos en la actualidad es la",
+        "4"           : "generación de residuos sólidos, los cuales surgen",
+        "6"           : "del uso desmedido de los recursos. La finalidad de este",
+        "10"          : "curso es aprender a separar adecuadamente los",
+        "13"          : "residuos para aprovechar el potencial de muchos de ellos",
+        "16"          : "y evitar que terminen en un relleno sanitario.",
+        "20"          : "Presta mucha atención a los diferentes temas que ",
+        "23"          : "desarrollaremos alrededor del curso. ¡Bienvenidos!"
+      }
     },
     "instruction": {
       "type"    : "",
-      "text"    : "Luego de escuchar el audio de bienvenida, te invitamos a desplegar el menú que hay al lado izquierdo para comenzar la formación.",
-      "posY"    : 500,
-      "posX"    : 72,
+      "text"    : "Luego de escuchar el audio de bienvenida, continua navegando el contenido del curso",
+      "posY"    : 430,
+      "posX"    : 80,
       "size"    : 500,
       "color"   : "#189BDB"
     }

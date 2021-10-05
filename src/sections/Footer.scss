@@ -11,15 +11,14 @@
   z-index: 1;
   background: url('../assets/img/backgrounds/fondo-footer-1.png');
   background-position-y: bottom;
-  background-position-x: -70px;
 
   &:before {
     content: '';
     position: absolute;
-    top: -40px;
-    right: -90px;
-    width: 500px;
-    height: 500px;
+    top: -26px;
+    left: -20px;
+    width: 1048px;
+    height: 150px;
     background: url('../assets/img/backgrounds/fondo-footer-2.png');
     background-repeat: no-repeat;
   }
@@ -27,29 +26,26 @@
   .restrict {
     position: absolute;
     z-index: 2;
-    bottom: 17px;
-    right: 255px;
-    width: 53px;
-    height: 53px;
+    bottom: 14px;
+    right: 288px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
+    filter: brightness(0.5);
   }
 
   .labelFooter {
-    background-color: $blanco;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 30px;
-    padding: 1rem 3rem;
     position: absolute;
     width: auto;
-    top: 13px;
-    left: 305px;
+    top: 38px;
+    left: 210px;
   }
 
   .imageFooter {
     position: absolute;
-    bottom: 20px;
-    right: 25px;
+    bottom: 13px;
+    right: 17px;
     margin: 0 auto;
     pointer-events: none;
   }
@@ -60,9 +56,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    bottom: 18px;
-    right: 256px;
-    width: 113px;
+    bottom: 16px;
+    right: 291px;
+    width: 117px;
 
     .buttonNav {
       display: flex;
@@ -100,8 +96,8 @@
 
   .numberPage {
     position: absolute;
-    top: 0px;
-    left: 30px;
+    top: 25px;
+    left: 25px;
   }
 }
 

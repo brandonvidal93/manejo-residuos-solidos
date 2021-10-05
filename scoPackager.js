@@ -4,7 +4,7 @@ var path = require('path');
   const config = {
     version: '1.2',
     organization: 'Familia',
-    title: 'Seguridad de la Información',
+    title: 'Manejo de residuos sólidos',
     language: 'en-ES',
     masteryScore: 100,
     startingPage: 'index.html',
@@ -14,7 +14,7 @@ var path = require('path');
       zip: false,
       author: 'IUSH',
       outputFolder: path.join(__dirname, 'scorm_packages'),
-      description: 'Seguridad de la Información',
+      description: 'Manejo de residuos sólidos',
       keywords: ['scorm', 'test', 'course'],
       typicalDuration: 'PT0H5M0S',
       rights: `©${new Date().getFullYear()} Grupo Familia.`,

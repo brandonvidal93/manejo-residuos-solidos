@@ -55,42 +55,45 @@ class Cover extends Component {
       backgroundImage: 'url(' + dataPage.background.bg + ')',
       backgroundSize: 'cover',
       backgroundPosition: 'center'
-    }
+    };
 
-    // const styleDnD = {
-    //   backgroundImage: 'url(' + dataPage.background.bgDnDStart + ')',
-    //   backgroundSize: 'cover',
-    //   backgroundPosition: 'center'
-    // }
+    const styleBtn = {
+      backgroundImage: 'url(' + dataPage.background.bgBtn + ')',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      width: '200px',
+      height: '44px'
+    };
 
     return (
       <div className={ (dataPage.type) + ' pL-4 animated fadeIn' } style = { style }>
-        <div className="c-35 dF-C-cs">
+        <div className="c-7 dF-C-cs mL-2">
           {
-            dataPage.logoCourse ? <img
+            dataPage.logoCourse && <img
               alt = 'Imagen Corporativa'
-              className = 'imageLogo mT-7 mL-1 mB-2'
-              src = { dataPage.logoCourse }/> : null
+              className = 'imageLogo mT-7 mB-2'
+              src = { dataPage.logoCourse }/>
           }
           {
-            dataPage.title ? <h1 className = 'mT-5 mL-1 mB-2 F3' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h1> : null
+            dataPage.title && <h1 className = 'mT-2 mB-1 F3' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h1>
           }
           {
-            dataPage.subTitle ? <h3 className = 'mB-05 mL-1' dangerouslySetInnerHTML = {{ __html: dataPage.subTitle }}></h3> : null
+            dataPage.subTitle && <h3 className = 'mB-1' dangerouslySetInnerHTML = {{ __html: dataPage.subTitle }}></h3>
           }
           {
-            dataPage.module ? <h3 className = 'mB-1 mL-1' dangerouslySetInnerHTML = {{ __html: dataPage.module }}></h3> : null
+            dataPage.module && <h3 className = 'mB-1' dangerouslySetInnerHTML = {{ __html: dataPage.module }}></h3>
           }
           {
-            dataPage.courseName ? <p className = 'mB-1 mL-1' dangerouslySetInnerHTML = {{ __html: dataPage.courseName }}></p> : null
+            dataPage.courseName && <p className = 'mB-2 texto2' dangerouslySetInnerHTML = {{ __html: dataPage.courseName }}></p>
           }
 
           <button
-            className = 'buttonQuiz pT-1 pB-1 mL-1 pL-2 pR-2'
+            className = 'buttonQuiz pL-2 pR-2'
             onClick = { this.startCourse }
             id = { 'btnIniciar' }
+            style = { styleBtn }
             >
-              INICIAR
+              Iniciar
           </button>
 
           {/* <div className = 'DnDStart mL-1 d-Flex j-Bt aI-C' id = { 'DnDStart' } style = { styleDnD }>
@@ -124,7 +127,6 @@ class Page1 extends Component {
 
   componentDidMount() {
     document.querySelector('.footer').classList.add('dNone'); // OCULTAR EL FONDO
-    document.querySelector('.menuContent').classList.add('dNone'); // OCULTAR EL FONDO
   }
 
   // FUNCION PARA ENVIAR EL INDEX ACTUALIZADO Y EMPEZAR EL CURSO
@@ -151,7 +153,6 @@ class Page1 extends Component {
     });
 
     document.querySelector('.footer').classList.remove('dNone');
-    document.querySelector('.menuContent').classList.remove('dNone');
   }
 
   render() {
@@ -188,8 +189,8 @@ class Page1 extends Component {
         }
 
         <div className = 'c-10 animated fadeIn'>
-          <div className = 'c-3 mB-2'>
-            <h2 className = 'mT-4 mL-4 tCenter' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h2>
+          <div className = 'c-5 mB-2'>
+            <h1 className = 'mT-4 mL-5 titulo2' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h1>
           </div>
 
           <div className = 'c-10 d-Flex d-C j-E aI-C' style = {{ ...style, 'paddingTop': 40, 'paddingLeft': 0, 'paddingRight': 0, 'paddingBottom': 40 }} >
@@ -265,25 +266,25 @@ class Page2 extends Component {
 
     this.props.checkEnabledUnit(0);
 
-    document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
+    // document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
   }
 
   render() {
     const { dataPage } = this.props;
 
     return (
-      <div className = { 'pageContent'}>
-        <div className = 'c-10 animated fadeIn'>
-          <div className = 'mL-7 mT-6'> 
+      <div className = { 'pageContent animated fadeIn'}>
+        <div className = 'c-10'>
+          <div className = 'mL-6 mT-6'> 
             <img alt = 'Imagen' className = 'imageNPC pAbs' src = { dataPage.resources.img1 }/>
             {
               dataPage.title ? <h1 className = 'c-7 mB-05 F3' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h1> : null
             }
             {
-              dataPage.text ? <p className = 'c-5 mB-2 fw-3' dangerouslySetInnerHTML = {{ __html: dataPage.text }}></p> : null
+              dataPage.text ? <p className = 'c-55 mB-2 fw-3' dangerouslySetInnerHTML = {{ __html: dataPage.text }}></p> : null
             }
           </div>
-          <div className = 'mB-2 mL-7'>
+          <div className = 'mB-2 mL-5'>
             <InteractiveSubtitle dataPage={ dataPage.multimedia } isEnded = { this.isEnded } />
           </div>
         </div>
@@ -459,7 +460,7 @@ class Page6 extends Component {
     this.props.checkEndUnit(0);
     this.props.checkEnabledUnit(1);
 
-    document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
+    // document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
   }
   
   // componentDidMount() {
@@ -885,7 +886,7 @@ class Page15 extends Component {
     this.props.checkEndUnit(1);
     this.props.checkEnabledUnit(2);
 
-    document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
+    // document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
   }
 
   // componentDidMount() {
@@ -1006,7 +1007,7 @@ class Page17 extends Component {
     this.props.checkEndUnit(2);
     this.props.checkEnabledUnit(3);
 
-    document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
+    // document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
   }
 
   // componentDidMount() {
@@ -1549,7 +1550,7 @@ class Page28 extends Component {
     this.props.checkEndUnit(3);
     this.props.checkEnabledUnit(4);
 
-    document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
+    // document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
     document.getElementById('btnNavDown').classList.add('animationDownMenu');
   }
 
@@ -1760,7 +1761,7 @@ class Page31 extends Component {
     this.props.checkEndUnit(4);
     this.props.checkEnabledUnit(5);
 
-    document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
+    // document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
     document.getElementById('btnNavDown').classList.add('animationDownMenu');
   }
 
@@ -1881,7 +1882,7 @@ class Page33 extends Component {
     this.props.checkEndUnit(5);
     this.props.checkEnabledUnit(6);
     
-    document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
+    // document.querySelector('.buttonOpen').classList.add('animationOpenMenu');
   }
   
   // componentDidMount() {

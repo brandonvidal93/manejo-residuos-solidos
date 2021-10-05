@@ -107,7 +107,7 @@ class InteractiveAudio extends Component {
 
           <div className = 'buttonBox dF-R-cc'>
             { this.state.ended !== true ?
-              <button className = 'buttonPlayer' id = 'btnPlayPause' onClick = { this._play }>
+              <button className = 'buttonPause' id = 'btnPlayPause' onClick = { this._play }>
                 <span className = 'fa-layers fa-fw iconButton' >
                   <FontAwesomeIcon icon="circle" />
                   {
@@ -118,14 +118,14 @@ class InteractiveAudio extends Component {
                 </span>
               </button>
               :
-              <button className = 'buttonPlayer' id = 'btnRedo' onClick = { this._redo }>
+              <button className = 'buttonPause' id = 'btnRedo' onClick = { this._redo }>
                 <span className = 'fa-layers fa-fw iconButton' >
                   <FontAwesomeIcon icon="circle" />
                   <FontAwesomeIcon icon="redo-alt" inverse transform="shrink-8" />
                 </span>
               </button>
             }
-            <button className = 'buttonPlayer' id = 'btnMute' onClick = { this._mute }>
+            <button className = 'buttonVolume' id = 'btnMute' onClick = { this._mute }>
               <span className = 'fa-layers fa-fw iconButton' >
                 <FontAwesomeIcon icon="circle" />
                 {
@@ -138,7 +138,7 @@ class InteractiveAudio extends Component {
           </div>
 
           <div className = 'trackLabelBox'>
-            <div className = 'labelBox pT-05 pB-05 pL-1 pR-1'>
+            <div className = 'labelBox pT-05 pB-05 pL-1'>
               <p className = 'subtitle'>{ this.state.subTitle }</p>
             </div>
           </div>

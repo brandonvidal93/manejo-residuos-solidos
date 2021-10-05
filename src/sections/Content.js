@@ -114,7 +114,7 @@ class Content extends Component {
         { this.showContent() }
 
         { /* CARGAR DEL MENU LATERAL */ }
-        <MenuCourse
+        {/* <MenuCourse
           actualIndex = { this.props.actualIndex }
           dataPage = { data.menuCourse }
           enableUnit = { enableUnit }
@@ -124,7 +124,7 @@ class Content extends Component {
           unitActual = { unitActual }
           updateActualUnit = { updateActualUnit }
           updateNextUnit = { updateNextUnit }
-          unitFinal = { unitFinal } />
+          unitFinal = { unitFinal } /> */}
 
           {/* CARGA DEL COMPOMENTE FOOTER */}
         <Footer
