@@ -88,45 +88,22 @@ class InteractivePath1 extends Component {
       backgroundRepeat: 'no-repeat'
     }
 
-    // console.log(this.state.countItem);
     return (
-      <div className = 'InteractivePath1 mL-7' style = {{ ...style }}>
+      <div className = 'InteractivePath1 mT-7 mL-5' style = {{ ...style }}>
         {
           multimedia.map((item, i) => {
             return(
-              i % 2 !== 0 ?
               <div
-              className = { 'c-15 itemGlobe animated fadeIn pAbs d-Flex d-C j-C aI-C dNone' }
+              className = { 'itemGlobe animated fadeIn pAbs d-Flex d-C j-C aI-C dNone' }
               id = { 'itemGlobe-' + (i + 1) }
               key = { i }
-              style = { { 'top': item.itemInfo.posGlobe.posY, 'left': item.itemInfo.posGlobe.posX, 'borderColor': item.itemInfo.colorBorder } }>
-                <span className = 'fa-layers fa-fw mB-05' style = {{ 'fontSize': '2rem'}} >
-                  <FontAwesomeIcon icon="circle" style = {{ 'color': '#F4F4F4'}}/>
-                  <FontAwesomeIcon icon="circle" style = {{ 'color': item.itemInfo.color }} transform="shrink-6" />
-                </span>
+              style = { { 'top': item.itemInfo.posGlobe.posY, 'left': item.itemInfo.posGlobe.posX, 'borderColor': item.itemInfo.color } }>
                 {
-                  item.itemInfo.title ? <h4 className = 'mB-05 fw-3 tCenter' dangerouslySetInnerHTML = {{ __html: item.itemInfo.title }}></h4> : null
+                  item.itemInfo.title ? <h4 className = 'mB-05 fw-3' dangerouslySetInnerHTML = {{ __html: item.itemInfo.title }}></h4> : null
                 }
                 {
-                  item.itemInfo.text ? <p className = 'mB-05 fw-3 tCenter' dangerouslySetInnerHTML = {{ __html: item.itemInfo.text }}></p> : null
+                  item.itemInfo.text ? <p className = 'fw-3' dangerouslySetInnerHTML = {{ __html: item.itemInfo.text }}></p> : null
                 }
-              </div> :
-              <div
-              className = { 'c-15 itemGlobe animated fadeIn pAbs d-Flex d-C j-C aI-C dNone' }
-              id = { 'itemGlobe-' + (i + 1) }
-              key = { i }
-              style = { { 'top': item.itemInfo.posGlobe.posY, 'left': item.itemInfo.posGlobe.posX, 'borderColor': item.itemInfo.colorBorder } }>
-                {
-                  item.itemInfo.title ? <h4 className = 'mB-05 fw-3 tCenter' dangerouslySetInnerHTML = {{ __html: item.itemInfo.title }}></h4> : null
-                }
-                {
-                  item.itemInfo.text ? <p className = 'mB-05 fw-3 tCenter' dangerouslySetInnerHTML = {{ __html: item.itemInfo.text }}></p> : null
-                }
-
-                <span className = 'fa-layers fa-fw' style = {{ 'fontSize': '2rem'}} >
-                  <FontAwesomeIcon icon="circle" style = {{ 'color': '#F4F4F4'}}/>
-                  <FontAwesomeIcon icon="circle" style = {{ 'color': item.itemInfo.color }} transform="shrink-6" />
-                </span>
               </div>
             );
           })

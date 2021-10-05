@@ -105,7 +105,7 @@ class ModalCircle1 extends Component {
     });
 
     document.querySelector('.footer').classList.add('dNone'); // OCULTAR EL FONDO
-    document.querySelector('.menuContent').classList.add('dNone'); // OCULTAR EL FONDO
+    // document.querySelector('.menuContent').classList.add('dNone'); // OCULTAR EL FONDO
     document.querySelector('.instruction').classList.add('dNone'); // OCULTAR EL FONDO
   }
 
@@ -116,7 +116,7 @@ class ModalCircle1 extends Component {
     });
 
     document.querySelector('.footer').classList.remove('dNone'); // OCULTAR EL FONDO
-    document.querySelector('.menuContent').classList.remove('dNone'); // OCULTAR EL FONDO
+    // document.querySelector('.menuContent').classList.remove('dNone'); // OCULTAR EL FONDO
     document.querySelector('.instruction').classList.remove('dNone'); // OCULTAR EL FONDO
   }
 

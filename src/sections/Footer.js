@@ -63,7 +63,7 @@ class Footer extends Component {
           </button>
 
           <button
-            className = { 'buttonNav ' + (actualIndex === limitNavigation || Object.values(data)[actualIndex].endCourse === true ? 'disabled ': '') }
+            className = { 'buttonNav ' + (actualIndex === limitNavigation || Object.values(data)[actualIndex].endCourse === true ? 'disabled ': '') + (actualIndex === 1 || actualIndex === 23 || actualIndex === 24 ? 'disabled ': '') }
             id = 'btnNavRight'
             onClick = { this.navigationCourse }>
             <FontAwesomeIcon
@@ -92,7 +92,7 @@ class Footer extends Component {
     const { actualIndex } = this.props;
     if (actualIndex !== 0) {
       return(
-        <h2 className = 'numberPage fw-7 blanco'>{ ((actualIndex) <= 9 ? '0' + (actualIndex) : (actualIndex)) }/25</h2>
+        <h2 className = 'numberPage fw-7 blanco'>{ ((actualIndex) <= 9 ? '0' + (actualIndex) : (actualIndex)) }/24</h2>
       );
     }
   }

@@ -13,7 +13,7 @@ import DataCourse from './data/data.json';
 
 // DEFINICION DEL LIMITE CON LA CANTIDAD DE OBJETOS QUE HAY EN DataCourse
 // SE RESTAN 2 al LIMIT PARA SACAR EL BACK COVER QUE ES UNA MODAL DE FINALIZACION
-const LIMIT = 25;
+const LIMIT = 24;
 // const LIMIT = Object.keys(DataCourse).length - 2;
 const UNITS = DataCourse.coverPage.units;
 const LABELFOOTER = DataCourse.coverPage.footer.label;
@@ -52,7 +52,7 @@ class App extends Component {
     this.state = {
       calificacion: 0,
       conectLMS: false,
-      index: 2,
+      index: 4,
       nextUnit: 1,
       pages: LIMIT,
       units: UNITS,
@@ -306,10 +306,10 @@ class App extends Component {
 
     const {index} = this.state;
 
-    document.getElementById('btnNavRight').classList.add('animationBtnNav');
-    // if (index !== 1 && index !== 2 && index !== 6 && index !== 15 && index !== 17 && index !== 28 && index !== 31 && index !== 32 && index !== 33) {
-    //   document.getElementById('btnNavRight').classList.add('animationBtnNav');
-    // }
+    
+    if (index !== 1 && index !== 23 && index !== 24) {
+      document.getElementById('btnNavRight').classList.add('animationBtnNav');
+    }
 
     // GUARDA EL SUSPEND DATA CADA QUE SE HACE UN AVACE EN EL CURSO o UNA MODIFICACION
     this.setSuspend();

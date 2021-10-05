@@ -99,84 +99,38 @@
 
   "page3": {
     "type": "pageCourse",
-    "startUnit": true,
-    "nameUnit": "unit1",
     "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-1.png",
-      "textHeader"  : "Generalidades",
-      "color"       : "#5C2481"
+      "textHeader"  : "Estrategia de sostenibilidad corporativa"
     },
-    "title"   : "¿De qué se trata la seguridad de la información?",
-    "text"    : "La información es uno de los recursos más relevantes de una organización, pues ésta se encarga de conectar cada una de las áreas del negocio, de unificar los procesos y de guiar la productividad hacia la dirección correcta. <br><br> La seguridad de la información consiste en implementar tecnologías y controles enfocados en las personas, administración de procesos, la infraestructura y las tecnologías, con el fin de reducir y controlar el riesgo de un ataque cibernético que atentan con la confidencialidad, integridad y disponibilidad de la información.",
-    "multimedia": [
-      {
-        "urlImgBtn"         : "img/3/n-1.png",
-        "title"             : "Disponibilidad",
-        "color"             : "#004991",
-        "itemInfo": {
-          "title"           : "Disponibilidad",
-          "text1"           : "Acceso a la información disponible cuando las personas autorizadas la necesiten.",
-          "text2"           : "<b>Ejemplo:</b> la información de la cuenta bancaria debe de estar disponible cuando la necesite y no cuando el banco lo desee.",
-          "colorText"       : "#004991",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
-        }
-      },
-      {
-        "urlImgBtn"         : "img/3/n-2.png",
-        "title"             : "Confidencialidad",
-        "color"             : "#683E92",
-        "itemInfo": {
-          "title"           : "Confidencialidad",
-          "text1"           : "La información debe ser accesible sólo por las personas autorizadas. ",
-          "text2"           : "<b>Ejemplo:</b> la información de mi cuenta bancaria no la debe de revisar cualquier tercero sin previa autorización, solamente la puedo consultar yo o las personas que autorice.",
-          "colorText"       : "#683E92",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
-        }
-      },
-      {
-        "urlImgBtn"         : "img/3/n-3.png",
-        "title"             : "Integridad",
-        "color"             : "#2097D3",
-        "itemInfo": {
-          "title"           : "Integridad",
-          "text1"           : "Información correcta sin modificaciones no autorizadas ni errores. ",
-          "text2"           : "<b>Ejemplo:</b> si en mi cuenta bancaria me consignaron $100, en la consulta de movimientos debo de tener una consignación por $100 y no por $10 o $1000.",
-          "colorText"       : "#2097D3",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
-        }
-      }
-    ],
+    "title"   : "Estrategia de sostenibilidad corporativa",
+    "text"    : "",
+    "boxInfo": {
+      "title"         : "Reproducir video",
+      "text"          : "",
+      "imgBg"         : "img/3/video-3.png"
+    },
+    "modal": {
+      "type"          : "videoModal",
+      "title"         : "",
+      "text"          : "",
+      "buttonModal"   : "",
+      "closedModal"   : true,
+      "urlVideo"      : "https://content.jwplatform.com/videos/wlJ69ED2-SpzKbqXP.mp4"
+    },
     "instruction": {
-      "type"    : "mouse",
-      "text"    : "Haz clic en cada ícono para conocer la información.",
-      "posY"    : 50,
-      "posX"    : 660,
-      "size"    : 330,
-      "color"   : "#FFD15C"
+      "type"          : "mouse",
+      "text"          : "Haz clic en el reproductor de video para conocer la información.",
+      "posY"          : 50,
+      "posX"          : 660,
+      "size"          : 330,
+      "color"         : "#FFD15C"
     }
   },
 
   "page4": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-1.png",
-      "textHeader"  : "Generalidades",
-      "color"       : "#5C2481"
-    },
-    "title"   : "¿Qué motiva a los criminales en la red?",
-    "text"    : "En la siguiente multimedia podrás conocer qué es lo que motiva a los criminales en la red.",
+    "title"   : "Estrategia de sostenibilidad corporativa",
+    "text"    : "El Grupo Familia está comprometido como organización para llevar la gestión de sostenibilidad del step 1 al 3. De acuerdo con las implementaciones y avances que tenemos actualmente, nos podemos visualizar en el 3.",
     "background": {
       "bg": "img/4/bgPage-4.png"
     },
@@ -184,87 +138,71 @@
       {
         "urlImgBtn"   : "img/4/n-1.png",
         "pos": {
-          "top"       : 55,
-          "left"      : -8
+          "top"       : 220,
+          "left"      : 215
         },
         "itemInfo": {
           "title"     : "",
-          "text"      : "Fraudes, robo de identidad, extorsiones",
+          "text"      : "<b>Step 1: Cumplimiento legal</b><br>Lo mínimo que exige la ley o el mercado.",
           "posGlobe": {
-            "posY"    : -50,
-            "posX"    : -10
+            "posY"    : 230,
+            "posX"    : -56
           },
-          "color"     : "#93C750"
+          "color"     : "#683E92"
         }
       },
       {
         "urlImgBtn"   : "img/4/n-2.png",
         "pos": {
-          "top"       : -36,
-          "left"      : 168
+          "top"       : 136,
+          "left"      : 320
         },
         "itemInfo": {
           "title"     : "",
-          "text"      : "Dinero fácil y con el menor riesgo",
+          "text"      : "<b>Step 2: Gestión empresarial</b><br>Lo mínimo que exige la ley o el mercado.",
           "posGlobe": {
-            "posY"    : 65,
-            "posX"    : 167
+            "posY"    : 135,
+            "posX"    : 47
           },
-          "color"     : "#0A4D94"
+          "color"     : "#2097D3"
         }
       },
       {
         "urlImgBtn"   : "img/4/n-3.png",
         "pos": {
-          "top"       : 189,
-          "left"      : 287
+          "top"       : 47,
+          "left"      : 215
         },
         "itemInfo": {
           "title"     : "",
-          "text"      : "Acceso fácil a la información de las personas",
+          "text"      : "<b>Step 3: ADN corporativo</b><br>La sostenibilidad como esencia organizacional. ",
           "posGlobe": {
-            "posY"    : 81,
-            "posX"    : 284
+            "posY"    : 40,
+            "posX"    : -45
           },
-          "color"     : "#347DB9"
+          "color"     : "#00539A"
         }
       },
       {
         "urlImgBtn"   : "img/4/n-4.png",
         "pos": {
-          "top"       : -32,
-          "left"      : 400
+          "top"       : -41,
+          "left"      : 320
         },
         "itemInfo": {
           "title"     : "",
-          "text"      : "Un ciberdelito tiene una baja inversión",
+          "text"      : "<b>Meta</b><br>Ser reconocidos como empresa líder de sostenibilidad en el sector donde participamos.",
           "posGlobe": {
-            "posY"    : 67,
-            "posX"    : 400
+            "posY"    : -72,
+            "posX"    : 42
           },
-          "color"     : "#33A0D6"
-        }
-      },
-      {
-        "urlImgBtn"   : "img/4/n-5.png",
-        "pos": {
-          "top"       : 75,
-          "left"      : 576
-        },
-        "itemInfo": {
-          "title"     : "",
-          "text"      : "Reconocimiento y popularidad",
-          "posGlobe": {
-            "posY"    : -10,
-            "posX"    : 570
-          },
-          "color"     : "#643B8D"
+          "color"     : "#F8B328"
         }
       }
     ],
     "instruction": {
       "type"          : "mouse",
-      "text"          : "Haz clic en cada ícono para conocer la información.",
+      "text"          : "Haz clic en cada step para conocer la información.",
       "posY"          : 50,
       "posX"          : 660,
       "size"          : 330,
@@ -764,122 +702,46 @@
 
   "page10": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-2.png",
-      "textHeader"  : "Amenazas",
-      "color"       : "#5C2481"
-    },
-    "title"   : "2. Phishing o suplantación de identidad",
-    "text"    : "El phishing también está presente en páginas Web fraudulentas a las que puedes acceder con facilidad porque han conseguido aparecer en los resultados de un motor de búsqueda como Google o porque se encuentran en el perfil de un usuario de una red social. Por todo lo anterior, la mejor prevención para el phishing se basa en desconfiar del contenido que recibimos a través del correo electrónico, mensajería instantánea, redes sociales e incluso desconfiar cuando alguien nos llama para pedirnos información privada por teléfono. <br><br> Si te llegas a encontrar algunos de estos casos no abras el correo y no ingreses a estos sitios web inseguros.",
-    "instruction": {
-      "type"    : "mouse",
-      "text"    : "Haz clic en la siguiente imagen y visualiza los ejemplos de suplantación en el correo electrónico y páginas web.",
-      "posY"    : 50,
-      "posX"    : 660,
-      "size"    : 330,
-      "color"   : "#FFD15C"
-    },
-    "multimedia": {
-      "buttonModal": {
-        "title"       : "",
-        "text"        : "",
-        "imgBg"       : "img/10/btnGallery.png"
-      },
-      "gallery": [
-        {
-          "key"       : 1,
-          "img"       : "img/10/n-1.jpg"
-        },
-        {
-          "key"       : 2,
-          "img"       : "img/10/n-2.jpg"
-        },
-        {
-          "key"       : 3,
-          "img"       : "img/10/n-3.jpg"
-        }
-      ],
-      "closedModal"   : true
-    }
+    "title"   : "Manejo integral de residuos sólidos",
+    "text"    : "Conoce sobre los procedimientos necesarios para un adecuado manejo integral de residuos sólidos peligrosos y no peligrosos al interior de la plantas de producción de Grupo Familia.<br><br>Para ello, profundizaremos sobre los siguientes temas:",
+    "img"     : "img/10/n-1.png"
   },
 
   "page11": {
     "type": "pageCourse",
     "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-2.png",
-      "textHeader"  : "Amenazas",
-      "color"       : "#5C2481"
+      "textHeader"  : "Qué es un residuo y su marco normativo"
     },
-    "title"   : "3. Smishing",
-    "text"    : "",
+    "title"   : "Qué es un residuo y su marco normativo",
+    "text"    : "Visualiza el siguiente video y conoce qué es residuo sólido o desecho.",
+    "boxInfo": {
+      "title"         : "Reproducir video",
+      "text"          : "",
+      "imgBg"         : "img/11/video-11.png"
+    },
+    "modal": {
+      "type"          : "videoModal",
+      "title"         : "",
+      "text"          : "",
+      "buttonModal"   : "",
+      "closedModal"   : true,
+      "urlVideo"      : "https://content.jwplatform.com/videos/8eQP4txt-SpzKbqXP.mp4"
+    },
     "instruction": {
-      "type"    : "mouse",
-      "text"    : "Haz clic en cada una de las flechas para conocer la información.",
-      "posY"    : 50,
-      "posX"    : 660,
-      "size"    : 330,
-      "color"   : "#FFD15C"
-    },
-    "multimedia": {
-      "items": [
-        {
-          "imgBg": "img/11/n-1.png",
-          "img": "",
-          "info": "Estafa por medio de mensajes SMS (mensajes de texto), donde se solicitan datos, se pide llamar a un número o ingresar a un sitio web.",
-          "width": 210,
-          "color": "#2097D3",
-          "button": {
-            "posY": 80,
-            "posX": -28
-          }
-        },
-        {
-          "imgBg": "img/11/n-2.png",
-          "img": "",
-          "info": "Esta estafa tiene como objetivo redirigir al usuario a una página Web falsa con el fin de obtener datos personales, información bancaria o infectar su dispositivo móvil.",
-          "width": 210,
-          "color": "#04366A",
-          "button": {
-            "posY": 80,
-            "posX": -28
-          }
-        },
-        {
-          "imgBg": "img/11/n-3.png",
-          "img": "",
-          "info": "En algunas ocasiones se pide llamar a un número en donde se le solicita cierta información con técnicas de ingeniería social.",
-          "width": 210,
-          "color": "#89C240",
-          "button": {
-            "posY": 80,
-            "posX": -28
-          }
-        },
-        {
-          "imgBg": "img/11/n-4.png",
-          "img": "img/11/img-1.png",
-          "info": "",
-          "width": 210,
-          "color": "#683E92",
-          "button": {
-            "posY": 80,
-            "posX": -28
-          }
-        }
-      ]
+      "type"          : "mouse",
+      "text"          : "Haz clic en el reproductor de video para conocer la información.",
+      "posY"          : 50,
+      "posX"          : 660,
+      "size"          : 330,
+      "color"         : "#FFD15C"
     }
   },
 
   "page12": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-2.png",
-      "textHeader"  : "Amenazas",
-      "color"       : "#5C2481"
-    },
-    "title"   : "4. Malware (software malicioso)",
-    "text"    : "Programas utilizados por los cibercriminales para infectar y tomar el control de computadores y dispositivos móviles.",
-    "img"     : "img/12/img-1.png"
+    "title"   : "Manejo Integral de Residuos (MIR)",
+    "text"    : "El Manejo Integral de Residuos tiene como meta el que todos los colaboradores de las diferentes áreas de la Compañía manejen adecuadamente sus residuos sólidos peligrosos y no peligrosos, a través del uso de la escala de colores definida para clasificar los residuos sólidos generados.<br><br>Lleva en orden consecutivo cada círculo para concer la información.",
+    "img"     : "img/12/n-1.png"
   },
 
   "page13": {
@@ -1649,79 +1511,30 @@
   "page21": {
     "type": "pageCourse",
     "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-4.png",
-      "textHeader"  : "Seguridad de la información",
-      "color"       : "#5C2481"
+      "textHeader"  : "Beneficios del manejo integral de residuos"
     },
-    "title"   : "Respaldo de la información",
-    "text"    : "",
-    "multimedia": {
-      "audio": {
-        "src"             : "audio/resp-informacion.mp3",
-        "autoPlay"        : true
-      },
-      "subtitles": {
-        "3"               : "Tener un respaldo actualizado minimiza el impacto de pérdida de la información en caso de",
-        "7"               : "alguna falla, robo o infección del dispositivo.",
-        "11"              : "Dentro de la Compañía, la información debe ser almacenada",
-        "14"              : "en el One Drive corporativo."
-      },
-      "layers": [
-        [{
-            "label"       : "",
-            "labelSide"   : "bottom",
-            "icon"        : "img/21/n-1.png",
-            "time"        : 3,
-            "size"        : 216,
-            "position": {
-              "yPosition" : 113,
-              "xPosition" : 36
-            }
-          },
-          {
-            "label"       : "",
-            "labelSide"   : "bottom",
-            "icon"        : "img/21/n-2.png",
-            "time"        : 4,
-            "size"        : 296,
-            "position": {
-              "yPosition" : 17,
-              "xPosition" : 27
-            }
-          },
-          {
-            "icon"        : "img/21/n-3.png",
-            "time"        : 7,
-            "size"        : 164,
-            "position": {
-              "yPosition" : 110,
-              "xPosition" : 251
-            }
-          },
-          {
-            "label"       : "",
-            "labelSide"   : "bottom",
-            "icon"        : "img/21/n-4.png",
-            "time"        : 11,
-            "size"        : 283,
-            "position": {
-              "yPosition" : 18,
-              "xPosition" : 345
-            }
-          },
-          {
-            "label"       : "",
-            "labelSide"   : "bottom",
-            "time"        : 13,
-            "size"        : 345,
-            "icon"        : "img/21/n-5.png",
-            "position": {
-              "yPosition" : 113,
-              "xPosition" : 417
-            }
-          }
-        ]
-      ]
+    "title"   : "Beneficios del manejo integral de residuos",
+    "text"    : "Visualiza el siguiente video y conoce los beneficios que hay cuando se disponen correctamente los residuos.",
+    "boxInfo": {
+      "title"         : "Reproducir video",
+      "text"          : "",
+      "imgBg"         : "img/21/video-21.png"
+    },
+    "modal": {
+      "type"          : "videoModal",
+      "title"         : "",
+      "text"          : "",
+      "buttonModal"   : "",
+      "closedModal"   : true,
+      "urlVideo"      : "https://content.jwplatform.com/videos/8eQP4txt-SpzKbqXP.mp4"
+    },
+    "instruction": {
+      "type"          : "mouse",
+      "text"          : "Haz clic en el reproductor de video para conocer la información.",
+      "posY"          : 50,
+      "posX"          : 660,
+      "size"          : 330,
+      "color"         : "#FFD15C"
     }
   },
 
