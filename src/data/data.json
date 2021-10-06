@@ -1249,118 +1249,32 @@
 
   "page19": {
     "type": "pageCourse",
-    "title"   : "Contraseñas",
-    "text"    : "Mecanismo diseñado para proteger el acceso a las diferentes cuentas de aplicaciones, como correo electrónico, redes sociales, cuantas bancarias, computadores, entre otras. El mal uso de las contraseñas es igual a dejar las llaves pegadas en la cerradura externa de la puerta de la casa. <br><br>Las contraseñas protegen tu identidad y es información que solamente debe conocer el propietario. <br><br>A continuación, te presentamos algunos tips para el manejo de las contraseñas.",
+    "title"   : "Seguridad en las conversaciones",
+    "text"    : "Ser cauto y utilizar un tono de voz adecuado cuando se comparte información a través de conversaciones. Evita hablar de temas sensibles en estos escenarios:",
     "instruction": {
-      "type"          : "mouse",
-      "text"          : "Haz clic en los botones para conocer la información",
-      "posY"          : 50,
-      "posX"          : 660,
-      "size"          : 330,
-      "color"         : "#FFD15C"
+      "type"    : "mouse",
+      "text"    : "Haz clic en los círculos inferiores para conocer los demás ítems",
+      "posY"    : 50,
+      "posX"    : 660,
+      "size"    : 330,
+      "color"   : "#FFD15C"
     },
     "multimedia": [
       {
-        "urlImgBtn"         : "img/19/n-1.png",
-        "title"             : "Disponibilidad",
-        "posY"              : -150,
-        "posX"              : -180,
-        "itemInfo": {
-          "title"           : "01",
-          "text1"           : "Cámbiala con frecuencia.",
-          "text2"           : "",
-          "colorText"       : "#023974",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
-        }
+        "text1"   : "",
+        "img1"    : "img/19/n-1.png",
+        "color"   : "#93278F",
+        "bg"      : "img/19/bg-1.png",
+        "bgPosY"  : 7,
+        "bgPosX"  : 425
       },
       {
-        "urlImgBtn"         : "img/19/n-2.png",
-        "title"             : "",
-        "posY"              : -38,
-        "posX"              : -180,
-        "itemInfo": {
-          "title"           : "02",
-          "text1"           : "No utilices computadoras públicas para iniciar sesión con cuentas personales o corporativas.",
-          "text2"           : "",
-          "colorText"       : "#074991",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
-        }
-      },
-      {
-        "urlImgBtn"         : "img/19/n-3.png",
-        "title"             : "",
-        "posY"              : 88,
-        "posX"              : -180,
-        "itemInfo": {
-          "title"           : "03",
-          "text1"           : "No repitas la contraseña cuando un sistema te pida cambiarla.",
-          "text2"           : "",
-          "colorText"       : "#2171B3",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
-        }
-      },
-      {
-        "urlImgBtn"         : "img/19/n-4.png",
-        "title"             : "",
-        "posY"              : 88,
-        "posX"              : -56,
-        "itemInfo": {
-          "title"           : "04",
-          "text1"           : "No las escribas en papel o en documentos digitales a la vista de otras personas.",
-          "text2"           : "",
-          "colorText"       : "#2097D3",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
-        }
-      },
-      {
-        "urlImgBtn"         : "img/19/n-5.png",
-        "title"             : "",
-        "posY"              : -38,
-        "posX"              : -46,
-        "itemInfo": {
-          "title"           : "05",
-          "text1"           : "No la compartas con nadie.",
-          "text2"           : "",
-          "colorText"       : "#89C240",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
-        }
-      },
-      {
-        "urlImgBtn"         : "img/19/n-6.png",
-        "title"             : "",
-        "posY"              : -150,
-        "posX"              : -46,
-        "itemInfo": {
-          "title"           : "06",
-          "text1"           : "Aprovecha los nuevos métodos de seguridad como autenticación en dos pasos, verificación de huella dactilar o reconocimiento facial.",
-          "text2"           : "",
-          "colorText"       : "#683E92",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
-        }
+        "text1"   : "",
+        "img1"    : "img/19/n-2.png",
+        "color"   : "#033164",
+        "bg"      : "img/19/bg-2.png",
+        "bgPosY"  : 7,
+        "bgPosX"  : 360
       }
     ]
   },
