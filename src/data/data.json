@@ -1344,75 +1344,63 @@
   },
 
   "page20": {
-    "type": "pageCourse",
-    "title"   : "Seguridad en las conversaciones",
-    "text"    : "Ser cauto y utilizar un tono de voz adecuado cuando se comparte información a través de conversaciones. Evita hablar de temas sensibles en estos escenarios:",
+    "type"        : "pageCourse",
+    "title"   : "Recuerda lo aprendido",
+    "text"    : "¿Cómo será el plan de migración de las plantas en Grupo Familia? Juega el siguiente concéntrese e identifica correctamente los años con cada uno de los pasos.",
     "instruction": {
       "type"    : "mouse",
-      "text"    : "Haz clic en los círculos inferiores para conocer los demás ítems",
+      "text"    : "Haz clic sobre el botón para realizar la actividad",
       "posY"    : 50,
       "posX"    : 660,
       "size"    : 330,
       "color"   : "#FFD15C"
     },
-    "multimedia": [
-      {
-        "text1"   : "En el transporte público",
-        "img1"    : "img/20/n-1.png",
-        "color"   : "#93278F",
-        "bg"      : "img/20/bg-1.png",
-        "bgPosY"  : 7,
-        "bgPosX"  : 425
-      },
-      {
-        "text1"   : "En los pasillos",
-        "img1"    : "img/20/n-2.png",
-        "color"   : "#033164",
-        "bg"      : "img/20/bg-2.png",
-        "bgPosY"  : 7,
-        "bgPosX"  : 360
-      },
-      {
-        "text1"   : "En los ascensores",
-        "img1"    : "img/20/n-3.png",
-        "color"   : "#09539A",
-        "bg"      : "img/20/bg-3.png",
-        "bgPosY"  : 7,
-        "bgPosX"  : 339
-      },
-      {
-        "text1"   : "Lugares públicos",
-        "img1"    : "img/20/n-4.png",
-        "color"   : "#2171B3",
-        "bg"      : "img/20/bg-4.png",
-        "bgPosY"  : 7,
-        "bgPosX"  : 315
-      },
-      {
-        "text1"   : "Al teléfono",
-        "img1"    : "img/20/n-5.png",
-        "color"   : "#89C240",
-        "bg"      : "img/20/bg-5.png",
-        "bgPosY"  : 7,
-        "bgPosX"  : 297
-      },
-      {
-        "text1"   : "Sala de reuniones",
-        "img1"    : "img/20/n-6.png",
-        "color"   : "#2097D3",
-        "bg"      : "img/20/bg-6.png",
-        "bgPosY"  : 7,
-        "bgPosX"  : 275
-      },
-      {
-        "text1"   : "<b>Ejemplo:</b> acabo de retirar de mi cuenta bancaria $2.000 dólares y en una conversación en el transporte público le cuento a mi compañero que llevo esa suma de dinero en el bolsillo, ¿qué pasaría si un delincuente que va en ese mismo transporte escucha la conversación?",
-        "img1"    : "",
-        "color"   : "#F8B32A",
-        "bg"      : "img/20/bg-7.png",
-        "bgPosY"  : 7,
-        "bgPosX"  : 265
-      }
-    ]
+    "multimedia": {
+      "type": "icon",
+      "imgHide": "img/20/hide-1.png",
+      "items": [
+        {
+          "id"    : 1,
+          "img"   : "img/20/n-1.png",
+          "pair"  : 1
+        },
+        {
+          "id"    : 2,
+          "img"   : "img/20/n-2.png",
+          "pair"  : 3
+        },
+        {
+          "id"    : 3,
+          "img"   : "img/20/n-3.png",
+          "pair"  : 2
+        },
+        {
+          "id"    : 4,
+          "img"   : "img/20/n-4.png",
+          "pair"  : 4
+        },
+        {
+          "id"    : 5,
+          "img"   : "img/20/n-5.png",
+          "pair"  : 3
+        },
+        {
+          "id"    : 6,
+          "img"   : "img/20/n-6.png",
+          "pair"  : 1
+        },
+        {
+          "id"    : 7,
+          "img"   : "img/20/n-7.png",
+          "pair"  : 4
+        },
+        {
+          "id"    : 8,
+          "img"   : "img/20/n-8.png",
+          "pair"  : 2
+        }
+      ]
+    }
   },
 
   "page21": {

@@ -949,29 +949,17 @@ class Page20 extends Component {
 
     return (
       <div className = { 'pageContent'}>
-        <div className = 'headerTitle d-Flex d-Rr j-E aI-C mB-1 mL-4 mT-2'>
-          <h2
-            className = 'textHeader F2'
-            dangerouslySetInnerHTML = {{ __html: dataPage.headerPage.textHeader }}
-            style = {{ 'borderColor': dataPage.headerPage.color }}></h2>
-
-          <FontAwesomeIcon icon="play" size = 'lg' className = 'mL-025 mR-05' style = {{ 'color': '#EAEAEA' }} />
-
-          <img alt = 'Imagen' className = '' src = { dataPage.headerPage.imgHeader }/>
-        </div>
-
-        <div className = 'c-10 animated fadeIn'>
-          <div className = 'mL-7 c-75 mT-025 mR-2 mB-1'> 
+        <div className = 'c-10 animated fadeIn d-Flex d-C j-C aI-S'>
+          <div className = 'headerTitle c-75 d-Flex d-C j-C aI-S mL-5 mT-7'>
             {
-              dataPage.title ? <h2 className = 'mB-1 fw-4' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h2> : null
+              dataPage.title ? <h2 className = 'mB-1 F2' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h2> : null
             }
             {
-              dataPage.text ? <p className = 'fw-3' dangerouslySetInnerHTML = {{ __html: dataPage.text }}></p> : null
+              dataPage.text ? <p className = 'mB-2 fw-3' dangerouslySetInnerHTML = {{ __html: dataPage.text }}></p> : null
             }
           </div>
-
-          <div className = ''>
-            <SlideDot1 dataPage = { dataPage } isEnded = { this.isEnded } />
+          <div className = 'c-8 d-Flex j-C aI-S mL-5'>
+            <InteractiveFlip1 dataPage = { dataPage.multimedia } isEnded = { this.isEnded } />
           </div>
         </div>
 

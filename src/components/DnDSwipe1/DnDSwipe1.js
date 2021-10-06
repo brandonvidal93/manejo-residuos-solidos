@@ -62,7 +62,7 @@ class DnDSwipe1 extends Component {
                   'backgroundRepeat': 'no-repeat'
                 }
                 return(
-                  <div className = { 'dropBg pAbs ' + (i !== 0 ? '' : '') } id = { 'dropBg-' + i }  key = { i } style = {{ ...styleDrop, 'top': item.posY, 'left': item.posX}}>
+                  <div className = { 'dropBg pAbs ' + (i !== 0 ? 'disabledGray2' : '') } id = { 'dropBg-' + i }  key = { i } style = {{ ...styleDrop, 'top': item.posY, 'left': item.posX}}>
                     <BoxDrop                    
                       color = { item.color }
                       id = { item.target }

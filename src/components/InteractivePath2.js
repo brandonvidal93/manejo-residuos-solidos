@@ -111,7 +111,7 @@ class InteractivePath2 extends Component {
             {
               multimedia.row1.col4.map((col4, i) => {
                 return(
-                  <img alt = 'Imagen' className = 'btnItem btnDisabled' id={col4.id} src = { col4.img } onClick={this.handleClick}/>
+                  <img alt = 'Imagen' className = 'btnItem btnDisabled' id={col4.id} src = { col4.img }/>
                 )
               })
             }
@@ -150,7 +150,7 @@ class InteractivePath2 extends Component {
             {
               multimedia.row2.col4.map((col4, i) => {
                 return(
-                  <img alt = 'Imagen' className = 'btnItem btnDisabled' id={col4.id} src = { col4.img } onClick={this.handleClick}/>
+                  <img alt = 'Imagen' className = 'btnItem btnDisabled' id={col4.id} src = { col4.img }/>
                 )
               })
             }
