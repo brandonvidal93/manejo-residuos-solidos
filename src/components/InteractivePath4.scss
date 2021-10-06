@@ -10,18 +10,6 @@
 
     .circleButton {
       background-color: transparent;
-      color: $color4;
-      font-size: 1.5em;
-      transition: all .3s;
-      width: 50px;
-      height: 50px;
-      border: 5px solid #EAEFF3;
-      border-radius: 50%;
-      font-style: italic;
-
-      &:hover {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      }
     }
   }
 
@@ -40,13 +28,14 @@
       background-color: #F7F7F7;
       border-radius: 15px;
       border: 3px solid;
-      padding: 1em 2.7em 1em 1em;
+      padding: 1em 2rem;
 
       .buttonClose {
         position: absolute;
+        background-color: transparent;
         border-radius: 50%;
-        top: 2px;
-        right: 0px;
+        top: -15px;
+        right: -15px;
         .iconButton {
           color: red;
           font-size: 2.3em;
@@ -68,11 +57,11 @@
         width: 0;
         height: 0;
         border-left: 20px solid transparent;
-        border-top: 20px solid #074991;
+        border-bottom: 20px solid #085A3C;
         border-right: 20px solid transparent;
         position: absolute;
-        top: 173px;
-        left: 20px;
+        top: -20px;
+        left: 70px;
       }
       &:after {
         content: "";
@@ -80,11 +69,11 @@
         width: 0;
         height: 0;
         border-left: 16px solid transparent;
-        border-top: 16px solid #F7F7F7;
+        border-bottom: 16px solid #F7F7F7;
         border-right: 16px solid transparent;
         position: absolute;
-        top: 172px;
-        left: 24px;
+        top: -16px;
+        left: 74px;
       }
     }
 
@@ -95,11 +84,11 @@
         width: 0;
         height: 0;
         border-left: 20px solid transparent;
-        border-top: 20px solid #2097D3;
+        border-bottom: 20px solid #BA0505;
         border-right: 20px solid transparent;
         position: absolute;
-        top: 100%;
-        left: 110px;
+        top: -20px;
+        left: 56px;
       }
       &:after {
         content: "";
@@ -107,38 +96,11 @@
         width: 0;
         height: 0;
         border-left: 16px solid transparent;
-        border-top: 16px solid #F7F7F7;
+        border-bottom: 16px solid #F7F7F7;
         border-right: 16px solid transparent;
         position: absolute;
-        top: 100%;
-        left: 114px;
-      }
-    }
-
-    .trian-3 {
-      &:before {
-        content: "";
-        display: block;
-        width: 0;
-        height: 0;
-        border-left: 20px solid transparent;
-        border-top: 20px solid #683E92;
-        border-right: 20px solid transparent;
-        position: absolute;
-        top: 100%;
-        left: 197px;
-      }
-      &:after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 0;
-        border-left: 16px solid transparent;
-        border-top: 16px solid #F7F7F7;
-        border-right: 16px solid transparent;
-        position: absolute;
-        top: 100%;
-        left: 201px;
+        top: -16px;
+        left: 60px;
       }
     }
   }

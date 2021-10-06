@@ -12,7 +12,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 
-import './SlideLR1.scss';
+import './SlideLR2.scss';
 
 library.add(fas, fab, far);
 
@@ -41,7 +41,7 @@ class SlideUpDown extends Component {
   render() {
     const { multimedia } = this.props;
     return (
-      <div className = 'SlideLR1 d-Flex j-S aI-S'>
+      <div className = 'SlideLR2 d-Flex j-S aI-C'>
         <div className = 'contentSlide d-Flex d-C j-C aI-C' id = 'contentSlide'>
           {
             multimedia.items.map( (item, i) => {
@@ -54,7 +54,7 @@ class SlideUpDown extends Component {
               )
             })
           }
-          <div className = 'contentButton mL-1 d-Flex j-C aI-C mT-2'>
+          <div className = 'contentButton d-Flex j-Bt aI-C pAbs'>
             <button className = { 'buttonSlide ' + (this.state.page === 1 ? 'disabled' : '') } id = 'btnAnt' onClick = { this.mSlides }>
               <span className = 'fa-layers fa-fw iconButton' >
                 <FontAwesomeIcon icon="circle" />

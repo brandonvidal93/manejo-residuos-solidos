@@ -27,14 +27,8 @@ class InteractivePath4 extends Component {
     const ITEM = dataPage.multimedia.map( (item, i) => {
       return(
         <div className = 'circleItems' key = { i } style = { { 'top': item.pos.top, 'left': item.pos.left } }>
-          <button className = { 'circleButton ' + ( i !== 0 ? 'disabledGray' : '')} id = { i } onClick = { this.enableItem } style = {{ 'backgroundColor': item.itemInfo.color }}>
-            <h3 className = 'blanco' id = { 'int-' + i } >?</h3>
-
-            <span className = 'fa-layers fa-fw dNone'id = { 'check-' + i } >
-              <FontAwesomeIcon icon="circle" className = 'blanco' />
-              <FontAwesomeIcon icon="check" transform="shrink-6" style = {{ 'color': item.itemInfo.color }} />
-            </span>
-            {/* <img alt = '' className = '' id = { i } src = { item.urlImgBtn }/> */}
+          <button className = { 'circleButton ' + ( i !== 0 ? 'disabledGray' : '')} id = { i } onClick = { this.enableItem }>
+            <img alt = '' className = '' id = { i } src = { item.urlImgBtn }/>
           </button>
         </div>
       );
@@ -54,16 +48,11 @@ class InteractivePath4 extends Component {
 
       console.log('Menor');
 
-      document.getElementById('int-' + idItem).classList.add('dNone');
-      document.getElementById('check-' + idItem).classList.remove('dNone');
-
       let nextItem = document.getElementById(idItem + 1);
       nextItem.classList.remove('disabledGray');
       
       this.setState({ countItem: this.state.countItem + 1 });
     } else {
-      document.getElementById('int-' + idItem).classList.add('dNone');
-      document.getElementById('check-' + idItem).classList.remove('dNone');
       
       this.setState({ countItem: this.state.countItem + 1 });
       this.props.isEnded(true); // SI LLEGA EL FINAL DE LA ACT ENVÍA EL TRUE
@@ -112,7 +101,7 @@ class InteractivePath4 extends Component {
               }
 
               {
-                multimedia[actualItem].itemInfo.text ? <p className = '' dangerouslySetInnerHTML = {{ __html: multimedia[actualItem].itemInfo.text }}></p> : null
+                multimedia[actualItem].itemInfo.text ? <p className = 'tCenter' dangerouslySetInnerHTML = {{ __html: multimedia[actualItem].itemInfo.text }}></p> : null
               }
 
               <button
@@ -127,37 +116,6 @@ class InteractivePath4 extends Component {
             </div>
           </div> : null
         }
-        {/* {
-          // MOSTRAR LOS GLOBOS DE TEXTO
-          this.state.openGlobe !== false ?
-          <div className = 'bgItemGlobe'>
-            <div
-              className = { 'itemGlobe animated dF-C-cs ' + multimedia[actualItem - 1].itemInfo.posTriang + ' fadeInDown'}
-              style = { { 'width': multimedia[actualItem - 1].itemInfo.posGlobe.size, 'top': multimedia[actualItem - 1].itemInfo.posGlobe.posY, 'left': multimedia[actualItem - 1].itemInfo.posGlobe.posX, 'borderColor': multimedia[actualItem - 1].itemInfo.colorBorder } }>
-
-              {
-                multimedia[actualItem - 1].itemInfo.title ? <h4 className = 'mB-05' dangerouslySetInnerHTML = {{ __html: multimedia[actualItem - 1].itemInfo.title }}></h4> : null
-              }
-
-              {
-                multimedia[actualItem - 1].itemInfo.text ? <p className = 'mB-05' dangerouslySetInnerHTML = {{ __html: multimedia[actualItem - 1].itemInfo.text }}></p> : null
-              }
-
-              { multimedia[actualItem - 1].itemInfo.buttonClose.closedModal === true ?
-                <button
-                  className = 'buttonClose'
-                  onClick = { this.hideModal }
-                  style = { { 'top': multimedia[actualItem - 1].itemInfo.buttonClose.posY, 'left': (multimedia[actualItem - 1].itemInfo.buttonClose.posX + '%') } }
-                  >
-                  <span className = 'fa-layers fa-fw iconButton' >
-                    <FontAwesomeIcon icon="circle" />
-                    <FontAwesomeIcon icon="times" inverse transform="shrink-6" />
-                  </span>
-                </button> : null
-              }
-            </div>
-          </div> : null
-        } */}
       </div>
     );
   }
