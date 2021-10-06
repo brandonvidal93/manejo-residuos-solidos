@@ -145,7 +145,7 @@
           "title"     : "",
           "text"      : "<b>Step 1: Cumplimiento legal</b><br>Lo mínimo que exige la ley o el mercado.",
           "posGlobe": {
-            "posY"    : 230,
+            "posY"    : 235,
             "posX"    : -56
           },
           "color"     : "#683E92"
@@ -161,7 +161,7 @@
           "title"     : "",
           "text"      : "<b>Step 2: Gestión empresarial</b><br>Lo mínimo que exige la ley o el mercado.",
           "posGlobe": {
-            "posY"    : 135,
+            "posY"    : 140,
             "posX"    : 47
           },
           "color"     : "#2097D3"
@@ -177,7 +177,7 @@
           "title"     : "",
           "text"      : "<b>Step 3: ADN corporativo</b><br>La sostenibilidad como esencia organizacional. ",
           "posGlobe": {
-            "posY"    : 40,
+            "posY"    : 45,
             "posX"    : -45
           },
           "color"     : "#00539A"
@@ -193,7 +193,7 @@
           "title"     : "",
           "text"      : "<b>Meta</b><br>Ser reconocidos como empresa líder de sostenibilidad en el sector donde participamos.",
           "posGlobe": {
-            "posY"    : -72,
+            "posY"    : -67,
             "posX"    : 42
           },
           "color"     : "#F8B328"
@@ -212,45 +212,92 @@
 
   "page5": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-1.png",
-      "textHeader"  : "Generalidades",
-      "color"       : "#5C2481"
+    "startUnit": true,
+    "nameUnit": "unit1",
+    "title"   : "Estrategia de sostenibilidad corporativa",
+    "text"    : "En Grupo Familia impactamos la vida de las familias generando salud y bienestar de manera sostenible y actuamos de manera ética y transparente, generando valor para el planeta, la compañía y la sociedad, enmarcados en 3 pilares:",
+    "background": {
+      "bg": "img/5/bgPage-5.png"
     },
-    "title"   : "¿Qué es vulnerabilidad y amenaza en informática?",
-    "text"    : "Visualiza el siguiente video y conoce cuándo podemos estar vulnerables o en medio de una amenaza informática.",
-    "boxInfo": {
-      "title"         : "Reproducir video",
-      "text"          : "",
-      "imgBg"         : "img/play-1.png"
-    },
-    "modal": {
-      "type"          : "videoModal",
-      "title"         : "",
-      "text"          : "",
-      "buttonModal"   : "",
-      "closedModal"   : true,
-      "urlVideo"      : "https://content.jwplatform.com/videos/ZTIFlNfs-SpzKbqXP.mp4"
-    },
+    "multimedia": [
+      {
+        "urlImgBtn"         : "img/5/n-1.png",
+        "title"             : "",
+        "color"             : "#004991",
+        "itemInfo": {
+          "title"           : "Generamos bienestar: “rompiendo barreras para el bienestar”",
+          "text1"           : "• Soluciones superiores de higiene y aseo.<br>• Estrategias de educación y sensibilización que permitan romper tabúes para el bienestar.<br>• Incrementar en nivel de bienestar a poblaciones vulnerables a través del acompañamiento de la Fundación Grupo Familia.<br>• Oportunidades y bienestar para todos los empleados de la Compañía.",
+          "text2"           : "",
+          "img2": "img/5/n-1-1.png",
+          "colorText"       : "#004991",
+          "pos": {
+            "top": 40,
+            "left": -222
+          },
+          "buttonClose": {
+            "closedModal"   : true,
+            "posY"          : -10,
+            "posX"          : -10
+          }
+        }
+      },
+      {
+        "urlImgBtn"         : "img/5/n-2.png",
+        "title"             : "",
+        "color"             : "#683E92",
+        "itemInfo": {
+          "title"           : "Promovemos la circularidad: “Diseño y desarrollo de productos y procesos pensados para una economía circular”",
+          "text1"           : "• Asumir la responsabilidad de nuestros productos a lo largo de todo el ciclo de vida.<br>• Gestión responsable del plástico y el papel en nuestros empaques y productos.<br>• Desarrollar alternativas de aprovechamiento para productos al final del ciclo de vida.",
+          "text2"           : "",
+          "img2": "img/5/n-2-1.png",
+          "colorText"       : "#683E92",
+          "pos": {
+            "top": 311,
+            "left": -63
+          },
+          "buttonClose": {
+            "closedModal"   : true,
+            "posY"          : -10,
+            "posX"          : -10
+          }
+        }
+      },
+      {
+        "urlImgBtn"         : "img/5/n-3.png",
+        "title"             : "",
+        "color"             : "#2097D3",
+        "itemInfo": {
+          "title"           : "Hacemos más con menos: “Mejores soluciones con un menor impacto ambiental”",
+          "text1"           : "• El incremento de la ecoeficiencia en nuestros procesos productivos.<br>• Menor uso de recursos naturales en productos y empaques.<br>• Desarrollo de soluciones que integren el impacto a lo largo de todo el ciclo de vida.<br>• Soluciones de logística y transporte más eficientes.<br>• Gestión de la cadena de suministro.",
+          "text2"           : "",
+          "img2": "img/5/n-3-1.png",
+          "colorText"       : "#2097D3",
+          "pos": {
+            "top": 40,
+            "left": 102
+          },
+          "buttonClose": {
+            "closedModal"   : true,
+            "posY"          : -10,
+            "posX"          : -10
+          }
+        }
+      }
+    ],
     "instruction": {
-      "type"          : "mouse",
-      "text"          : "Haz clic en el reproductor de video para conocer la información.",
-      "posY"          : 50,
-      "posX"          : 660,
-      "size"          : 330,
-      "color"         : "#FFD15C"
+      "type"    : "mouse",
+      "text"    : "Haz clic en cada ícono para conocer la información.",
+      "posY"    : 50,
+      "posX"    : 660,
+      "size"    : 330,
+      "color"   : "#FFD15C"
     }
   },
 
   "page6": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-1.png",
-      "textHeader"  : "Generalidades",
-      "color"       : "#5C2481"
-    },
-    "title"   : "¿Quién es el objetivo de un ataque informático?",
-    "text"    : "Para descubrirlo, te invitamos a seguir esta conversación.",
+    "title"   : "Metas de sostenibilidad ambiental",
+    "text"    : "Conoce las metas de sostenibilidad ambiental del Grupo Familia 2017-2021 y los resultados que se obtuvieron en el 2020. Para ello, te invitamos a seguir la siguiente historia de un youtuber ambientalista que conoció una de nuestras plantas y quedó asombrado con los indicadores que tenemos. Presta mucha atención.",
     "instruction": {
       "type"    : "mouse",
       "text"    : "Sigue la conversación dando clic en en botón con dirección hacia abajo.",
@@ -263,47 +310,101 @@
       "items": [
         {
           "img"       : "img/6/n-1.png",
-          "text"      : "¡Uy! Menos mal que yo no soy objetivo de un ataque informático, eso es para las empresas o los bancos.",
+          "text"      : "Hola chicos y chicas, a que no adivinan en dónde me encuentro…",
           "textPos": {
-            "posY"    : 95,
-            "posX"    : 250,
-            "width"   : 180
+            "posY"    : 65,
+            "posX"    : 218,
+            "width"   : 131
           }
         },
         {
           "img"       : "img/6/n-2.png",
-          "text"      : "¿Sigues creyendo que el objetivo de los ciberdelincuentes son grandes empresas o entidades bancarias?",
+          "text"      : "Estoy en un lugar espectacular al que me invitaron y estoy conociendo todo el proceso de transformación de los productos que fabrican y cómo utilizan los recursos de forma eficiente. ",
           "textPos": {
-            "posY"    : 100,
-            "posX"    : 125,
-            "width"   : 230
+            "posY"    : 72,
+            "posX"    : 254,
+            "width"   : 183
           }
         },
         {
-          "img"       : "img/6/n-2.png",
-          "text"      : "Malas noticias, en realidad cualquier persona que maneje información o cualquier dispositivo que esté conectado en una red, es un potencial objetivo para un atacante informático.",
+          "img"       : "img/6/n-3.png",
+          "text"      : "Comenten y digan en dónde creen que me encuentro",
           "textPos": {
-            "posY"    : 80,
-            "posX"    : 110,
-            "width"   : 270
+            "posY"    : 75,
+            "posX"    : 256,
+            "width"   : 140
           }
         },
         {
-          "img"       : "img/6/n-1.png",
-          "text"      : "Si eso es así, tendré que tener mucho cuidado con la información que tengo en mis dispositivos. ",
+          "img"       : "img/6/n-4.png",
+          "text"      : "Ahora sí mis queridos amigos, estoy en una de las plantas de producción de <b>Grupo Familia</b><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¡Qué emoción! <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vamos a comenzar<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;este recorrido.",
           "textPos": {
-            "posY"    : 100,
-            "posX"    : 230,
-            "width"   : 230
+            "posY"    : 40,
+            "posX"    : 190,
+            "width"   : 150
           }
         },
         {
-          "img"       : "img/6/n-2.png",
-          "text"      : "Te invito a que conozcas cuáles son las amenazas a las que estamos expuestos. Éstas las verás en el siguiente tema. ",
+          "img"       : "img/6/n-5.png",
+          "text"      : "People, les presento a Juan, él me está haciendo este maravilloso tour y hace poco me habló de las metas ambientales que tiene <b>Grupo Familia</b> del 2017 al 2021.",
           "textPos": {
-            "posY"    : 90,
-            "posX"    : 120,
-            "width"   : 240
+            "posY"    : 67,
+            "posX"    : 306,
+            "width"   : 200
+          }
+        },
+        {
+          "img"       : "img/6/n-6.png",
+          "text"      : "Me comentó que <b>la meta del consumo de agua sería reducir en 18%</b> en las plantas Tissue y en <b>2020 lograron reducir el 16%</b>.",
+          "textPos": {
+            "posY"    : 64,
+            "posX"    : 210,
+            "width"   : 171
+          }
+        },
+        {
+          "img"       : "img/6/n-7.png",
+          "text"      : "Así mismo, me contó que en el <b>consumo de energía eléctrica</b> se quería <b>reducir el 7%</b> en todos los procesos productivos del Grupo Familia y lograron en <b>2020 el 1%</b>.",
+          "textPos": {
+            "posY"    : 62,
+            "posX"    : 196,
+            "width"   : 225
+          }
+        },
+        {
+          "img"       : "img/6/n-8.png",
+          "text"      : "Por otro lado, en recuperación de residuos sólidos se alcanzaría un indicador global del <b>95%</b> incluyendo la planta de Aconcagua y <b>lograron esa meta en el 2020</b>",
+          "textPos": {
+            "posY"    : 63,
+            "posX"    : 310,
+            "width"   : 210
+          }
+        },
+        {
+          "img"       : "img/6/n-9.png",
+          "text"      : "y que en el tema de los empaques <b>reducirían un 22% el consumo de material</b> por tonelada de producto, en <b>2020 consiguieron el 18%</b>. ",
+          "textPos": {
+            "posY"    : 60,
+            "posX"    : 320,
+            "width"   : 185
+          }
+        },
+        {
+          "img"       : "img/6/n-10.png",
+          "text"      : "Además, Juan me está contando que para la próxima década, se hará una <b>estrategia de cambio climático</b> coherente con la agenda 2030 que se está dando en el contexto y en el mundo.",
+          "textPos": {
+            "posY"    : 56,
+            "posX"    : 220,
+            "width"   : 200
+          }
+        },
+        {
+          "img"       : "img/6/n-11.png",
+          "text"      : "Mis queridos amigos, he finalizado este recorrido y me voy enamorado de esta Compañía, de su gente y de las <b>buenas prácticas de sostenibilidad ambiental</b> que practican aquí, nos vemos en una próxima oportunidad.",
+          "textPos": {
+            "posY"    : 74,
+            "posX"    : 194,
+            "width"   : 221
           }
         }
       ]
@@ -311,56 +412,63 @@
   },
 
   "page7": {
-    "type"        : "pageCourse",
-    "startUnit"   : true,
-    "nameUnit"    : "unit2",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-2.png",
-      "textHeader"  : "Amenazas",
-      "color"       : "#5C2481"
-    },
-    "title"   : "¿Cuáles son las amenazas más comunes?",
-    "text"    : "En nuestra cotidianidad estamos expuestos a diferentes amenazas, por eso es fundamental que conozcas cuáles son las más comunes para que evites un ataque informático. <br><br>A continuación, descubrirás las 5 amenazas más relevantes. En el desarrollo del curso, te explicaremos en qué consiste cada una de ellas.",
+    "type": "pageCourse",
+    "title"   : "Consecuencias del manejo incorrecto de los residuos sólidos",
+    "text"    : "Las siguientes imágenes pueden herir susceptibilidades, recomendamos discreción. Nuestro objetivo es visualizar y concientizar sobre las consecuencias de disponer de los residuos sólidos de una forma incorrecta.",
     "instruction": {
       "type"    : "mouse",
-      "text"    : "Haz clic sobre cada ícono para descubrir cuáles son las amenazas.",
+      "text"    : "Haz clic en cada ícono siguiente para ver las imágenes.",
       "posY"    : 50,
       "posX"    : 660,
       "size"    : 330,
       "color"   : "#FFD15C"
     },
     "multimedia": {
-      "type": "icon",
       "items": [
         {
-          "id"    : 1,
-          "title" : "Ingeniería social",
-          "text"  : "",
-          "img"   : "img/7/n-1.png"
+          "img"       : "img/7/n-1.png",
+          "text"      : "Hola chicos y chicas, a que no adivinan en dónde me encuentro…",
+          "textPos": {
+            "posY"    : 65,
+            "posX"    : 218,
+            "width"   : 131
+          }
         },
         {
-          "id"    : 2,
-          "title" : "Phishing o suplantación de identidad",
-          "text"  : "",
-          "img"   : "img/7/n-2.png"
+          "img"       : "img/7/n-2.png",
+          "text"      : "Estoy en un lugar espectacular al que me invitaron y estoy conociendo todo el proceso de transformación de los productos que fabrican y cómo utilizan los recursos de forma eficiente. ",
+          "textPos": {
+            "posY"    : 72,
+            "posX"    : 254,
+            "width"   : 183
+          }
         },
         {
-          "id"    : 3,
-          "title" : "Smishing",
-          "text"  : "",
-          "img"   : "img/7/n-3.png"
+          "img"       : "img/7/n-3.png",
+          "text"      : "Comenten y digan en dónde creen que me encuentro",
+          "textPos": {
+            "posY"    : 75,
+            "posX"    : 256,
+            "width"   : 140
+          }
         },
         {
-          "id"    : 4,
-          "title" : "Malware (software malicioso)",
-          "text"  : "",
-          "img"   : "img/7/n-4.png"
+          "img"       : "img/7/n-4.png",
+          "text"      : "Ahora sí mis queridos amigos, estoy en una de las plantas de producción de <b>Grupo Familia</b><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¡Qué emoción! <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vamos a comenzar<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;este recorrido.",
+          "textPos": {
+            "posY"    : 40,
+            "posX"    : 190,
+            "width"   : 150
+          }
         },
         {
-          "id"    : 5,
-          "title" : "Ransomware",
-          "text"  : "",
-          "img"   : "img/7/n-5.png"
+          "img"       : "img/7/n-5.png",
+          "text"      : "People, les presento a Juan, él me está haciendo este maravilloso tour y hace poco me habló de las metas ambientales que tiene <b>Grupo Familia</b> del 2017 al 2021.",
+          "textPos": {
+            "posY"    : 67,
+            "posX"    : 306,
+            "width"   : 200
+          }
         }
       ]
     }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MenuCourse from './pages/MenuCourse';
 import Footer from './Footer';
 
 import './Content.scss'
@@ -21,19 +20,16 @@ class Content extends Component {
       // INS ---------------------------------------------------------------------------------
       case 1: return( <Page1 dataPage = { data.page1 } startCourse = { clickNavigation } /> );
 
-      case 2: return( <Page2 dataPage = { data.page2 } endActivities = { endActivities[2] } checkEndActivity = { checkEndActivity } checkEnabledUnit = { checkEnabledUnit } /> );
+      case 2: return( <Page2 dataPage = { data.page2 } endActivities = { endActivities[2] } checkEndActivity = { checkEndActivity } /> );
 
-      // UNIDAD 1 ---------------------------------------------------------------------------
       case 3: return( <Page3 dataPage = { data.page3 } endActivities = { endActivities[3] } checkEndActivity = { checkEndActivity } /> );
 
       case 4: return( <Page4 dataPage = { data.page4 } endActivities = { endActivities[4] } checkEndActivity = { checkEndActivity } /> );
 
       case 5: return( <Page5 dataPage = { data.page5 } endActivities = { endActivities[5] } checkEndActivity = { checkEndActivity } /> );
 
-      case 6: return( <Page6 dataPage = { data.page6 } endActivities = { endActivities[6] } checkEndActivity = { checkEndActivity } checkEnabledUnit = { checkEnabledUnit } checkEndUnit = { checkEndUnit } /> );
-      // FIN UNIDAD 1 -----------------------------------------------------------------------
-      
-      // UNIDAD 2 ---------------------------------------------------------------------------
+      case 6: return( <Page6 dataPage = { data.page6 } endActivities = { endActivities[6] } checkEndActivity = { checkEndActivity } /> );
+
       case 7: return( <Page7 dataPage = { data.page7 } endActivities = { endActivities[7] } checkEndActivity = { checkEndActivity } /> );
 
       case 8: return( <Page8 dataPage = { data.page8 } endActivities = { endActivities[8] } checkEndActivity = { checkEndActivity } /> );
@@ -50,16 +46,12 @@ class Content extends Component {
 
       case 14: return( <Page14 dataPage = { data.page14 } endActivities = { endActivities[14] } checkEndActivity = { checkEndActivity } /> );
 
-      case 15: return( <Page15 dataPage = { data.page15 } endActivities = { endActivities[15] } checkEndActivity = { checkEndActivity } checkEnabledUnit = { checkEnabledUnit } checkEndUnit = { checkEndUnit } /> );
-      // FIN UNIDAD 2 -----------------------------------------------------------------------
+      case 15: return( <Page15 dataPage = { data.page15 } endActivities = { endActivities[15] } checkEndActivity = { checkEndActivity } /> );
 
-      // UNIDAD 3 ---------------------------------------------------------------------------
       case 16: return( <Page16 dataPage = { data.page16 } endActivities = { endActivities[16] } checkEndActivity = { checkEndActivity } /> );
 
-      case 17: return( <Page17 dataPage = { data.page17 } endActivities = { endActivities[17] } checkEndActivity = { checkEndActivity } checkEnabledUnit = { checkEnabledUnit } checkEndUnit = { checkEndUnit } /> );
-      // FIN UNIDAD 3 -----------------------------------------------------------------------
+      case 17: return( <Page17 dataPage = { data.page17 } endActivities = { endActivities[17] } checkEndActivity = { checkEndActivity } /> );
 
-      // UNIDAD 4 ---------------------------------------------------------------------------
       case 18: return( <Page18 dataPage = { data.page18 } endActivities = { endActivities[18] } checkEndActivity = { checkEndActivity } /> );
 
       case 19: return( <Page19 dataPage = { data.page19 } endActivities = { endActivities[19] } checkEndActivity = { checkEndActivity } /> );
@@ -80,22 +72,17 @@ class Content extends Component {
 
       case 27: return( <Page27 dataPage = { data.page27 } endActivities = { endActivities[27] } checkEndActivity = { checkEndActivity } /> );
 
-      case 28: return( <Page28 dataPage = { data.page28 } endActivities = { endActivities[28] } checkEndActivity = { checkEndActivity } checkEnabledUnit = { checkEnabledUnit } checkEndUnit = { checkEndUnit } /> );
-      // FIN UNIDAD 4 -----------------------------------------------------------------------
-
-      // UNIDAD 5 ---------------------------------------------------------------------------
+      case 28: return( <Page28 dataPage = { data.page28 } endActivities = { endActivities[28] } checkEndActivity = { checkEndActivity } /> );
+      
       case 29: return( <Page29 dataPage = { data.page29 } endActivities = { endActivities[29] } checkEndActivity = { checkEndActivity } /> );
 
       case 30: return( <Page30 dataPage = { data.page30 } endActivities = { endActivities[30] } checkEndActivity = { checkEndActivity } /> );
 
-      case 31: return( <Page31 dataPage = { data.page31 } endActivities = { endActivities[31] } checkEndActivity = { checkEndActivity } checkEnabledUnit = { checkEnabledUnit } checkEndUnit = { checkEndUnit } /> );
-      // FIN UNIDAD 5 -----------------------------------------------------------------------
+      case 31: return( <Page31 dataPage = { data.page31 } endActivities = { endActivities[31] } checkEndActivity = { checkEndActivity } /> );
 
-      // UNIDAD 6 ---------------------------------------------------------------------------
       case 32: return( <Page32 dataPage = { data.page32 } startQuiz = { clickNavigation } /> );
 
       case 33: return( <Page33 dataPage = { data.page33 } endQuiz = { clickNavigation } setScore = { setScore } endActivities = { endActivities[33] } checkEndActivity = { checkEndActivity } checkEnabledUnit = { checkEnabledUnit } checkEndUnit = { checkEndUnit } /> );
-      // FIN UNIDAD 4 -----------------------------------------------------------------------
 
       // END --------------------------------------------------------------------------------
       case 34: return( <Page34 dataPage = { data.page34 } calificacion = { calificacion } /> );
@@ -106,37 +93,24 @@ class Content extends Component {
   }
 
   render() {
-    const { data, enableUnit, goToPage, nextUnit, unitActual, updateActualUnit, updateNextUnit, unitFinal } = this.props;
+    const { actualIndex, bgFooter, clickNavigation, data, endActivities, imageFooter, labelFooter, limitNavigation } = this.props;
 
     return (
       <div className='content'>
         { /* LLAMADO DE LA FUNCION QUE RETORNA EL CONTENT */ }
         { this.showContent() }
 
-        { /* CARGAR DEL MENU LATERAL */ }
-        {/* <MenuCourse
-          actualIndex = { this.props.actualIndex }
-          dataPage = { data.menuCourse }
-          enableUnit = { enableUnit }
-          goToPage = { goToPage }
-          nextUnit = { nextUnit }
-          Units = { data.menuCourse.Units }
-          unitActual = { unitActual }
-          updateActualUnit = { updateActualUnit }
-          updateNextUnit = { updateNextUnit }
-          unitFinal = { unitFinal } /> */}
-
           {/* CARGA DEL COMPOMENTE FOOTER */}
         <Footer
-          actualIndex = { this.props.actualIndex }
-          bgFooter = { this.props.bgFooter }
-          clickNavigation = { this.props.clickNavigation }
-          data = { this.props.data }
-          endActivities = { this.props.endActivities }
+          actualIndex = { actualIndex }
+          bgFooter = { bgFooter }
+          clickNavigation = { clickNavigation }
+          data = { data }
+          endActivities = { endActivities }
           getPos = { this.getPos }
-          imageFooter = { this.props.imageFooter }
-          labelFooter = { this.props.labelFooter }
-          limitNavigation = { this.props.limitNavigation } />
+          imageFooter = { imageFooter }
+          labelFooter = { labelFooter }
+          limitNavigation = { limitNavigation } />
       </div>
     );
   }

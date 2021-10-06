@@ -44,7 +44,11 @@ class InteractivePath1 extends Component {
     console.log(e.target);
 
     document.getElementById(idItem).classList.add('visited');
-    document.getElementById('itemGlobe-' + (idItem)).classList.remove('dNone');
+    document.querySelector('#itemGlobe-' + (idItem)).classList.remove('itemGlobeDisabled');
+    if (document.querySelector('h4')) {
+      document.querySelector('#itemGlobe-' + (idItem) + ' h4').classList.remove('hideText');
+    }
+    document.querySelector('#itemGlobe-' + (idItem) + ' p').classList.remove('hideText');
 
     if (idItem <= multimedia.length) {
       if (idItem !== this.state.actualItem) {
@@ -94,15 +98,15 @@ class InteractivePath1 extends Component {
           multimedia.map((item, i) => {
             return(
               <div
-              className = { 'itemGlobe animated fadeIn pAbs d-Flex d-C j-C aI-C dNone' }
+              className = { 'itemGlobe animated fadeIn pAbs d-Flex d-C j-C aI-C itemGlobeDisabled' }
               id = { 'itemGlobe-' + (i + 1) }
               key = { i }
               style = { { 'top': item.itemInfo.posGlobe.posY, 'left': item.itemInfo.posGlobe.posX, 'borderColor': item.itemInfo.color } }>
                 {
-                  item.itemInfo.title ? <h4 className = 'mB-05 fw-3' dangerouslySetInnerHTML = {{ __html: item.itemInfo.title }}></h4> : null
+                  item.itemInfo.title && <h4 className = 'mB-05 fw-3 hideText' dangerouslySetInnerHTML = {{ __html: item.itemInfo.title }}></h4>
                 }
                 {
-                  item.itemInfo.text ? <p className = 'fw-3' dangerouslySetInnerHTML = {{ __html: item.itemInfo.text }}></p> : null
+                  item.itemInfo.text && <p className = 'fw-3 hideText' dangerouslySetInnerHTML = {{ __html: item.itemInfo.text }}></p>
                 }
               </div>
             );

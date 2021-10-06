@@ -1,7 +1,7 @@
 @import "../resources/colors";
 @import "../resources/animation.scss";
 
-.SlideUpDown {
+.SlideLR1 {
   .contentSlide {
     .slideBox {
       .text {
@@ -13,14 +13,14 @@
       background-color: rgba(0, 0, 0, 0);
 
       .iconButton {
-        font-size: 2.5em;
-        color: #04386D;
+        font-size: 3rem;
+        color: $titulo1;
         transition: all .3s;
       }
 
       &:hover {
         .iconButton {
-          color: $color2;
+          color: #236635;
         }
       }
     }

@@ -100,6 +100,12 @@ button {
   opacity: 0.1;
 }
 
+.hideText {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+}
+
 .dBlock { display: block; }
 
 .dNone { display: none!important; }
