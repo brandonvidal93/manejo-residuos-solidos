@@ -513,11 +513,11 @@
 
   "page9": {
     "type": "pageCourse",
-    "title"   : "2. Phishing o suplantación de identidad",
-    "text"    : "Es la estafa más habitual en Internet. Se basa en hacerse pasar por una persona o empresa de confianza para obtener datos nuestros: contraseñas, información bancaria, entre otros. Para ello, el cibercriminal utiliza la ingeniería social para que el engaño sea creíble, es decir, diseñan correos electrónicos muy parecidos al de las empresas. Un correo phishing suele tener las siguientes características:",
+    "title"   : "Sabías que...",
+    "text"    : "A continuación, te daremos más datos interesantes sobre nuestro contexto.<br> “Todo junto es basura, separado es un recurso”.",
     "instruction": {
       "type"    : "mouse",
-      "text"    : "Desliza cada número según corresponda para conocer las características.",
+      "text"    : "Haz clic sostenido en el ícono y llévalo en orden consecutivo. ",
       "posY"    : 50,
       "posX"    : 660,
       "size"    : 330,
@@ -527,48 +527,12 @@
       "dragItems": [
         {
           "drag"    : 1,
-          "img"     : "img/9/n-1.png",
+          "img"     : "img/9/drag-1.png",
           "text"    : "",
-          "posY"      : 139,
-          "posX"      : 25,
+          "posY"      : 69,
+          "posX"      : 21,
           "type"    : "1",
           "color"    : "#1586EA"
-        },
-        {
-          "drag"    : 2,
-          "img"     : "img/9/n-2.png",
-          "text"    : "",
-          "posY"      : 140,
-          "posX"      : 114,
-          "type"    : "2",
-          "color"    : "#1FBDED"
-        },
-        {
-          "drag"    : 3,
-          "img"     : "img/9/n-3.png",
-          "text"    : "",
-          "posY"      : 139,
-          "posX"      : 203,
-          "type"    : "3",
-          "color"    : "#AC0B5A"
-        },
-        {
-          "drag"    : 4,
-          "img"     : "img/9/n-4.png",
-          "text"    : "",
-          "posY"      : 140,
-          "posX"      : 291,
-          "type"    : "4",
-          "color"    : "#0A6837"
-        },
-        {
-          "drag"    : 5,
-          "img"     : "img/9/n-5.png",
-          "text"    : "",
-          "posY"      : 139,
-          "posX"      : 380,
-          "type"    : "5",
-          "color"    : "#521381"
         }
       ],
       "dropZone": {
@@ -577,94 +541,161 @@
             "key"       : 1,
             "img"       : "img/9/n-1.png",
             "target"    : "1",
-            "posY"      : 0,
-            "posX"      : 0,
+            "posY"      : 92,
+            "posX"      : 130,
             "type"      : "1",
-            "color"    : "#1586EA"
+            "color"    : "#074991"
           },
           {
             "key"       : 2,
             "img"       : "img/9/n-2.png",
             "target"    : "2",
-            "posY"      : -44,
-            "posX"      : 89,
-            "type"      : "2",
+            "posY"      : -58,
+            "posX"      : 209,
+            "type"      : "1",
             "color"    : "#1FBDED"
           },
           {
             "key"       : 3,
             "img"       : "img/9/n-3.png",
             "target"    : "3",
-            "posY"      : 0,
-            "posX"      : 178,
-            "type"      : "3",
+            "posY"      : 133,
+            "posX"      : 291,
+            "type"      : "1",
             "color"    : "#AC0B5A"
           },
           {
             "key"       : 4,
             "img"       : "img/9/n-4.png",
             "target"    : "4",
-            "posY"      : -44,
-            "posX"      : 266,
-            "type"      : "4",
+            "posY"      : -94,
+            "posX"      : 370,
+            "type"      : "1",
             "color"    : "#0A6837"
           },
           {
             "key"       : 5,
             "img"       : "img/9/n-5.png",
             "target"    : "5",
-            "posY"      : 0,
-            "posX"      : 355,
-            "type"      : "5",
+            "posY"      : 150,
+            "posX"      : 451,
+            "type"      : "1",
+            "color"    : "#521381"
+          },
+          {
+            "key"       : 6,
+            "img"       : "img/9/n-6.png",
+            "target"    : "6",
+            "posY"      : -116,
+            "posX"      : 534,
+            "type"      : "1",
+            "color"    : "#521381"
+          },
+          {
+            "key"       : 7,
+            "img"       : "img/9/n-7.png",
+            "target"    : "7",
+            "posY"      : 136,
+            "posX"      : 615,
+            "type"      : "1",
+            "color"    : "#521381"
+          },
+          {
+            "key"       : 8,
+            "img"       : "img/9/n-8.png",
+            "target"    : "8",
+            "posY"      : -55,
+            "posX"      : 694,
+            "type"      : "1",
+            "color"    : "#521381"
+          },
+          {
+            "key"       : 9,
+            "img"       : "img/9/n-9.png",
+            "target"    : "9",
+            "posY"      : 62,
+            "posX"      : 785,
+            "type"      : "1",
             "color"    : "#521381"
           }
         ],
         "infoBox": [
           {
             "target"    : "1",
-            "color"     : "#0E69A5",
-            "text"      : "Solicitan datos personales.",
-            "posY"      : 280,
+            "color"     : "#074991",
+            "text"      : "A nivel mundial se consume entre 500 y 1 billón de bolsas plásticas por año. Más de 1 millón de bolsas por minuto.",
+            "posY"      : 110,
             "posX"      : 0,
             "trian"     : "trian-1"
           },
           {
             "target"    : "2",
-            "color"     : "#19A1D0",
-            "text"      : "Solicitan descargar un archivo para ver una factura, multa, una cita judicial, entre otros.",
-            "posY"      : -30,
+            "color"     : "#00539A",
+            "text"      : "Se necesitan 100 mil barriles de petróleo para fabricar las bolsas plásticas que se utilizan cada año en el mundo.",
+            "posY"      : -45,
             "posX"      : 90,
             "trian"     : "trian-2"
           },
           {
             "target"    : "3",
-            "color"     : "#E31F83",
-            "text"      : "Solicitan hacer clic en un enlace que conduce a una página web fraudulenta o falsa.",
-            "posY"      : 290,
+            "color"     : "#2097D3",
+            "text"      : "Una bolsa tiene el potencial de matar un animal cada 3 meses, debido a la digestión o a la inhalación involuntaria.",
+            "posY"      : 147,
             "posX"      : 160,
             "trian"     : "trian-3"
           },
           {
             "target"    : "4",
-            "color"     : "#0A6837",
-            "text"      : "El correo tiene tono de urgencia.",
-            "posY"      : -20,
+            "color"     : "#9DD528",
+            "text"      : "Por cada tonelada de papel que se recicla se salvan 18 árboles.",
+            "posY"      : -60,
             "posX"      : 240,
             "trian"     : "trian-4"
           },
           {
             "target"    : "5",
-            "color"     : "#662D91",
-            "text"      : "Los escenarios de ataque phishing no se limitan al correo electrónico. Es posible ser atacado mediante mensajería instantánea o por llamada telefónica haciéndose pasar por una persona de confianza.",
-            "posY"      : 285,
-            "posX"      : 0,
+            "color"     : "#72A82F",
+            "text"      : "Una gota de aceite puede contaminar 1.000 litros de agua.",
+            "posY"      : 185,
+            "posX"      : 320,
             "trian"     : "trian-5"
+          },
+          {
+            "target"    : "6",
+            "color"     : "#085A3C",
+            "text"      : "Solo el 5 % de las bolsas plásticas son reciclables.",
+            "posY"      : -83,
+            "posX"      : 405,
+            "trian"     : "trian-6"
+          },
+          {
+            "target"    : "7",
+            "color"     : "#683E92",
+            "text"      : "El 90% de los residuos se puede reciclar, solo el 10% es basura.",
+            "posY"      : 172,
+            "posX"      : 395,
+            "trian"     : "trian-7"
+          },
+          {
+            "target"    : "8",
+            "color"     : "#F8B328",
+            "text"      : "Casi el 30 % de la basura que se genera termina en botaderos clandestinos o cuerpos de agua. ",
+            "posY"      : -40,
+            "posX"      : 353,
+            "trian"     : "trian-8"
+          },
+          {
+            "target"    : "9",
+            "color"     : "#F18E32",
+            "text"      : "El 80% de la basura que hay en el mar es plástico.",
+            "posY"      : 95,
+            "posX"      : 494,
+            "trian"     : "trian-9"
           }
         ]
       },
       "resources": {
-        "bg1": "img/9/arrow-up.png",
-        "bg2": "img/9/arrow-down.png"
+        "bg": "img/9/bgPage-9.png"
       }
     }
   },

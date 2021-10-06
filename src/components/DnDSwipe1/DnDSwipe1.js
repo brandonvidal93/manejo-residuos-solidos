@@ -25,7 +25,7 @@ class DnDSwipe1 extends Component {
     document.getElementById('infoDrop-' + (e.currentTarget.id)).classList.add('dNone');
     console.log(this.state.actualItem);
 
-    if (this.state.actualItem === 4) {
+    if (this.state.actualItem === 8) {
       this.props.isEnded(true); // SI LLEGA EL FINAL DE LA ACT ENVÍA EL TRUE
     } else {
       this.setState({
@@ -39,9 +39,14 @@ class DnDSwipe1 extends Component {
   render() {
     const { multimedia } = this.props;
 
-    // console.log(this.state);
+    const style = {
+      backgroundImage: 'url(' + multimedia.resources.bg + ')',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    };
+
     return (
-      <div className = 'DnDSwipe1'>
+      <div className = 'DnDSwipe1' style={style}>
         <audio
           className = 'audio'
           autoPlay = { '' }
@@ -52,21 +57,20 @@ class DnDSwipe1 extends Component {
           <div className = 'dropContent c-10'>
             {
               multimedia.dropZone.drops.map( (item, i) => {
-                const style = {
+                const styleDrop = {
                   'backgroundImage': 'url(' + item.img + ')',
                   'backgroundRepeat': 'no-repeat'
                 }
                 return(
-                  <div className = { 'dropBg pAbs ' + (i !== 0 ? 'disabledGray2' : '') } id = { 'dropBg-' + i }  key = { i } style = {{ ...style, 'top': item.posY, 'left': item.posX}}>
-                    {
-                      i % 2 === 0 ? <img alt = 'Imagen' className = 'arrowDown pAbs' src = { multimedia.resources.bg2 }/> : <img alt = 'Imagen' className = 'arrowUp pAbs' src = { multimedia.resources.bg1 }/>
-                    }
-                    <BoxDrop
+                  <div className = { 'dropBg pAbs ' + (i !== 0 ? '' : '') } id = { 'dropBg-' + i }  key = { i } style = {{ ...styleDrop, 'top': item.posY, 'left': item.posX}}>
+                    <BoxDrop                    
                       color = { item.color }
                       id = { item.target }
                       img = { item.img }
                       order = { item.type }
-                      type = { item.type } />
+                      type = { item.type }
+                      top={ item.posY }
+                      left={ item.posX } />
                   </div>
                 )
               })
@@ -76,10 +80,11 @@ class DnDSwipe1 extends Component {
             {
               multimedia.dragItems.map( item => {
                 return(
-                  <div key = { item.drag } className = {'pAbs'} style = {{ 'top': item.posY, 'left': item.posX }}>
+                  <div key = { item.drag } id={'dragItemPath'} className = {'pAbs'}>
                     <DragItem
                       color = { item.color }
                       id = { item.drag }
+                      img = { item.img }
                       name = { item.data }
                       path = { item.img }
                       type = { item.type } />
