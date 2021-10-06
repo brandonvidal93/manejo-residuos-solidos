@@ -6,7 +6,7 @@ import './Content.scss'
 // IMPORTAR LOS COMPONENTES DE CADA PÁGINA
 import {
   Cover, Page1, Page2, Page3, Page4, Page5, Page6, Page7, Page8, Page9, Page10, Page11, Page12, Page13, Page14,
-  Page15, Page16, Page17, Page18, Page19, Page20, Page21, Page22, Page23, Page24
+  Page15, Page16, Page17, Page18, Page19, Page20, Page21, Page22, Page23
 } from './pages/Pages';
 
 class Content extends Component {
@@ -33,13 +33,13 @@ class Content extends Component {
 
       case 8: return( <Page8 dataPage = { data.page8 } endActivities = { endActivities[8] } checkEndActivity = { checkEndActivity } /> );
 
-      case 9: return( <Page9 dataPage = { data.page9 } endActivities = { endActivities[9] } checkEndActivity = { checkEndActivity } /> );
+      case 9: return( <Page9 dataPage = { data.page9 } /> );
 
-      case 10: return( <Page10 dataPage = { data.page10 } /> );
+      case 10: return( <Page10 dataPage = { data.page10 } endActivities = { endActivities[10] } checkEndActivity = { checkEndActivity } /> );
 
-      case 11: return( <Page11 dataPage = { data.page11 } endActivities = { endActivities[11] } checkEndActivity = { checkEndActivity } /> );
+      case 11: return( <Page11 dataPage = { data.page11 } /> );
 
-      case 12: return( <Page12 dataPage = { data.page12 } /> );
+      case 12: return( <Page12 dataPage = { data.page12 } endActivities = { endActivities[12] } checkEndActivity = { checkEndActivity } /> );
 
       case 13: return( <Page13 dataPage = { data.page13 } endActivities = { endActivities[13] } checkEndActivity = { checkEndActivity } /> );
 
@@ -57,14 +57,12 @@ class Content extends Component {
 
       case 20: return( <Page20 dataPage = { data.page20 } endActivities = { endActivities[20] } checkEndActivity = { checkEndActivity } /> );
 
-      case 21: return( <Page21 dataPage = { data.page21 } endActivities = { endActivities[21] } checkEndActivity = { checkEndActivity } /> );
+      case 21: return( <Page21 dataPage = { data.page21 } startQuiz = { clickNavigation } /> );
 
-      case 22: return( <Page22 dataPage = { data.page22 } startQuiz = { clickNavigation } /> );
-
-      case 23: return( <Page23 dataPage = { data.page23 } endActivities = { endActivities[23] } checkEndActivity = { checkEndActivity } setScore = { setScore } endQuiz = { clickNavigation } /> );
+      case 22: return( <Page22 dataPage = { data.page22 } endActivities = { endActivities[22] } checkEndActivity = { checkEndActivity } setScore = { setScore } endQuiz = { clickNavigation } /> );
 
       // END --------------------------------------------------------------------------------
-      case 24: return( <Page24 dataPage = { data.page24 } calificacion = { calificacion } /> );
+      case 23: return( <Page23 dataPage = { data.page23 } calificacion = { calificacion } /> );
 
       default:
         break;

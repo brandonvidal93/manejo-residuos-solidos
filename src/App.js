@@ -51,7 +51,7 @@ class App extends Component {
     this.state = {
       calificacion: 0,
       conectLMS: false,
-      index: 23,
+      index: 0,
       nextUnit: 1,
       pages: LIMIT,
       units: UNITS,
@@ -59,7 +59,8 @@ class App extends Component {
       unitFinal: [true],
       enableUnit: [true],
       // endActivities debe ir en FALSE para permitir las restricciones, en TRUE para editar
-      endActivities: [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]
+      // endActivities: [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      endActivities: [false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, false, false, false, false, false, false, true, false, true]
     }
   }
 
@@ -210,7 +211,7 @@ class App extends Component {
       // INICIO DEL QUIZ
       case 'btnQuiz':
         this.setState({
-          index: 23
+          index: 22
         });
         tracking.saveLocation(this.state.index);
         break;
@@ -218,7 +219,7 @@ class App extends Component {
       // FINAL DEL QUIZ
       case 'buttonCloseQuizModal':
         this.setState({
-          index: 24
+          index: 23
         });
         tracking.saveLocation(this.state.index);
         break;

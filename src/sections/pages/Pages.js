@@ -275,64 +275,10 @@ class Page2 extends Component {
 }
 
 class Page3 extends Component {
-  state = {
-    openModal: false,
-    warningAnimation: true
-  }
-
-  // FUNCION PARA ABRIR MODAL
-  showModal = () => {
-    this.setState({
-      openModal: !this.state.openModal,
-      warningAnimation: !this.state.warningAnimation
-    });
-  }
-
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
     checkEndActivity(3, end);
-  }
-
-  render() {
-    const { dataPage } = this.props;
-    const { boxInfo } = this.props.dataPage;
-
-    return (
-      <div className = { 'pageContent'}>
-        { /* MUESTRA LA MODAL DE ACUERDO AL ESTADO openModal */ }
-        { this.state.openModal !== false ? <ModalVideo1 dataModal={ dataPage } showModal={ this.showModal } isEnded = { this.isEnded } /> : null }
-        <div className = 'c-10 animated fadeIn d-Flex d-C j-C aI-S'>
-          <div className = 'headerTitle c-10 d-Flex d-C j-C aI-S mB-1 mL-6 mT-7'>
-            <h2
-              className = 'F2 mB-1'
-              dangerouslySetInnerHTML = {{ __html: dataPage.headerPage.textHeader }}
-              style = {{ 'borderColor': dataPage.headerPage.color }}></h2>
-            {
-              dataPage.text && <p className = 'fw-3' dangerouslySetInnerHTML = {{ __html: dataPage.text }}></p>
-            }
-          </div>
-          <div className = 'd-Flex c-10 j-C aI-C'>
-            <button className = 'buttonVideo' onClick = { this.showModal }>
-              <img
-                alt = 'Imagen Corporativa'
-                className = 'imageFooter'
-                src = { boxInfo.imgBg }/>
-            </button>
-          </div>
-        </div>
-
-        <Instruction dataPage = { dataPage.instruction } />
-      </div>
-    );
-  }
-}
-
-class Page4 extends Component {
-  // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
-  isEnded = (end) => {
-    const { checkEndActivity } = this.props;
-    checkEndActivity(4, end);
   }
 
   render() {
@@ -359,11 +305,11 @@ class Page4 extends Component {
   }
 }
 
-class Page5 extends Component {
+class Page4 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    checkEndActivity(5, end);
+    checkEndActivity(4, end);
   }
 
   render() {
@@ -401,12 +347,12 @@ class Page5 extends Component {
   }
 }
 
-class Page6 extends Component {
+class Page5 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
     // console.log('Recibí: ' + end);
-    checkEndActivity(6, end);
+    checkEndActivity(5, end);
   }
 
   render() {
@@ -435,11 +381,11 @@ class Page6 extends Component {
   }
 }
 
-class Page7 extends Component {
+class Page6 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    checkEndActivity(7, end);
+    checkEndActivity(6, end);
   }
 
   render() {
@@ -468,7 +414,7 @@ class Page7 extends Component {
   }
 }
 
-class Page8 extends Component {
+class Page7 extends Component {
   state = {
     openModal: false,
     openModal2: false,
@@ -491,7 +437,7 @@ class Page8 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    checkEndActivity(8, end);
+    checkEndActivity(7, end);
   }
 
   render() {
@@ -536,12 +482,11 @@ class Page8 extends Component {
   }
 }
 
-class Page9 extends Component {
+class Page8 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    // console.log('Recibí: ' + end);
-    checkEndActivity(9, end);
+    checkEndActivity(8, end);
   }
 
   render() {
@@ -570,7 +515,7 @@ class Page9 extends Component {
   }
 }
 
-class Page10 extends Component {
+class Page9 extends Component {
   render() {
     const { dataPage } = this.props;
 
@@ -598,7 +543,7 @@ class Page10 extends Component {
   }
 }
 
-class Page11 extends Component {
+class Page10 extends Component {
   state = {
     openModal: false,
     warningAnimation: true
@@ -616,7 +561,7 @@ class Page11 extends Component {
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
     // console.log('Recibí: ' + end);
-    checkEndActivity(11, end);
+    checkEndActivity(10, end);
   }
 
   render() {
@@ -653,7 +598,7 @@ class Page11 extends Component {
   }
 }
 
-class Page12 extends Component {
+class Page11 extends Component {
   render() {
     const { dataPage } = this.props;
 
@@ -681,12 +626,12 @@ class Page12 extends Component {
   }
 }
 
-class Page13 extends Component {
+class Page12 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
     // console.log('Recibí: ' + end);
-    checkEndActivity(13, end);
+    checkEndActivity(12, end);
   }
 
   render() {
@@ -723,11 +668,11 @@ class Page13 extends Component {
   }
 }
 
-class Page14 extends Component {
+class Page13 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    checkEndActivity(14, end);
+    checkEndActivity(13, end);
   }
 
   render() {
@@ -756,7 +701,7 @@ class Page14 extends Component {
   }
 }
 
-class Page15 extends Component {
+class Page14 extends Component {
   state = {
     openModal: false,
   }
@@ -768,7 +713,7 @@ class Page15 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    checkEndActivity(15, end);
+    checkEndActivity(14, end);
   }
 
   render() {
@@ -803,11 +748,11 @@ class Page15 extends Component {
   }
 }
 
-class Page16 extends Component {
+class Page15 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    checkEndActivity(16, end);
+    checkEndActivity(15, end);
   }
 
   render() {
@@ -836,11 +781,11 @@ class Page16 extends Component {
   }
 }
 
-class Page17 extends Component {
+class Page16 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    checkEndActivity(17, end);
+    checkEndActivity(16, end);
   }
 
   render() {
@@ -869,11 +814,11 @@ class Page17 extends Component {
   }
 }
 
-class Page18 extends Component {
+class Page17 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    checkEndActivity(18, end);
+    checkEndActivity(17, end);
   }
 
   render() {
@@ -902,12 +847,12 @@ class Page18 extends Component {
   }
 }
 
-class Page19 extends Component {
+class Page18 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
     // console.log('Recibí: ' + end);
-    checkEndActivity(19, end);
+    checkEndActivity(18, end);
   }
 
   render() {
@@ -936,11 +881,11 @@ class Page19 extends Component {
   }
 }
 
-class Page20 extends Component {
+class Page19 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    checkEndActivity(20, end);
+    checkEndActivity(19, end);
   }
 
   render() {
@@ -968,7 +913,7 @@ class Page20 extends Component {
   }
 }
 
-class Page21 extends Component {
+class Page20 extends Component {
   state = {
     openModal: false,
     warningAnimation: true
@@ -986,7 +931,7 @@ class Page21 extends Component {
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
     // console.log('Recibí: ' + end);
-    checkEndActivity(11, end);
+    checkEndActivity(20, end);
   }
 
   render() {
@@ -1023,7 +968,7 @@ class Page21 extends Component {
   }
 }
 
-class Page22 extends Component {
+class Page21 extends Component {
   // FUNCION PARA ENVIAR EL INDEX ACTUALIZADO Y EMPEZAR EL QUIZ
   startQuiz = e => {
     e.preventDefault();
@@ -1063,11 +1008,11 @@ class Page22 extends Component {
   }
 }
 
-class Page23 extends Component {
+class Page22 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    checkEndActivity(23, end);
+    checkEndActivity(22, end);
   }
   
   // FUNCION PARA ENVIAR EL INDEX ACTUALIZADO Y EMPEZAR EL QUIZ
@@ -1099,7 +1044,7 @@ class Page23 extends Component {
   }
 }
 
-class Page24 extends Component {
+class Page23 extends Component {
   closeCourse = () => {
     // ESTO SOLO SE EJECUTA CUANDO SE INICIA EL SERVIDOR O CUANDO SE ABRE COMO EMERGENTE
     window.parent.parent.close();
@@ -1157,5 +1102,5 @@ class Page24 extends Component {
 
 export {
   Cover, Page1, Page2, Page3, Page4, Page5, Page6, Page7, Page8, Page9, Page10, Page11, Page12, Page13, Page14,
-  Page15, Page16, Page17, Page18, Page19, Page20, Page21, Page22, Page23, Page24
+  Page15, Page16, Page17, Page18, Page19, Page20, Page21, Page22, Page23
 };

@@ -99,36 +99,6 @@
 
   "page3": {
     "type": "pageCourse",
-    "headerPage": {
-      "textHeader"  : "Estrategia de sostenibilidad corporativa"
-    },
-    "title"   : "Estrategia de sostenibilidad corporativa",
-    "text"    : "",
-    "boxInfo": {
-      "title"         : "Reproducir video",
-      "text"          : "",
-      "imgBg"         : "img/3/video-3.png"
-    },
-    "modal": {
-      "type"          : "videoModal",
-      "title"         : "",
-      "text"          : "",
-      "buttonModal"   : "",
-      "closedModal"   : true,
-      "urlVideo"      : "https://content.jwplatform.com/videos/wlJ69ED2-SpzKbqXP.mp4"
-    },
-    "instruction": {
-      "type"          : "mouse",
-      "text"          : "Haz clic en el reproductor de video para conocer la información.",
-      "posY"          : 50,
-      "posX"          : 660,
-      "size"          : 330,
-      "color"         : "#FFD15C"
-    }
-  },
-
-  "page4": {
-    "type": "pageCourse",
     "title"   : "Estrategia de sostenibilidad corporativa",
     "text"    : "El Grupo Familia está comprometido como organización para llevar la gestión de sostenibilidad del step 1 al 3. De acuerdo con las implementaciones y avances que tenemos actualmente, nos podemos visualizar en el 3.",
     "background": {
@@ -210,7 +180,7 @@
     }
   },
 
-  "page5": {
+  "page4": {
     "type": "pageCourse",
     "startUnit": true,
     "nameUnit": "unit1",
@@ -294,7 +264,7 @@
     }
   },
 
-  "page6": {
+  "page5": {
     "type": "pageCourse",
     "title"   : "Metas de sostenibilidad ambiental",
     "text"    : "Conoce las metas de sostenibilidad ambiental del Grupo Familia 2017-2021 y los resultados que se obtuvieron en el 2020. Para ello, te invitamos a seguir la siguiente historia de un youtuber ambientalista que conoció una de nuestras plantas y quedó asombrado con los indicadores que tenemos. Presta mucha atención.",
@@ -411,7 +381,7 @@
     }
   },
 
-  "page7": {
+  "page6": {
     "type": "pageCourse",
     "title"   : "Consecuencias del manejo incorrecto de los residuos sólidos",
     "text"    : "Las siguientes imágenes pueden herir susceptibilidades, recomendamos discreción. Nuestro objetivo es visualizar y concientizar sobre las consecuencias de disponer de los residuos sólidos de una forma incorrecta.",
@@ -474,7 +444,7 @@
     }
   },
 
-  "page8": {
+  "page7": {
     "type": "pageCourse",
     "title"   : "Sabías que...",
     "text"    : "En el pacífico existe una isla de basura también conocida como el continente de plástico, isla tóxica, gran mancha de basura en el pacífico, gran zona de basura en el pacífico y otros nombre similares, es una zona del océano cubierta de desechos y plásticos en el centro del océano pacífico norte. Las cifras están en las siguientes imágenes. ",
@@ -511,7 +481,7 @@
     }
   },
 
-  "page9": {
+  "page8": {
     "type": "pageCourse",
     "title"   : "Sabías que...",
     "text"    : "A continuación, te daremos más datos interesantes sobre nuestro contexto.<br> “Todo junto es basura, separado es un recurso”.",
@@ -700,14 +670,14 @@
     }
   },
 
-  "page10": {
+  "page9": {
     "type": "pageCourse",
     "title"   : "Manejo integral de residuos sólidos",
     "text"    : "Conoce sobre los procedimientos necesarios para un adecuado manejo integral de residuos sólidos peligrosos y no peligrosos al interior de la plantas de producción de Grupo Familia.<br><br>Para ello, profundizaremos sobre los siguientes temas:",
     "img"     : "img/10/n-1.png"
   },
 
-  "page11": {
+  "page10": {
     "type": "pageCourse",
     "headerPage": {
       "textHeader"  : "Qué es un residuo y su marco normativo"
@@ -725,7 +695,7 @@
       "text"          : "",
       "buttonModal"   : "",
       "closedModal"   : true,
-      "urlVideo"      : "https://content.jwplatform.com/videos/8eQP4txt-SpzKbqXP.mp4"
+      "urlVideo"      : "https://content.jwplatform.com/videos/wlJ69ED2-SpzKbqXP.mp4"
     },
     "instruction": {
       "type"          : "mouse",
@@ -737,14 +707,14 @@
     }
   },
 
-  "page12": {
+  "page11": {
     "type": "pageCourse",
     "title"   : "Manejo Integral de Residuos (MIR)",
     "text"    : "El Manejo Integral de Residuos tiene como meta el que todos los colaboradores de las diferentes áreas de la Compañía manejen adecuadamente sus residuos sólidos peligrosos y no peligrosos, a través del uso de la escala de colores definida para clasificar los residuos sólidos generados.<br><br>Lleva en orden consecutivo cada círculo para concer la información.",
     "img"     : "img/12/n-1.png"
   },
 
-  "page13": {
+  "page12": {
     "type": "pageCourse",
     "title"   : "Fases de la generación de residuos",
     "text"    : "<b>Separar en la fuente</b> los diferentes residuos sólidos que se generan a diario, es un acto responsable con la humanidad y con el planeta. ",
@@ -835,7 +805,7 @@
     ]
   },
 
-  "page14": {
+  "page13": {
     "type": "pageCourse",
     "title"   : "Sabías que...",
     "text"    : "Cada año Colombia genera cerca de 12 millones de toneladas de residuos, de los cuales solo el 17% es reciclado, lo que deja un amplio margen de crecimiento para la reutilización. <b>(Cempre, 2020)</b><br><br>Para ayudar a incrementar esta cifra, te explicaremos cuál es la clasificación de los residuos para que lo empieces a aplicar en tu vida cotidiana.",
@@ -888,7 +858,7 @@
     ]
   },
 
-  "page15": {
+  "page14": {
     "type": "pageCourse",
     "title"   : "Código de colores para la separación de residuos",
     "text"    : "",
@@ -963,7 +933,7 @@
     }
   },
 
-  "page16": {
+  "page15": {
     "type": "pageCourse",
     "title"   : "¿Cómo estamos implementando este cambio?",
     "text"    : "En Grupo Familia somos conscientes que los cambios son importantes y planear cada paso para implementar las mejoras es más importante. Es por esto que te presentamos “La Ruta del Cambio - Residuos Sólidos”. Acompáñanos para aprender, identificar y aplicar este conocimiento no solamente en la Compañía sino también en tu hogar. Esta es nuestra ruta:",
@@ -1056,7 +1026,7 @@
     }
   },
 
-  "page17": {
+  "page16": {
     "type": "pageCourse",
     "title"   : "Paso 1 y 2. Educación e identificación de las bolsas",
     "text"    : "Grupo Familia Colombia aprovecha el 95,6% de los residuos evitando que lleguen a rellenos sanitarios. A través de la siguiente actividad aprenderás a reconocer y clasificar los residuos a partir del color. Este será nuestro primer paso en nuestro proceso de transición.",
@@ -1238,7 +1208,7 @@
     }
   },
 
-  "page18": {
+  "page17": {
     "type": "pageCourse",
     "title"   : "Sabías que...",
     "text"    : "Cada año Colombia genera cerca de 12 millones de toneladas de residuos, de los cuales solo el 17% es reciclado, lo que deja un amplio margen de crecimiento para la reutilización. <b>(Cempre, 2020)</b><br><br>Para ayudar a incrementar esta cifra, te explicaremos cuál es la clasificación de los residuos para que lo empieces a aplicar en tu vida cotidiana.",
@@ -1311,7 +1281,7 @@
     ]
   },
 
-  "page19": {
+  "page18": {
     "type": "pageCourse",
     "title"   : "Seguridad en las conversaciones",
     "text"    : "Ser cauto y utilizar un tono de voz adecuado cuando se comparte información a través de conversaciones. Evita hablar de temas sensibles en estos escenarios:",
@@ -1343,7 +1313,7 @@
     ]
   },
 
-  "page20": {
+  "page19": {
     "type"        : "pageCourse",
     "title"   : "Recuerda lo aprendido",
     "text"    : "¿Cómo será el plan de migración de las plantas en Grupo Familia? Juega el siguiente concéntrese e identifica correctamente los años con cada uno de los pasos.",
@@ -1403,7 +1373,7 @@
     }
   },
 
-  "page21": {
+  "page20": {
     "type": "pageCourse",
     "headerPage": {
       "textHeader"  : "Beneficios del manejo integral de residuos"
@@ -1433,7 +1403,7 @@
     }
   },
 
-  "page22": {
+  "page21": {
     "type": "pageCourse",
     "title"   : "Te invitamos a realizar la evaluación final del curso",
     "text"    : "Responde a continuación las preguntas para que evaluemos el aprendizaje que hemos logrado en esta formación.",
@@ -1441,7 +1411,7 @@
     "bg": "img/22/bgPage-22.png"
   },
 
-  "page23": {
+  "page22": {
     "type": "pageCourse",
     "title"   : "Evaluación final",
     "text"    : "",
@@ -1770,7 +1740,7 @@
     }
   },
 
-  "page24": {
+  "page23": {
     "type"            : "endCourse",
     "message": {
       "success": {
