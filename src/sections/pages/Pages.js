@@ -940,7 +940,6 @@ class Page20 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    // console.log('Recibí: ' + end);
     checkEndActivity(20, end);
   }
 
@@ -1068,8 +1067,12 @@ class Page23 extends Component {
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
-    // console.log('Recibí: ' + end);
     checkEndActivity(23, end);
+  }
+  
+  // FUNCION PARA ENVIAR EL INDEX ACTUALIZADO Y EMPEZAR EL QUIZ
+  endQuiz = (buttonPress) => {
+    this.props.endQuiz(buttonPress);
   }
 
   render() {
@@ -1077,33 +1080,21 @@ class Page23 extends Component {
 
     return (
       <div className = { 'pageContent'}>
-        <div className = 'headerTitle d-Flex d-Rr j-E aI-C mB-1 mL-4 mT-2'>
-          <h2
-            className = 'textHeader F2'
-            dangerouslySetInnerHTML = {{ __html: dataPage.headerPage.textHeader }}
-            style = {{ 'borderColor': dataPage.headerPage.color }}></h2>
-
-          <FontAwesomeIcon icon="play" size = 'lg' className = 'mL-025 mR-05' style = {{ 'color': '#EAEAEA' }} />
-
-          <img alt = 'Imagen' className = '' src = { dataPage.headerPage.imgHeader }/>
-        </div>
-
-        <div className = 'c-10 animated fadeIn c-10 d-Flex j-C aI-C'>
-          <div className = 'mL-7 c-35'> 
+        <div className = 'c-10 animated fadeIn d-Flex d-C j-C aI-S'>
+          <div className = 'headerTitle c-75 d-Flex d-C j-C aI-S mL-5 mT-3'>
             {
-              dataPage.title ? <h2 className = 'mB-1 fw-4' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h2> : null
+              dataPage.title ? <h2 className = 'F2' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h2> : null
             }
             {
-              dataPage.text ? <p className = 'mB-2 fw-3' dangerouslySetInnerHTML = {{ __html: dataPage.text }}></p> : null
+              dataPage.text ? <p className = 'fw-3' dangerouslySetInnerHTML = {{ __html: dataPage.text }}></p> : null
             }
           </div>
-          <div className = 'd-Flex c-45 j-C aI-C'>
-            <ModalCircle3 dataPage = { dataPage } isEnded = { this.isEnded } />
+
+          <div className = 'mL-5 c-9'>
+            <Quiz1 multimedia = { dataPage.multimedia } isEnded = { this.isEnded } endQuiz = { this.endQuiz } setScore = { this.props.setScore } />
           </div>
         </div>
-
-        <Instruction dataPage = { dataPage.instruction } />
-      </div>  
+      </div>
     );
   }
 }

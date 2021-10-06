@@ -61,7 +61,7 @@ class Content extends Component {
 
       case 22: return( <Page22 dataPage = { data.page22 } startQuiz = { clickNavigation } /> );
 
-      case 23: return( <Page23 dataPage = { data.page23 } endActivities = { endActivities[23] } checkEndActivity = { checkEndActivity } /> );
+      case 23: return( <Page23 dataPage = { data.page23 } endActivities = { endActivities[23] } checkEndActivity = { checkEndActivity } setScore = { setScore } endQuiz = { clickNavigation } /> );
 
       // END --------------------------------------------------------------------------------
       case 24: return( <Page24 dataPage = { data.page24 } calificacion = { calificacion } /> );

@@ -1443,122 +1443,330 @@
 
   "page23": {
     "type": "pageCourse",
-    "title"   : "Puesto de trabajo",
-    "text"    : "Proteger documentos en papel y dispositivos de almacenamiento removibles, a fin de reducir los riesgos de acceso no autorizado, pérdida y daño de la información.",
-    "instruction": {
-      "type"          : "mouse",
-      "text"          : "Haz clic en cada uno de los botones para ver las recomendaciones.",
-      "posY"          : 50,
-      "posX"          : 660,
-      "size"          : 330,
-      "color"         : "#FFD15C"
-    },
-    "multimedia": [
-      {
-        "urlImgBtn"         : "img/23/n-1.png",
-        "title"             : "Disponibilidad",
-        "posY"              : 230,
-        "posX"              : -10,
-        "itemInfo": {
-          "title"           : "01",
-          "text1"           : "No dejes en el escritorio llaves, identificación o medio de acceso que tengas bajo tu responsabilidad.",
-          "text2"           : "",
-          "colorText"       : "#023974",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
+    "title"   : "Evaluación final",
+    "text"    : "",
+    "multimedia": {
+      "modal": {
+        "check": {
+          "title"         : "¡Muy bien!",
+          "text"          : "Aprobaste exitosamente la evaluación de conocimientos. Has demostrado tu compromiso e interés por conocer sobre este tema, continúa con esta actitud positiva y obtendrás grandes resultados.",
+          "img"           : "img/23/check.png"
+        },
+        "error": {
+          "title"         : "¡Inténtalo nuevamente!",
+          "text"          : "No lograste superar el porcentaje. Te invitamos a realizar nuevamente la evaluación final, si lo requieres puedes volver al contenido y reforzar los conocimientos. Esta vez lo harás mejor.",
+          "img"           : "img/23/error.png"
         }
       },
-      {
-        "urlImgBtn"         : "img/23/n-2.png",
-        "title"             : "",
-        "posY"              : 50,
-        "posX"              : -10,
-        "itemInfo": {
-          "title"           : "02",
-          "text1"           : "No dejes visible en pantalla información reservada y/o confidencial.",
-          "text2"           : "",
-          "colorText"       : "#074991",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
+      "questions": [
+        {
+          "type": "DnD",
+          "instruction"   : "",
+          "statement"     : "<b>1.</b> De acuerdo con el conocimiento adquirido, deposita en cada recipiente el residuo que corresponda.",
+          "dnd": {
+            "dragItems": [
+              {
+                "drag"    : 1,
+                "img"     : "img/23/drag-1.png",
+                "text"    : "Cajas de cartón",
+                "type"    : "3",
+                "data"    : ""
+              },
+              {
+                "drag"    : 2,
+                "img"     : "img/23/drag-2.png",
+                "text"    : "Empaque de mecato",
+                "type"    : "2",
+                "data"    : ""
+              },
+              {
+                "drag"    : 3,
+                "img"     : "img/23/drag-3.png",
+                "text"    : "Servilleta usada",
+                "type"    : "2",
+                "data"    : ""
+              },
+              {
+                "drag"    : 4,
+                "img"     : "img/23/drag-4.png",
+                "text"    : "Sobras de comida",
+                "type"    : "1",
+                "data"    : ""
+              },
+              {
+                "drag"    : 5,
+                "img"     : "img/23/drag-5.png",
+                "text"    : "Hojas de papel",
+                "type"    : "3",
+                "data"    : ""
+              },
+              {
+                "drag"    : 6,
+                "img"     : "img/23/drag-6.png",
+                "text"    : "Envase plástico",
+                "type"    : "3",
+                "data"    : ""
+              }
+            ],
+            "dropZone": {
+              "drops": [
+                {
+                  "key"       : 1,
+                  "img"       : "img/23/drop-1.png",
+                  "text"      : "img/23/check-1.png",
+                  "target"    : "1",
+                  "size"      : 136,
+                  "posY"      : 44,
+                  "posX"      : 86,
+                  "type"      : "1",
+                  "limit"     : 2
+                },
+                {
+                  "key"       : 2,
+                  "img"       : "img/23/drop-2.png",
+                  "text"      : "img/23/check-1.png",
+                  "target"    : "2",
+                  "size"      : 136,
+                  "posY"      : 107,
+                  "posX"      : 195,
+                  "type"      : "2",
+                  "limit"     : 2
+                },
+                {
+                  "key"       : 3,
+                  "img"       : "img/23/drop-3.png",
+                  "text"      : "img/23/check-1.png",
+                  "target"    : "3",
+                  "size"      : 136,
+                  "posY"      : 44,
+                  "posX"      : 304,
+                  "type"      : "3",
+                  "limit"     : 3
+                },
+                {
+                  "key"       : 4,
+                  "img"       : "img/23/drop-4.png",
+                  "text"      : "img/23/check-1.png",
+                  "target"    : "4",
+                  "size"      : 136,
+                  "posY"      : 107,
+                  "posX"      : 414,
+                  "type"      : "4",
+                  "limit"     : 2
+                }
+              ],
+              "infoBox": [
+                {
+                  "target"        : "1",
+                  "title"         : "¡Bien hecho!",
+                  "colorTitle"    : "",
+                  "subTitle"      : "",
+                  "text"          : "Has recordado y asociado correctamente cada una de las amenazas de acuerdo con su definición."
+                }
+              ]
+            },
+            "bg": "img/8/bgPage-8.png"
           }
-        }
-      },
-      {
-        "urlImgBtn"         : "img/23/n-3.png",
-        "title"             : "",
-        "posY"              : -30,
-        "posX"              : 137,
-        "itemInfo": {
-          "title"           : "03",
-          "text1"           : "Recoge siempre los documentos que mandes a imprimir, principalmente si la impresora es compartida.",
-          "text2"           : "",
-          "colorText"       : "#2171B3",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
+        },
+        {
+          "type": "LabelDnD",
+          "instruction"   : "",
+          "statement"     : "<b>2.</b> Selecciona correctamente el color de las bolsas para cada tipo de residuo.",
+          "labelDnD": {
+            "dragItem": [
+              {
+                "id": 1,
+                "text": "color de las bolsas",
+                "color": "#004991"
+              },
+              {
+                "id": 2,
+                "text": "Bolsa antigua",
+                "color": "#E31F83"
+              },
+              {
+                "id": 3,
+                "text": "Bolsa",
+                "color": "#085A3C"
+              },
+              {
+                "id": 4,
+                "text": "código de colores",
+                "color": "#86BF41"
+              },
+              {
+                "id": 5,
+                "text": "color de los contenedores",
+                "color": "#002C57"
+              },
+              {
+                "id": 6,
+                "text": "contenedores nuevos",
+                "color": "#F18E32"
+              },
+              {
+                "id": 7,
+                "text": "contenedores antiguos",
+                "color": "#189BDB"
+              },
+              {
+                "id": 8,
+                "text": "correcta separación",
+                "color": "#683E92"
+              },
+              {
+                "id": 9,
+                "text": "Incorrecta correcta separación",
+                "color": "#F8B328"
+              }
+            ],
+            "dropZone": {
+              "limit": 9,
+              "paragraph": [
+                {
+                  "key": 1,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "Para la adecuada separación de residuos aprendamos a identificar el",
+                      "posY": 30,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 1,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 20,
+                      "posX": 476,
+                      "size": 150,
+                      "type": "código de colores"
+                    }
+                  ]
+                },
+                {
+                  "key": 2,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "La separación de residuos debe empezar por la identificación del color de la ",
+                      "posY": 10,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 1,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": 0,
+                      "posX": 515,
+                      "size": 150,
+                      "type": "Bolsa"
+                    }
+                  ]
+                },
+                {
+                  "key": 3,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "A pesar de no coincidir con la escala de colores actual, vamos a reutilizar nuestros",
+                      "posY": -9,
+                      "posX": 40
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 1,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": -19,
+                      "posX": 556,
+                      "size": 150,
+                      "type": "contenedores nuevos"
+                    }
+                  ]
+                },
+                {
+                  "key": 4,
+                  "lines": [
+                    {
+                      "key": 1,
+                      "text": "En tu planta el",
+                      "posY": -30,
+                      "posX": 40
+                    },
+                    {
+                      "key": 2,
+                      "text": "nos indicará cómo hacer la",
+                      "posY": -30,
+                      "posX": 285
+                    }
+                  ],
+                  "drops": [
+                    {
+                      "key": 1,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": -39,
+                      "posX": 125,
+                      "size": 150,
+                      "type": "color de las bolsas"
+                    },
+                    {
+                      "key": 2,
+                      "box": "<div class = 'boxDrop'></div>",
+                      "posY": -39,
+                      "posX": 455,
+                      "size": 150,
+                      "type": "correcta separación"
+                    }
+                  ]
+                }
+              ]
+            },
+            "content": [
+              {
+                "info": 1,
+                "img": "img/check.png",
+                "imgSize": 150,
+                "title": "¡Muy bien!",
+                "text": "<p>Ahora ya conoces el concepto de persona jurídica y las responsabilidades tributarias que adquiere cada una. </p>"
+              }
+            ]
           }
+        },
+        {
+          "type"          : "single",
+          "instruction"   : "Selecciona la respuesta correcta.",
+          "statement"     : "<b>3.</b> ¿Cuáles son los beneficios que ofrece la separación de residuos en nuestras áreas de trabajo?",
+          "img": "img/23/img-1.png",
+          "options": [
+            {
+              "type"      : "A",
+              "text"      : "Relacionamiento con grupos de interés",
+              "value"     : false,
+              "color"     : "#86BF41"
+            },
+            {
+              "type"      : "B",
+              "text"      : "Aumento de las inversiones y ventas",
+              "value"     : false,
+              "color"     : "#F3B229"
+            },
+            {
+              "type"      : "C",
+              "text"      : "Ambientales, sociales, económicos y de salud.",
+              "value"     : true,
+              "color"     : "#189BDB"
+            },
+            {
+              "type"      : "D",
+              "text"      : "Todas las anteriores.",
+              "value"     : false,
+              "color"     : "#E21485"
+            }
+          ]
         }
-      },
-      {
-        "urlImgBtn"         : "img/23/n-4.png",
-        "title"             : "",
-        "posY"              : 50,
-        "posX"              : 284,
-        "itemInfo": {
-          "title"           : "04",
-          "text1"           : "No pegues notas en el monitor o en un espacio visible con información reservada y/o confidencial.",
-          "text2"           : "",
-          "colorText"       : "#2097D3",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
-        }
-      },
-      {
-        "urlImgBtn"         : "img/23/n-5.png",
-        "title"             : "",
-        "posY"              : 230,
-        "posX"              : 284,
-        "itemInfo": {
-          "title"           : "05",
-          "text1"           : "Resguarda documentos impresos y medios de almacenamiento con información reservada y/o confidencial bajo llave.",
-          "text2"           : "",
-          "colorText"       : "#89C240",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
-        }
-      },
-      {
-        "urlImgBtn"         : "img/23/n-6.png",
-        "title"             : "",
-        "posY"              : 310,
-        "posX"              : 135,
-        "itemInfo": {
-          "title"           : "06",
-          "text1"           : "Bloquea tus equipos cuando te ausentes.",
-          "text2"           : "",
-          "colorText"       : "#683E92",
-          "buttonClose": {
-            "closedModal"   : true,
-            "posY"          : 35,
-            "posX"          : 82
-          }
-        }
-      }
-    ],
-    "resources": {
-      "bgImg": "img/23/bgPage-23.png"
+      ]
     }
   },
 
