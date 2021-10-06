@@ -1209,66 +1209,56 @@ class Page23 extends Component {
 }
 
 class Page24 extends Component {
-  state = {
-    openModal: false,
-    warningAnimation: true
-  }
-
-  // FUNCION PARA ABRIR MODAL
-  showModal = () => {
-    this.setState({
-      openModal: !this.state.openModal,
-      warningAnimation: !this.state.warningAnimation
-    });
-  }
-
-  // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
-  isEnded = (end) => {
-    const { checkEndActivity } = this.props;
-    // console.log('Recibí: ' + end);
-    checkEndActivity(24, end);
+  closeCourse = () => {
+    // ESTO SOLO SE EJECUTA CUANDO SE INICIA EL SERVIDOR O CUANDO SE ABRE COMO EMERGENTE
+    window.parent.parent.close();
   }
 
   render() {
-    const { dataPage } = this.props;
-    const { boxInfo } = this.props.dataPage;
 
-    return (
-      <div className = { 'pageContent'}>
-        { /* MUESTRA LA MODAL DE ACUERDO AL ESTADO openModal */ }
-        { this.state.openModal !== false ? <ModalVideo1 dataModal={ dataPage } showModal={ this.showModal } isEnded = { this.isEnded } /> : null }
+    const { dataPage, calificacion } = this.props;
 
-        <div className = 'headerTitle d-Flex d-Rr j-E aI-C mB-1 mL-4 mT-2'>
-          <h2
-            className = 'textHeader F2'
-            dangerouslySetInnerHTML = {{ __html: dataPage.headerPage.textHeader }}
-            style = {{ 'borderColor': dataPage.headerPage.color }}></h2>
+    const style = {
+      backgroundImage: 'url(' + dataPage.background.bg + ')',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }
 
-          <FontAwesomeIcon icon="play" size = 'lg' className = 'mL-025 mR-05' style = {{ 'color': '#EAEAEA' }} />
+    return(
+      <div className={ (dataPage.type) + ' animated fadeIn' } style = { style }>
+        <div className="c-8 d-Flex d-C j-C aI-C">
+          {
+            dataPage.message.success.title ? <h1 className = 'mB-1 F2 titulo2 tCenter fw-7' dangerouslySetInnerHTML = {{ __html: calificacion >= 70 ? dataPage.message.success.title : dataPage.message.error.title }}></h1> : null
+          }
+          
+          {
+            dataPage.message.success.module ? <h3 className = 'mB-1 tCenter' dangerouslySetInnerHTML = {{ __html: calificacion >= 70 ? dataPage.message.success.module : dataPage.message.error.module }}></h3> : null
+          }
+          {
+            dataPage.message.success.courseName ? <p className = 'c-8 mB-2 tCenter' dangerouslySetInnerHTML = {{ __html: calificacion >= 70 ? dataPage.message.success.courseName : dataPage.message.error.courseName }}></p> : null
+          }
+          {
+            dataPage.message.success.subTitle ? <h2 className = 'mB-2 F2 tCenter titulo2' dangerouslySetInnerHTML = {{ __html: calificacion >= 70 ? dataPage.message.success.subTitle : dataPage.message.error.subTitle }}></h2> : null
+          }
+          {
+            dataPage.logoCourse && <img
+              alt = 'Imagen Corporativa'
+              className = 'mB-2'
+              src = { dataPage.logoCourse }/>
+          }
+          {
+            dataPage.buttonEnd ? 
+              <h2 
+                className = 'blanco tCenter fw-3 buttonEnd' 
+                dangerouslySetInnerHTML = {{ __html: dataPage.buttonEnd }}
+                onClick = { this.closeCourse }
+                style = {{ 'cursor': 'pointer' }} /> : 
+              null
+          }
 
-          <img alt = 'Imagen' className = '' src = { dataPage.headerPage.imgHeader }/>
+          { /* Restricción de avance <div className = { 'restrict-3 ' + (endActivities === true ? 'dNone' : '') } /> */ }
         </div>
 
-        <div className = 'c-10 animated fadeIn c-10 d-Flex j-Bt aI-C'>
-          <div className = 'mL-7 c-3 mT-3 mR-2'> 
-            {
-              dataPage.title ? <h2 className = 'mB-1 fw-4' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h2> : null
-            }
-            {
-              dataPage.text ? <p className = 'mB-2 fw-3' dangerouslySetInnerHTML = {{ __html: dataPage.text }}></p> : null
-            }
-          </div>
-          <div className = 'd-Flex c-45 j-C aI-C mT-2'>
-            <button className = 'buttonVideo mR-6' onClick = { this.showModal }>
-              <img
-                alt = 'Imagen Corporativa'
-                className = 'imageFooter'
-                src = { boxInfo.imgBg }/>
-            </button>
-          </div>
-        </div>
-
-        <Instruction dataPage = { dataPage.instruction } />
       </div>
     );
   }

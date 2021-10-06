@@ -1542,29 +1542,26 @@
   },
 
   "page24": {
-    "type": "pageCourse",
-    "title"   : "Redes sociales",
-    "text"    : "“Si no eres capaz de decirlo o hacerlo en un escenario, no lo digas ni lo hagas en las redes sociales”.",
-    "boxInfo": {
-      "title"         : "Reproducir video",
-      "text"          : "",
-      "imgBg"         : "img/play-1.png"
+    "type"            : "endCourse",
+    "message": {
+      "success": {
+        "title"       : "¡Has llegado al final de este recorrido!",
+        "subTitle"    : "¡Muchas gracias!",
+        "module"      : "",
+        "courseName"  : "Estamos seguros que tienes nuevos aprendizajes y que pondrás en práctica las recomendaciones que hemos entregado a lo largo del curso. Sé parte del cambio, contribuye con nuestro planeta, recuerda que con tus buenas prácticas protegemos lo nuestro.<br><br><b>“Si nada cambia y tú cambias, toda cambia”. Autor: Marcel Proust</b>"
+      },
+      "error": {
+        "title"       : "¡No has cumplido con el objetivo!",
+        "subTitle"    : "¡Muchos éxitos!",
+        "module"      : "",
+        "courseName"  : "Te invitamos a realizar nuevamente la evaluación, esta vez lo harás mejor. <br><br>Concéntrate en las 3 preguntas que hemos preparado para ti."
+      }
     },
-    "modal": {
-      "type"          : "videoModal",
-      "title"         : "",
-      "text"          : "",
-      "buttonModal"   : "",
-      "closedModal"   : true,
-      "urlVideo"      : "https://content.jwplatform.com/videos/noKRF1Ae-SpzKbqXP.mp4"
+    "logoCourse"      : "img/cover/logo-1.png",
+    "logoFooter"      : "img/cover/logo-2.png",
+    "background": {
+      "bg"            : "img/cover/fondo-end.png"
     },
-    "instruction": {
-      "type"          : "mouse",
-      "text"          : "Visualiza el siguiente video para conocer las razones y la importancia de proteger nuestros datos en las redes sociales.",
-      "posY"          : 50,
-      "posX"          : 660,
-      "size"          : 330,
-      "color"         : "#FFD15C"
-    }
+    "buttonEnd"       : "Finalizar"
   }
 }
