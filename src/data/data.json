@@ -965,30 +965,94 @@
 
   "page16": {
     "type": "pageCourse",
-    "startUnit": true,
-    "nameUnit": "unit3",
-    "title"   : "Dispositivos móviles",
-    "text"    : "Visualiza el siguiente video y conoce la seguridad de la información en los dispositivos móviles.",
-    "boxInfo": {
-      "title"         : "Reproducir video",
-      "text"          : "",
-      "imgBg"         : "img/play-1.png"
-    },
-    "modal": {
-      "type"          : "videoModal",
-      "title"         : "",
-      "text"          : "",
-      "buttonModal"   : "",
-      "closedModal"   : true,
-      "urlVideo"      : "https://content.jwplatform.com/videos/CH2R3POg-SpzKbqXP.mp4"
-    },
+    "title"   : "¿Cómo estamos implementando este cambio?",
+    "text"    : "En Grupo Familia somos conscientes que los cambios son importantes y planear cada paso para implementar las mejoras es más importante. Es por esto que te presentamos “La Ruta del Cambio - Residuos Sólidos”. Acompáñanos para aprender, identificar y aplicar este conocimiento no solamente en la Compañía sino también en tu hogar. Esta es nuestra ruta:",
     "instruction": {
-      "type"          : "mouse",
-      "text"          : "Haz clic en el reproductor de video para conocer la información.",
-      "posY"          : 50,
-      "posX"          : 660,
-      "size"          : 330,
-      "color"         : "#FFD15C"
+      "type"    : "mouse",
+      "text"    : "Haz clic sostenido en cada ícono y llévalo al recipiente correcto de acuerdo con su color.",
+      "posY"    : 50,
+      "posX"    : 660,
+      "size"    : 340,
+      "color"   : "#FFD15C"
+    },
+    "multimedia": {
+      "bg": "img/16/bgPage-16.png",
+      "row1": {
+        "col1": [
+          {
+            "img": "img/16/n-1.png",
+            "id" : "btnN1"
+          }
+        ],
+        "col2": [
+          {
+            "img" : "img/16/paso-1.png",
+            "id" : "btnPaso1"
+          },
+          {
+            "img" : "img/16/paso-2.png",
+            "id" : "btnPaso2"
+          }
+        ],
+        "col3": [
+          {
+            "img" : "img/16/educacion-1.png",
+            "id" : "btnEducacion1"
+          },
+          {
+            "img" : "img/16/bolsas-1.png",
+            "id" : "btnBolsas1"
+          }
+        ],
+        "col4": [
+          {
+            "img" : "img/16/educacion-2.png",
+            "id" : "btnEducacion2"
+          },
+          {
+            "img" : "img/16/bolsas-2.png",
+            "id" : "btnBolsas2"
+          }
+        ]
+      },
+      "row2": {
+        "col1": [
+          {
+            "img": "img/16/n-2.png",
+            "id" : "btnN2"
+          }
+        ],
+        "col2": [
+          {
+            "img" : "img/16/paso-3.png",
+            "id" : "btnPaso3"
+          },
+          {
+            "img" : "img/16/paso-4.png",
+            "id" : "btnPaso4"
+          }
+        ],
+        "col3": [
+          {
+            "img" : "img/16/contenedores-1.png",
+            "id" : "btnContenedores1"
+          },
+          {
+            "img" : "img/16/metricas-1.png",
+            "id" : "btnMetricas1"
+          }
+        ],
+        "col4": [
+          {
+            "img" : "img/16/contenedores-2.png",
+            "id" : "btnContenedores2"
+          },
+          {
+            "img" : "img/16/metricas-2.png",
+            "id" : "btnMetricas2"
+          }
+        ]
+      }
     }
   },
 
