@@ -476,172 +476,38 @@
 
   "page8": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-2.png",
-      "textHeader"  : "Amenazas",
-      "color"       : "#5C2481"
-    },
-    "title"   : "1. Ingeniería social",
-    "text"    : "",
+    "title"   : "Sabías que...",
+    "text"    : "En el pacífico existe una isla de basura también conocida como el continente de plástico, isla tóxica, gran mancha de basura en el pacífico, gran zona de basura en el pacífico y otros nombre similares, es una zona del océano cubierta de desechos y plásticos en el centro del océano pacífico norte. Las cifras están en las siguientes imágenes. ",
     "instruction": {
       "type"    : "mouse",
-      "text"    : "Lleva en orden consecutivo cada ícono en donde corresponda para conocer la información.",
+      "text"    : "Haz clic en las imágenes para conocerlas.",
       "posY"    : 50,
       "posX"    : 660,
       "size"    : 330,
       "color"   : "#FFD15C"
     },
     "multimedia": {
-      "dragItems": [
+      "buttonModal": {
+        "title"       : "",
+        "text"        : "",
+        "imgBg1"       : "img/8/n-1.png",
+        "imgBg2"       : "img/8/n-2.png"
+      },
+      "gallery": [
         {
-          "drag"    : 1,
-          "img"     : "img/8/n-1.png",
-          "text"    : "",
-          "type"    : "4",
-          "data"    : ""
-        },
-        {
-          "drag"    : 2,
-          "img"     : "img/8/n-2.png",
-          "text"    : "",
-          "type"    : "3",
-          "data"    : ""
-        },
-        {
-          "drag"    : 3,
-          "img"     : "img/8/n-3.png",
-          "text"    : "",
-          "type"    : "6",
-          "data"    : ""
-        },
-        {
-          "drag"    : 4,
-          "img"     : "img/8/n-4.png",
-          "text"    : "",
-          "type"    : "1",
-          "data"    : ""
-        },
-        {
-          "drag"    : 5,
-          "img"     : "img/8/n-5.png",
-          "text"    : "",
-          "type"    : "5",
-          "data"    : ""
-        },
-        {
-          "drag"    : 6,
-          "img"     : "img/8/n-6.png",
-          "text"    : "",
-          "type"    : "2",
-          "data"    : ""
+          "key"   : 1,
+          "img"   : "img/8/n-1.png",
+          "link"  : ""
         }
       ],
-      "dropZone": {
-        "drops": [
-          {
-            "key"       : 1,
-            "img"       : "img/8/n-4.png",
-            "target"    : "4",
-            "size"      : 136,
-            "posY"      : 44,
-            "posX"      : 86,
-            "type"      : "1"
-          },
-          {
-            "key"       : 2,
-            "img"       : "img/8/n-6.png",
-            "target"    : "6",
-            "size"      : 136,
-            "posY"      : 107,
-            "posX"      : 195,
-            "type"      : "2"
-          },
-          {
-            "key"       : 3,
-            "img"       : "img/8/n-2.png",
-            "target"    : "2",
-            "size"      : 136,
-            "posY"      : 44,
-            "posX"      : 304,
-            "type"      : "3"
-          },
-          {
-            "key"       : 4,
-            "img"       : "img/8/n-1.png",
-            "target"    : "1",
-            "size"      : 136,
-            "posY"      : 107,
-            "posX"      : 414,
-            "type"      : "4"
-          },
-          {
-            "key"       : 5,
-            "img"       : "img/8/n-5.png",
-            "target"    : "5",
-            "size"      : 136,
-            "posY"      : 44,
-            "posX"      : 524,
-            "type"      : "5"
-          },
-          {
-            "key"       : 6,
-            "img"       : "img/8/n-3.png",
-            "target"    : "3",
-            "size"      : 136,
-            "posY"      : 107,
-            "posX"      : 633,
-            "type"      : "6"
-          }
-        ],
-        "infoBox": [
-          {
-            "target"        : "4",
-            "title"         : "",
-            "colorTitle"    : "",
-            "subTitle"      : "",
-            "text"          : "Es un ejercicio de persuasión y manipulación que se apoya de un conjunto de técnicas psicológicas y habilidades sociales"
-          },
-          {
-            "target"        : "6",
-            "title"         : "",
-            "colorTitle"    : "",
-            "subTitle"      : "",
-            "text"          : "con el fin de engañar a usuarios incautos y obtener información sensible, infectar sus computadoras con malware (software malicioso)"
-          },
-          {
-            "target"        : "2",
-            "title"         : "",
-            "colorTitle"    : "",
-            "subTitle"      : "",
-            "text"          : "o abrir enlaces de sitios infectados sin que su receptor sea consciente de los riesgos."
-          },
-          {
-            "target"        : "1",
-            "title"         : "",
-            "colorTitle"    : "",
-            "subTitle"      : "",
-            "text"          : "Además, los ciberdelincuentes pueden tratar de aprovecharse de la falta de conocimiento de los usuarios,"
-          },
-          {
-            "target"        : "5",
-            "title"         : "",
-            "colorTitle"    : "",
-            "subTitle"      : "",
-            "text"          : "debido a la velocidad a la que avanza la tecnología. "
-          },
-          {
-            "target"        : "3",
-            "title"         : "",
-            "colorTitle"    : "",
-            "subTitle"      : "",
-            "text"          : "Numerosos consumidores y trabajadores no son conscientes del valor real de los datos personales."
-          }
-        ]
-      },
-      "bg": "img/8/bgPage-8.png",
-      "example": {
-        "hand"    : "img/hand-1.png"
-      }
+      "gallery2": [
+        {
+          "key"   : 1,
+          "img"   : "img/8/n-2.png",
+          "link"  : ""
+        }
+      ],
+      "closedModal"   : true
     }
   },
 
