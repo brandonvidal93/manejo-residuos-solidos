@@ -1,5 +1,4 @@
-import React, {Component} from 'react';
-
+import React, { Component } from 'react';
 import { FontAwesomeIcon } from'@fortawesome/react-fontawesome';
 
 // IMPORT FONT AWESOME LIBRARY
@@ -12,21 +11,14 @@ import './InteractivePath5.scss';
 
 library.add(fas, fab, far);
 
-class InteractivePath5 extends Component {
-  state = {
-    actualItem: 0,
-    countItem: 0,
-    openGlobe: false
-  }
+class InteractivePath4 extends Component {
 
-  trackScrolling = (e) => {
-    e.preventDefault();
-    const CONTENTBOX = document.getElementById('scrollContent');
-    if (e.currentTarget.id === 'btnLeft') {
-      CONTENTBOX.scrollLeft = CONTENTBOX.scrollLeft - 300;
-    }
-    if (e.currentTarget.id === 'btnRight') {
-      CONTENTBOX.scrollLeft = CONTENTBOX.scrollLeft + 300;
+  constructor(props) {
+    super(props);
+    this.state = {
+      actualItem: 0,
+      countItem: 0,
+      openGlobe: false
     }
   }
 
@@ -34,9 +26,9 @@ class InteractivePath5 extends Component {
     const { dataPage } = this.props;
     const ITEM = dataPage.multimedia.map( (item, i) => {
       return(
-        <div className = 'circleItems mR-1 mL-1' key = { i } >
-          <button className = { 'circleButton ' + ( i !== 0 ? 'disabledGray' : '')} id = { i } onClick = { this.enableItem } style = {{ 'backgroundColor': item.itemInfo.color }}>
-            <h1 className = 'blanco F3 tCenter' >0{ i + 1 }</h1>
+        <div className = 'circleItems' key = { i } style = { { 'top': item.pos.top, 'left': item.pos.left } }>
+          <button className = { 'circleButton ' + ( i !== 0 ? 'disabledGray' : '')} id = { i } onClick = { this.enableItem }>
+            <img alt = '' className = '' id = { i } src = { item.urlImgBtn }/>
           </button>
         </div>
       );
@@ -47,26 +39,19 @@ class InteractivePath5 extends Component {
   enableItem = (e) => {
     const { multimedia } = this.props.dataPage;
     e.preventDefault();
-    const CONTENTBOX = document.getElementById('scrollContent');
     const IDITEM = e.currentTarget.id;
     let idItem = parseInt(IDITEM);
 
     this.setState({ actualItem : idItem });
 
-    if (idItem < multimedia.length - 1 && this.state.countItem < multimedia.length - 1) {
+    if (idItem < multimedia.length - 1) {
 
       console.log('Menor');
-
-      console.log(this.state.countItem);
 
       let nextItem = document.getElementById(idItem + 1);
       nextItem.classList.remove('disabledGray');
       
       this.setState({ countItem: this.state.countItem + 1 });
-
-      if (this.state.countItem > 2) {
-        CONTENTBOX.scrollLeft = CONTENTBOX.scrollLeft + 300;
-      }
     } else {
       
       this.setState({ countItem: this.state.countItem + 1 });
@@ -89,72 +74,55 @@ class InteractivePath5 extends Component {
   //FUNCION PARA CERRAR LA MODAL Y CAMBIAR EL STATE DE COVER style = {{ 'marginTop': 40, 'marginLeft': -480 }}
   hideModal = () => { this.showGlobe(); }
 
-  // style = { { 'top': item.pos.top, 'left': item.pos.left } }
-
   render() {
     const { multimedia } = this.props.dataPage;
     const { actualItem } = this.state;
 
+    const style = {
+      backgroundImage: 'url(' + this.props.dataPage.background.bg + ')',
+      backgroundSize: 'auto',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }
+
+    // console.log(this.state.countItem);
     return (
-      <div className = 'InteractivePath5 d-Flex d-C j-S aI-S' style = {{ }}>
+      <div className = 'InteractivePath5' style = {{ ...style }}>
+        { this.showItems() }
+        {
+          // MOSTRAR LOS GLOBOS DE TEXTO
+          this.state.openGlobe !== false ?
+          <div className = 'bgItemGlobe'>
+            <div
+              className = { 'itemGlobe dF-C-cs animated fadeIn' } style = {{ 'borderColor': multimedia[actualItem].itemInfo.color, 'top': multimedia[actualItem].itemInfo.posGlobe.posY, 'left': multimedia[actualItem].itemInfo.posGlobe.posX }}>
 
-        <div className = 'trackContent d-Flex j-C aI-S'>
-          <button
-            className = { 'buttonNav mT-3'}
-            id = 'btnLeft'
-            onClick = { this.trackScrolling }>
-            <FontAwesomeIcon
-              className = 'iconButton'
-              icon = { ['fas', 'chevron-left'] }
-              size = 'lg' />
-          </button>
+              {
+                multimedia[actualItem].itemInfo.title && <h4 className = 'mB-05' dangerouslySetInnerHTML = {{ __html: multimedia[actualItem].itemInfo.title }}></h4>
+              }
 
-          <div className = 'scrollContent d-Flex j-S aI-S mL-1 mR-1' id = 'scrollContent'>
-            { this.showItems() }
+              {
+                multimedia[actualItem].itemInfo.text && <p className = 'tCenter' dangerouslySetInnerHTML = {{ __html: multimedia[actualItem].itemInfo.text }}></p>
+              }
 
-            {
-              // MOSTRAR LOS GLOBOS DE TEXTO
-              this.state.openGlobe !== false ?
-              <div className = 'bgItemGlobe'>
-                <div
-                  className = { 'itemGlobe dF-C-cc animated fadeInDown ' + multimedia[actualItem].itemInfo.trian } style = {{ 'borderColor': multimedia[actualItem].itemInfo.color, 'top': multimedia[actualItem].itemInfo.posGlobe.posY, 'left': multimedia[actualItem].itemInfo.posGlobe.posX }}>
+              {
+                multimedia[actualItem].itemInfo.img && <img alt = '' className = '' src = { multimedia[actualItem].itemInfo.img }/>
+              }
 
-                  {
-                    multimedia[actualItem].itemInfo.title ? <h4 className = 'mB-05' dangerouslySetInnerHTML = {{ __html: multimedia[actualItem].itemInfo.title }}></h4> : null
-                  }
-
-                  {
-                    multimedia[actualItem].itemInfo.text ? <p className = 'tCenter' dangerouslySetInnerHTML = {{ __html: multimedia[actualItem].itemInfo.text }}></p> : null
-                  }
-
-                  <button
-                    className = 'buttonClose'
-                    onClick = { this.hideModal }
-                    >
-                    <span className = 'fa-layers fa-fw iconButton' >
-                      <FontAwesomeIcon icon="circle" />
-                      <FontAwesomeIcon icon="times" inverse transform="shrink-6" />
-                    </span>
-                    </button>
-                </div>
-              </div> : null
-            }
-          </div>
-
-          <button
-            className = { 'buttonNav mT-3' }
-            id = 'btnRight'
-            onClick = { this.trackScrolling }>
-            <FontAwesomeIcon
-              className = 'iconButton'
-              icon = { ['fas', 'chevron-right'] }
-              size = 'lg' />
-          </button>
-        </div>
-
+              <button
+                className = 'buttonClose'
+                onClick = { this.hideModal }
+                >
+                <span className = 'fa-layers fa-fw iconButton' >
+                  <FontAwesomeIcon icon="circle" />
+                  <FontAwesomeIcon icon="times" inverse transform="shrink-6" />
+                </span>
+                </button>
+            </div>
+          </div> : null
+        }
       </div>
     );
   }
 }
 
-export default InteractivePath5;
+export default InteractivePath4;

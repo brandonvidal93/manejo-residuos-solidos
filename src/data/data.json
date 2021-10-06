@@ -1176,83 +1176,72 @@
 
   "page18": {
     "type": "pageCourse",
-    "startUnit": true,
-    "nameUnit": "unit4",
-    "title"   : "Estaciones de trabajo",
-    "text"    : "Ten presente estas indicaciones para implementarlas en tu equipo de cómputo.",
+    "title"   : "Sabías que...",
+    "text"    : "Cada año Colombia genera cerca de 12 millones de toneladas de residuos, de los cuales solo el 17% es reciclado, lo que deja un amplio margen de crecimiento para la reutilización. <b>(Cempre, 2020)</b><br><br>Para ayudar a incrementar esta cifra, te explicaremos cuál es la clasificación de los residuos para que lo empieces a aplicar en tu vida cotidiana.",
     "instruction": {
       "type"    : "mouse",
-      "text"    : "Haz clic en cada botón vertical para conocer la información.",
+      "text"    : "Haz clic sobre cada ícono para descubrir cuáles son.",
       "posY"    : 50,
       "posX"    : 660,
       "size"    : 330,
       "color"   : "#FFD15C"
     },
+    "background": {
+      "bg": "img/18/bgPage-18.png"
+    },
     "multimedia": [
       {
-        "button": {
-          "text": "Bloquea tu equipo",
-          "color": "#04386D"
+        "urlImgBtn"   : "img/18/btn-1.png",
+        "pos": {
+          "top"       : 52,
+          "left"      : 68
         },
-        "information": {
-          "img1": "img/18/n-1.png",
-          "img2": "img/18/nTeclas-1.png",
-          "text": "Bloquea tu equipo cuando te levantes de tu puesto de trabajo."
+        "itemInfo": {
+          "title"     : "",
+          "text"      : "",
+          "img"         : "img/18/n-1.png",
+          "posGlobe": {
+            "posY"    : 256,
+            "posX"    : 0
+          },
+          "color"     : "#085A3C",
+          "trian"     : "trian-1"
         }
       },
       {
-        "button": {
-          "text": "Cierra la sesión",
-          "color": "#0C62A5"
+        "urlImgBtn"   : "img/18/btn-2.png",
+        "pos": {
+          "top"       : 52,
+          "left"      : 267
         },
-        "information": {
-          "img1": "img/18/n-2.png",
-          "img2": "",
-          "text": "Cierra la sesión cuando termines de usarlo"
+        "itemInfo": {
+          "title"     : "",
+          "text"      : "",
+          "img"         :"img/18/n-2.png",  
+          "posGlobe": {
+            "posY"    : 256,
+            "posX"    : 276
+          },
+          "color"     : "#BA0505",
+          "trian"     : "trian-2"
         }
       },
       {
-        "button": {
-          "text": "Contraseñas",
-          "color": "#189BDB"
+        "urlImgBtn"   : "img/18/btn-3.png",
+        "pos": {
+          "top"       : 52,
+          "left"      : 391
         },
-        "information": {
-          "img1": "img/18/n-3.png",
-          "img2": "",
-          "text": "No permitas que el navegador recuerde las contraseñas."
-        }
-      },
-      {
-        "button": {
-          "text": "Redes desconocidas",
-          "color": "#89C240"
-        },
-        "information": {
-          "img1": "img/18/n-4.png",
-          "img2": "",
-          "text": "Evita conectarte a redes desconocidas."
-        }
-      },
-      {
-        "button": {
-          "text": "Dispositivos",
-          "color": "#D3046E"
-        },
-        "information": {
-          "img1": "img/18/n-5.png",
-          "img2": "",
-          "text": "No utilices dispositivos USB desconocidos y compra marcas confiables en lugares garantizados."
-        }
-      },
-      {
-        "button": {
-          "text": "Descargas e instalaciones",
-          "color": "#93278F"
-        },
-        "information": {
-          "img1": "img/18/n-6.png",
-          "img2": "",
-          "text": "Para descargar e instalar aplicaciones apóyate con el <b>Centro de Atención al Usuario</b>, si necesitas hacerlo en tu equipo personal realiza la descarga en el sitio del fabricante y usa licencias legales."
+        "itemInfo": {
+          "title"     : "",
+          "text"      : "",
+          "img"         :"img/18/n-3.png",  
+          "posGlobe": {
+            "posY"    : 256,
+            "posX"    : 399
+          },
+          "color"     : "#BA0505",
+          "trian"     : "trian-2"
         }
       }
     ]

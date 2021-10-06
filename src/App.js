@@ -12,7 +12,7 @@ import './App.scss';
 import DataCourse from './data/data.json';
 
 // DEFINICION DEL LIMITE CON LA CANTIDAD DE OBJETOS QUE HAY EN DataCourse
-// SE RESTAN 2 al LIMIT PARA SACAR EL BACK COVER QUE ES UNA MODAL DE FINALIZACION
+// SE RESTAN 1 al LIMIT PARA SACAR EL BACK COVER QUE ES UNA MODAL DE FINALIZACION
 const LIMIT = Object.keys(DataCourse).length - 1;
 const UNITS = DataCourse.coverPage.units;
 const LABELFOOTER = DataCourse.coverPage.footer.label;
@@ -51,7 +51,7 @@ class App extends Component {
     this.state = {
       calificacion: 0,
       conectLMS: false,
-      index: 17,
+      index: 18,
       nextUnit: 1,
       pages: LIMIT,
       units: UNITS,
@@ -164,8 +164,6 @@ class App extends Component {
     - Unidades o Temas       -> ${this.state.units}
     - Unidad Actual          -> ${this.state.unitActual} `;
     console.log(messageState);
-    // console.table(this.state.endActivities);
-    // console.table(this.state.unitFinal);
     console.log();
   }
 
