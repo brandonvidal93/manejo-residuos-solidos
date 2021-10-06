@@ -12,68 +12,150 @@ import './InteractivePath2.scss';
 library.add(fas, fab, far);
 
 class InteractivePath2 extends Component {
+  // state
   state = {
-    countItem: 1
+    countItems: 0,
   }
 
-  showInfo = e => {
-    const { dataPage } = this.props;
+  handleClick = (e) => {
+    console.log(e.target.id);
 
-    e.preventDefault();
+    switch (e.target.id) {
+      case 'btnN1':
+        document.getElementById('btnPaso1').classList.remove('btnDisabled');
+        document.getElementById('btnPaso2').classList.remove('btnDisabled');
+        break;
+        case 'btnN2':
+        document.getElementById('btnPaso3').classList.remove('btnDisabled');
+        document.getElementById('btnPaso4').classList.remove('btnDisabled');
+        break;
+      case 'btnPaso1':
+        document.getElementById('btnEducacion1').classList.remove('btnDisabled');
+        break;
+      case 'btnEducacion1':
+        document.getElementById('btnEducacion2').classList.remove('btnDisabled');
+        break;
+      case 'btnPaso2':
+        document.getElementById('btnBolsas1').classList.remove('btnDisabled');
+        break;
+      case 'btnBolsas1':
+        document.getElementById('btnBolsas2').classList.remove('btnDisabled');
+        break;
+      case 'btnPaso3':
+        document.getElementById('btnContenedores1').classList.remove('btnDisabled');
+        break;
+      case 'btnContenedores1':
+        document.getElementById('btnContenedores2').classList.remove('btnDisabled');
+        break;
+      case 'btnPaso4':
+        document.getElementById('btnMetricas1').classList.remove('btnDisabled');
+        break;
+      case 'btnMetricas1':
+        document.getElementById('btnMetricas2').classList.remove('btnDisabled');
+        break;
+      default:
+        break;
+    }
 
-    let idItem = e.currentTarget.id.substring(4);
-
-    this.setState({
-      countItem: this.state.countItem + 1
-    });
-
-    console.log(this.state.countItem);
-
-    if (this.state.countItem < dataPage.items.length) {
-      document.getElementById('info-' + idItem).classList.remove('dNone');
-      document.getElementById('int-' + idItem).classList.add('dNone');
-
-      if (this.state.countItem !== dataPage.items.length) {
-        document.getElementById('btn-' + (parseInt(idItem) + 1)).classList.remove('btnDisabled');
-      }
-    } else {
-      document.getElementById('info-' + idItem).classList.remove('dNone');
-      document.getElementById('int-' + idItem).classList.add('dNone');
+    if (this.state.countItems >= 9) {
       this.props.isEnded(true);
+    } else {
+      this.setState({
+        countItems: this.state.countItems + 1,
+      });
     }
   }
 
   render() {
-    const { dataPage } = this.props;
+    const { multimedia } = this.props;
+    const style = {
+      backgroundImage: 'url(' + multimedia.bg + ')',
+      backgroundSize: 'auto',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      height: '276px'
+    };
 
+    console.log(multimedia);
     return(
-      <div className = 'interactivePath2 d-Flex j-S aI-C'>
-        {
-          dataPage.items.map((item, i) => {
-            return(
-              <div className = 'boxInfo d-Flex j-C aI-C' key = { i } style = {{ 'width': item.width, 'backgroundImage': 'url(' + item.imgBg + ')' }} >
-                <div id = {'int-' + i}>
-                  <h1 className = 'tCenter fw-4 F4-5 color-5'>?</h1>
-                </div> 
-                <div className = { 'info pL-1 pR-1 d-Flex d-C j-C aI-C animated fadeIn dNone'} id = { 'info-' + i }>
-                  {
-                    item.img ? <img alt = 'Item' className = { 'imgItem c-10' } src = { item.img } /> : null
-                  }
-                  {
-                    item.info ? <p className = 'tCenter' dangerouslySetInnerHTML = {{ __html: item.info }}></p> : null
-                  }
-                </div>
+      <div className = 'interactivePath2 d-Flex d-C j-S aI-S' style={style}>
+        <div className = 'row d-Flex j-S aI-St c-10 mT-1 mL-4'>
+          <div className='d-Flex d-C j-C aI-C'>
+            {
+              multimedia.row1.col1.map((col1, i) => {
+                return(
+                  <img alt = 'Imagen' className = 'btnItem' id={col1.id} src = { col1.img } onClick={this.handleClick}/>
+                )
+              })
+            }
+          </div>
+          <div className='d-Flex d-C j-Ar aI-C mL-05 pB-1 pT-025'>
+            {
+              multimedia.row1.col2.map((col2, i) => {
+                return(
+                  <img alt = 'Imagen' className = 'btnItem btnDisabled' id={col2.id} src = { col2.img } onClick={this.handleClick}/>
+                )
+              })
+            }
+          </div>
+          <div className='d-Flex d-C j-Ar aI-C pB-1 pT-025' style={{marginLeft: '1.6rem'}}>
+            {
+              multimedia.row1.col3.map((col3, i) => {
+                return(
+                  <img alt = 'Imagen' className = 'btnItem btnDisabled' id={col3.id} src = { col3.img } onClick={this.handleClick}/>
+                )
+              })
+            }
+          </div>
+          <div className='d-Flex d-C j-Ar aI-C pB-1 pT-025' style={{marginLeft: '1.4rem'}}>
+            {
+              multimedia.row1.col4.map((col4, i) => {
+                return(
+                  <img alt = 'Imagen' className = 'btnItem btnDisabled' id={col4.id} src = { col4.img }/>
+                )
+              })
+            }
+          </div>
+        </div>
 
-                <button className = { 'btnItem pAbs ' + (i !== 0 ? 'btnDisabled' : '') } id = { 'btn-' + i } onClick = { this.showInfo } style = { { 'top': item.button.posY, 'left': item.button.posX } } >
-                  <span className = 'fa-layers fa-fw iconButton' >
-                    <FontAwesomeIcon className = 'circleIcon' icon="circle" style = {{ 'color': item.color }} />
-                    <FontAwesomeIcon icon="chevron-right" inverse transform="shrink-6" />
-                  </span>
-                </button>
-              </div>
-            )
-          })
-        }
+        <div className = 'row d-Flex j-S aI-St c-10 mT-1 mL-4'>
+          <div className='d-Flex d-C j-C aI-C'>
+            {
+              multimedia.row2.col1.map((col1, i) => {
+                return(
+                  <img alt = 'Imagen' className = 'btnItem' id={col1.id} src = { col1.img } onClick={this.handleClick}/>
+                )
+              })
+            }
+          </div>
+          <div className='d-Flex d-C j-Ar aI-C mL-05 pB-05 pT-05'>
+            {
+              multimedia.row2.col2.map((col2, i) => {
+                return(
+                  <img alt = 'Imagen' className = 'btnItem btnDisabled' id={col2.id} src = { col2.img } onClick={this.handleClick}/>
+                )
+              })
+            }
+          </div>
+          <div className='d-Flex d-C j-Ar aI-C pB-05 pT-05' style={{marginLeft: '1.6rem'}}>
+            {
+              multimedia.row2.col3.map((col3, i) => {
+                return(
+                  <img alt = 'Imagen' className = 'btnItem btnDisabled' id={col3.id} src = { col3.img } onClick={this.handleClick}/>
+                )
+              })
+            }
+          </div>
+          <div className='d-Flex d-C j-Ar aI-C pB-05 pT-05' style={{marginLeft: '1.4rem'}}>
+            {
+              multimedia.row2.col4.map((col4, i) => {
+                return(
+                  <img alt = 'Imagen' className = 'btnItem btnDisabled' id={col4.id} src = { col4.img }/>
+                )
+              })
+            }
+          </div>
+        </div>
       </div>
     )
   }

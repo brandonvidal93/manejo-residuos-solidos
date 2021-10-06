@@ -57,7 +57,6 @@ class ModalCircle2 extends Component {
         if (idItem !== multimedia.length) {
           let nextItem = document.getElementById(idItem + 1);
           nextItem.classList.remove('disabledGray');
-          // document.getElementById('title-' + (idItem + 1)).classList.remove('disabledGray');
           this.setState({ countItem: this.state.countItem + 1 });
         } else {
           this.setState({ countItem: this.state.countItem + 1 });
@@ -79,7 +78,6 @@ class ModalCircle2 extends Component {
     });
 
     document.querySelector('.footer').classList.add('dNone'); // OCULTAR EL FONDO
-    document.querySelector('.menuContent').classList.add('dNone'); // OCULTAR EL FONDO
     document.querySelector('.instruction').classList.add('dNone'); // OCULTAR EL FONDO
   }
 
@@ -90,13 +88,14 @@ class ModalCircle2 extends Component {
     });
 
     document.querySelector('.footer').classList.remove('dNone'); // OCULTAR EL FONDO
-    document.querySelector('.menuContent').classList.remove('dNone'); // OCULTAR EL FONDO
     document.querySelector('.instruction').classList.remove('dNone'); // OCULTAR EL FONDO
   }
 
   render() {
     const { multimedia } = this.props.dataPage;
     const { actualItem } = this.state;
+
+    console.log(multimedia);
     // console.log(this.state.countItem);
     return (
       <div className = 'ModalCircle2 d-Flex d-C'>
@@ -104,25 +103,24 @@ class ModalCircle2 extends Component {
           // MOSTRAR LOS GLOBOS DE TEXTO
           this.state.openGlobe !== false ?
           <div className = 'bgItemGlobe animated fadeIn'>
-            <div className = { 'itemGlobe animated fadeIn d-Flex d-C j-C aI-C'} >
+            <div className = { 'itemGlobe animated fadeIn d-Flex j-Bt aI-C'} >
+              <div className='c-35 d-Flex j-C aI-C'>
+                <img alt = '' className = 'c-9' src = { multimedia[actualItem - 1].urlImgBtn }/>
+              </div>
+              <div className='c-65'>
+                <h3 className = 'mB-025 titulo2'>{ multimedia[actualItem - 1].itemInfo.title }</h3>
+                <p className = '' dangerouslySetInnerHTML = { { __html: multimedia[actualItem - 1].itemInfo.text1 } } />
+              </div>
 
-              <h2 className = 'mB-1 titleGlobe tCenter blanco d-Flex j-C aI-C' style = {{ 'backgroundColor': multimedia[actualItem - 1].itemInfo.colorText }}>{ multimedia[actualItem - 1].itemInfo.title }</h2>
-
-              <p className = 'mB-05 tCenter c-75' dangerouslySetInnerHTML = { { __html: multimedia[actualItem - 1].itemInfo.text1 } } />
-
-              { 
-                multimedia[actualItem - 1].itemInfo.buttonClose.closedModal === true ?
-                <button
-                  className = 'buttonClose'
-                  onClick = { this.hideModal }
-                  style = { { 'top': multimedia[actualItem - 1].itemInfo.buttonClose.posY, 'left': (multimedia[actualItem - 1].itemInfo.buttonClose.posX + '%') } }
-                  >
-                  <span className = 'fa-layers fa-fw iconButton' >
-                    <FontAwesomeIcon icon="circle" />
-                    <FontAwesomeIcon icon="times" inverse transform="shrink-6" />
-                  </span>
-                </button> : null
-              }
+              <button
+                className = 'buttonClose'
+                onClick = { this.hideModal }
+                >
+                <span className = 'fa-layers fa-fw iconButton' >
+                  <FontAwesomeIcon icon="circle" />
+                  <FontAwesomeIcon icon="times" inverse transform="shrink-6" />
+                </span>
+              </button>
             </div>
           </div> : null
         }

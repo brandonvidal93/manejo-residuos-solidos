@@ -10,17 +10,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(#29427D, 1);
+  background-color: rgba(#053423, 1);
   z-index: 4;
   transition: all .2s;
 
   .itemGallery {
     background-color: #F7F7F7;
     border: 10px solid $blanco;
-    padding: 1rem;
+    // padding: 1rem;
     border-radius: 15px;
-    width: 802px;
-    height: 572px;
+    // width: 802px;
+    // height: 572px;
 
     .buttonSlide {
       background-color: rgba(0, 0, 0, 0);
@@ -77,7 +77,7 @@
     right: -20px;
     background-color: rgba(255, 255, 255, 1);
     border-radius: 50%;
-    padding: 0.4rem 0.2rem;
+    padding: 0.4rem 0.1rem;
     .iconButton {
       color: red;
       font-size: 2.3em;

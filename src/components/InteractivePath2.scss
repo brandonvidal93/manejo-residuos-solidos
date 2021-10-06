@@ -4,16 +4,11 @@
 .interactivePath2 {
   .btnItem {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0);
-
-    .iconButton {
-      font-size: 2.8em;
-      transition: all .3s;
-    }
   }
 
   .btnDisabled {
     pointer-events: none;
+    opacity: 0;
     .iconButton {
       .circleIcon {
         color: #CACACA!important;

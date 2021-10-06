@@ -25,17 +25,15 @@ const DragItem = ({ countDrop, name, path, type, id }) => {
     end: (item, monitor) => {
       const dropResult = monitor.getDropResult()
       if (item && dropResult) {
-        // alert(`You dropped ${item.name} into ${dropResult.name}!`);
+        // console.log(`You dropped ${item.name} into ${dropResult.limit}!`);
         // console.log(`You dropped ${id} item`);
         // AQUI ES DONDE VA EL CODIGO PARA MOSTRAR EL GLOBO INFO
 
-        // console.log(document.getElementById('infoDrop-' + id));
-        // console.log(document.getElementById('dragBox-' + id));
-
         document.getElementById('dragBox-' + id).classList.add('dNone');
-        document.getElementById('imgDrop-' + id).classList.remove('dNone');
+        const dropType = document.getElementById('dragBox-' + id).classList[1];
+        console.log(dropType);
 
-        countDrop();
+        countDrop(dropType, dropResult.limit);
 
         document.getElementById('audioNotification').src = 'audio/check.mp3';
         document.getElementById('audioNotification').play();
@@ -55,6 +53,7 @@ const DragItem = ({ countDrop, name, path, type, id }) => {
 
   return (
     <div
+      className={'dragImg dropType-' + type}
       onDragStart = { dragStart }
       onDragOver = { dragOver }
       onDragEnd = { dragEnd }

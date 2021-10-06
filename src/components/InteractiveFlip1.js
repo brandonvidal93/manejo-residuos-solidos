@@ -14,100 +14,114 @@ library.add(fas, fab, far);
 
 class InteractiveFlip extends Component {
   state = {
-    count: 1
+    count: 1,
+    countPair: 1
   }
 
   flip = e => {
     const { dataPage } = this.props;
-    // console.log(e.currentTarget.classList);
 
     let idBtn = parseInt(e.currentTarget.id);
 
-    // console.log(Object.values(dataPage)[idBtn - 1].text);
-
-    e.currentTarget.classList.add('animated', 'flipOutY');
-
-    // console.log(e.currentTarget.classList);
-
     this.setState({ count: this.state.count + 1 });
 
-    if (this.state.count === dataPage.items.length) {
-      this.props.isEnded(true);
+    e.currentTarget.classList.add('show');
+    document.getElementById('hide-' + idBtn).classList.remove('animated', 'flipInY');
+    document.getElementById('hide-' + idBtn).classList.add('animated', 'flipOutY');
+
+    // Validación para que bloquee el tablero despues de seleccionar 2 tarjetas
+    if (this.state.count === 2) {
+      document.querySelector('.interactiveFlip').style.pointerEvents = 'none';
+
+      const itemsSelected = document.getElementsByClassName('show');
+      const allItems = document.getElementsByClassName('itemFlip');
+
+      if (itemsSelected[0].getAttribute('pair') === itemsSelected[1].getAttribute('pair')) {
+        for (let i = 0; i < itemsSelected.length; i++) {
+          itemsSelected[i].classList.add('parejaLista');
+        }
+
+        for (let i = 0; i < allItems.length; i++) {
+          allItems[i].classList.remove('show');
+        }
+
+        this.setState({
+          countPair: this.state.countPair + 1
+        })
+
+        if (this.state.countPair === dataPage.items.length / 2) {
+          this.props.isEnded(true);
+        }
+      } else {
+        setTimeout(() => {
+          let idErrors=[];
+          for (let i = 0; i < itemsSelected.length; i++) {
+            idErrors = [...idErrors, itemsSelected[i].getAttribute('id')];
+            console.log(idErrors);
+          }
+
+          for (let i = 0; i < allItems.length; i++) {
+            allItems[i].classList.remove('show');
+          }
+          this.flipHide(idErrors);
+        }, 1000);
+      }
+      
+      setTimeout(() => {
+        document.querySelector('.interactiveFlip').style.pointerEvents = 'all';
+      }, 1000);
+
+      this.setState({
+        count: 1
+      })
     }
 
     this.flipShow(idBtn);
   }
 
   flipShow = (item) => {
-    // console.log(document.getElementById('info-' + item));
     setTimeout(function(){
+      document.getElementById('info-' + item).classList.remove('animated', 'flipOutY');
       document.getElementById('info-' + item).classList.remove('dNone');
       document.getElementById('info-' + item).classList.add('animated', 'flipInY');
     }, 800);
   }
 
+  flipHide = (_idErros) => {
+    setTimeout(function(){
+      for (let i = 0; i < _idErros.length; i++) {
+        document.getElementById('info-' + _idErros[i]).classList.remove('flipInY');
+        document.getElementById('info-' + _idErros[i]).classList.add('animated', 'flipOutY');
+        document.getElementById('info-' + _idErros[i]).classList.add('dNone');
+        document.getElementById('hide-' + _idErros[i]).classList.remove('flipOutY');
+        document.getElementById('hide-' + _idErros[i]).classList.add('animated', 'flipInY');
+      }
+    }, 800);
+  }
+
+
   render() {
     const { dataPage } = this.props;
 
-    switch (dataPage.type) {
-      case 'icon':
-        return (
-          <div className = 'interactiveFlip'>
-            {
-              dataPage.items.map((item, i) => {
-                return(
-                  <div key = { item.id } className = { 'itemFlip' }>
-                    <div className = { 'buttonFlip d-Flex d-C j-C aI-C flip-' + item.id } id = { item.id } onClick = { this.flip }>
-                      <img alt = 'Item' className = '' src = { item.img }/>
-                      {/* <h3 className = 'tCenter mB-1' dangerouslySetInnerHTML = {{ __html: item.title }}></h3> */}
-                    </div>
+    return (
+      <div className = 'interactiveFlip c-10 d-Flex j-Bt'>
+        {
+          dataPage.items.map((item, i) => {
+            return(
+              <div key = { item.id } className = { 'itemFlip'} id = { item.id } onClick = { this.flip } pair={'pair-' + item.pair}>
+                <div className = { 'buttonFlip d-Flex d-C j-C aI-C'} id = { 'hide-' + item.id } >
+                  <img alt = 'Item' className = '' src = { dataPage.imgHide }/>
+                </div>
 
-                    <div className = { 'infoFlip d-Flex d-C ' + (item.id < 4 ? 'j-S' : 'j-C') + ' aI-C dNone flip-' + item.id } id = { 'info-' + item.id }>
-                      {
-                        item.id < 4 ?
-                        <div className = 'd-Flex d-C j-C aI-C'>
-                          <h1 className = 'blanco' >0{ item.id }</h1>
-                          <hr className = 'mB-05 line-5'></hr>
-                          <h4 className = 'tCenter fw-3 blanco' dangerouslySetInnerHTML = {{ __html: item.title }}></h4>
-                        </div> :
-                        <div className = 'd-Flex d-R j-C aI-C c-95'>
-                          <h1 className = 'blanco mR-1' >0{ item.id }</h1>
-                          {/* <hr className = 'mB-05 line-5'></hr> */}
-                          <h4 className = 'tCenter fw-3 blanco pL-05' dangerouslySetInnerHTML = {{ __html: item.title }} style = {{ 'borderLeft': '1px solid #ffffff' }}></h4>
-                        </div>
-                      }
-                    </div>
-                  </div>
-                );
-              })
-            }
-          </div>
-        );
-
-      default:
-        return (
-          <div className = 'interactiveFlip'>
-            {
-              dataPage.items.map((item, i) => {
-                return(
-                  <div key = { item.id }>
-                    <div className = 'buttonFlip dF-R-cc' id = { item.id } onClick = { this.flip }>
-                      <span className = 'fa-layers fa-fw iconButton' >
-                        <FontAwesomeIcon icon="circle" style={{ color: '#5C657C' }} />
-                        <FontAwesomeIcon icon="plus" inverse transform="shrink-6" />
-                      </span>
-                    </div>
-                    <div className = 'infoFlip dF-R-cc dNone' id = { 'info-' + item.id }>
-                      <p className = 'mR-1 fw-7'>{ item.text }</p>
-                      <img alt = '' className = '' src = { item.img }/>
-                    </div>
-                  </div>
-                );
-              })
-            }
-          </div>
-        );
-    }
+                <div className = { 'infoFlip d-Flex d-C aI-C dNone'} id = { 'info-' + item.id }>
+                  <img alt = 'Item' className = '' src = { item.img }/>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    );
   }
 }
 

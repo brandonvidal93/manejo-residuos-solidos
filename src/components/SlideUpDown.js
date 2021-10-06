@@ -51,7 +51,7 @@ class SlideUpDown extends Component {
                     item.img ? <img alt = 'Imagen' className = '' src = { item.img }/> : null
                   }
                   {
-                    item.text ? <p className = 'text pAbs' dangerouslySetInnerHTML = {{ __html: item.text }} style = {{ 'top': item.textPos.posY, 'left': item.textPos.posX, 'width': item.textPos.width }} /> : null
+                    item.text ? <p className = 'text pAbs tCenter' dangerouslySetInnerHTML = {{ __html: item.text }} style = {{ 'top': item.textPos.posY, 'left': item.textPos.posX, 'width': item.textPos.width }} /> : null
                   }
                 </div>
               )

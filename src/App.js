@@ -12,8 +12,8 @@ import './App.scss';
 import DataCourse from './data/data.json';
 
 // DEFINICION DEL LIMITE CON LA CANTIDAD DE OBJETOS QUE HAY EN DataCourse
-// SE RESTAN 2   al LIMIT PARA SACAR EL BACK COVER QUE ES UNA MODAL DE FINALIZACION
-const LIMIT = Object.keys(DataCourse).length - 2;
+// SE RESTAN 1 al LIMIT PARA SACAR EL BACK COVER QUE ES UNA MODAL DE FINALIZACION
+const LIMIT = Object.keys(DataCourse).length - 1;
 const UNITS = DataCourse.coverPage.units;
 const LABELFOOTER = DataCourse.coverPage.footer.label;
 const BGFOOTER = DataCourse.coverPage.footer.bgImgs;
@@ -56,13 +56,11 @@ class App extends Component {
       pages: LIMIT,
       units: UNITS,
       unitActual: 0,
-      // unitFinal: [true, true, true, true, true, true, true],
-      unitFinal: [false, false, false, false, false, false, false],
-      // enableUnit: [true, true, true, true, true, true, true],
-      enableUnit: [false, false, false, false, false, false, false],
+      unitFinal: [true],
+      enableUnit: [true],
       // endActivities debe ir en FALSE para permitir las restricciones, en TRUE para editar
-      // endActivities: [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]
-      endActivities: [true, true, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, true]
+      // endActivities: [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      endActivities: [false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, false, false, false, false, false, false, true, false, true]
     }
   }
 
@@ -167,16 +165,12 @@ class App extends Component {
     - Unidades o Temas       -> ${this.state.units}
     - Unidad Actual          -> ${this.state.unitActual} `;
     console.log(messageState);
-    console.table(this.state.endActivities);
-    console.table(this.state.unitFinal);
     console.log();
   }
 
   // FUNCION PARA ACTUALIZAR EL INDEX Y NAVEGAR RECIBE PARAMETRO DE FOOTER EL ID DEL BOTON
   navigationCourse = (buttonPress) => {
     console.log('Recibo en App.js: ' + buttonPress);
-    // var goMenu;
-
     //SCORM
     if (this.state.index < 0) {
       this.setState({index: 0})
@@ -201,7 +195,7 @@ class App extends Component {
       // DROP PARA COMENZAR EL CURSO
       case 'btnIniciar':
         this.setState({
-          index: this.state.index + 1
+          index: 1
         });
         tracking.saveLocation(this.state.index);
         break;
@@ -217,7 +211,7 @@ class App extends Component {
       // INICIO DEL QUIZ
       case 'btnQuiz':
         this.setState({
-          index: 33
+          index: 22
         });
         tracking.saveLocation(this.state.index);
         break;
@@ -225,14 +219,14 @@ class App extends Component {
       // FINAL DEL QUIZ
       case 'buttonCloseQuizModal':
         this.setState({
-          index: 34
+          index: 23
         });
         tracking.saveLocation(this.state.index);
         break;
     
       default:
         this.setState({
-          index: 2
+          index: 0
         });
         tracking.saveLocation(this.state.index);
     }
@@ -287,15 +281,6 @@ class App extends Component {
 
     console.log(this.state.unitActual); // UNIDAD ACTUAL
 
-    for (var i = 0; i < 6; i++) {
-      document.getElementsByClassName('buttonMenu')[i].classList.remove('animation');
-      console.log(document.getElementsByClassName('buttonMenu')[i]);
-
-    }
-    if (this.state.unitActual < this.state.units) {
-     document.getElementById('btnUnit-' + this.state.nextUnit).classList.add('animation'); 
-    }
-
     // GUARDA EL SUSPEND DATA CADA QUE SE HACE UN AVACE EN EL CURSO o UNA MODIFICACION
     this.setSuspend();
   }
@@ -308,7 +293,9 @@ class App extends Component {
     console.log(this.state.endActivities);
 
     const {index} = this.state;
-    if (index !== 1 && index !== 2 && index !== 6 && index !== 15 && index !== 17 && index !== 28 && index !== 31 && index !== 32 && index !== 33) {
+
+    
+    if (index !== 1 && index !== 23 && index !== 24) {
       document.getElementById('btnNavRight').classList.add('animationBtnNav');
     }
 

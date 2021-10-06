@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, ul, ol, li, button, label {
-  font-size: .9em;
+  font-size: 0.9em;
   color: $texto1;
   line-height: 20px;
   font-weight: 300;
@@ -98,6 +98,12 @@ button {
   pointer-events: none;
   filter: grayscale(100%);
   opacity: 0.1;
+}
+
+.hideText {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
 }
 
 .dBlock { display: block; }

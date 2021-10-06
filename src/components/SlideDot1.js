@@ -42,7 +42,7 @@ class SlideDot1 extends Component {
     const { multimedia } = this.props.dataPage;
 
     return (
-      <div className = 'SlideDot1 d-Flex d-C j-C aI-C' style = {{ 'backgroundImage': 'url(' + multimedia[this.state.item].bg + ')', 'backgroundPositionY': multimedia[this.state.item].bgPosY, 'backgroundPositionX': multimedia[this.state.item].bgPosX }}>
+      <div className = 'SlideDot1 d-Flex j-C aI-C'>
         <div className = 'dotContent d-Flex d-C j-C aI-C mB-1' style = {{ 'borderColor' : multimedia[this.state.item].color }} >         
           {
             multimedia.map((item, i) => {
@@ -70,12 +70,12 @@ class SlideDot1 extends Component {
             })
           }
         </div>
-        <div className = 'buttonBox d-Flex j-C aI-C'>
+        <div className = 'buttonBox d-Flex d-C j-C aI-C mL-1'>
           {
             multimedia.map((button, i) => {
               return(
                 <div
-                  className = { 'btnItem ' + (this.state.item === i ? 'btnActive': '') }
+                  className = { 'btnItem mB-05 ' + (this.state.item === i ? 'btnActive': '') }
                   id = { 'btnItem-' + i }
                   key = { i }
                   onClick = { this.showItem } >

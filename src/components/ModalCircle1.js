@@ -24,45 +24,21 @@ class ModalCircle1 extends Component {
 
   showItems = () => {
     const { dataPage } = this.props;
-    const ITEM = dataPage.multimedia.map( (item, i) => {
+    return dataPage.multimedia.map( (item, i) => {
+      console.log(item);
       return(
-        <div className = 'circleItems' key = { i }>
-          {
-            i % 2 !== 0 ?
-            <div className = 'd-Flex d-R j-C aI-C itemButton'>
-              
-              <div className = {'itemLabel d-R j-C aI-C pT-1 pB-1 pL-2 pR-3 itemLabelR ' + ( i + 1 !== 1 ? 'disabledGray' : '')} id = {'title-' + (i + 1)} style = {{ 'borderColor': item.color }}>
-                <h4 className = 'userSN textItem' style = {{ 'color': item.color }}> { item.title }</h4>
-                <FontAwesomeIcon icon="play" size = 'lg' className = 'userSN mL-05 mR-025' style = {{ 'color': '#EAEAEA' }} />
-              </div>
-              <button 
-                className = { 'circleButton ' + ( i + 1 !== 1 ? 'disabledGray' : '')} 
-                id = { i + 1 } 
-                onClick = { this.enableItem } >
+        <div className = 'circleItems pAbs' key = { i } style={{top: item.itemInfo.pos.top, left: item.itemInfo.pos.left}}>
+          <button 
+            className = { 'circleButton ' + ( i + 1 !== 1 ? 'disabledGray' : '')} 
+            id = { i + 1 } 
+            onClick = { this.enableItem } >
 
-                <img alt = '' className = '' id = { i + 1 } src = { item.urlImgBtn }/>
-              </button>
-            </div> :
-            <div className = 'd-Flex d-Rr j-C aI-C itemButton'>
-              
-              <div className = {'itemLabel d-R j-C aI-C pT-1 pB-1 pL-3 pR-2 itemLabelL ' + ( i + 1 !== 1 ? 'disabledGray' : '')} id = {'title-' + (i + 1)} style = {{ 'borderColor': item.color }}>
-                <FontAwesomeIcon icon="play" size = 'lg' className = 'mL-025 mR-05 userSN' style = {{ 'color': '#EAEAEA' }} />
-                <h4 className = 'userSN textItem' style = {{ 'color': item.color }}> { item.title }</h4>
-              </div>
-
-              <button 
-                className = { 'circleButton ' + ( i + 1 !== 1 ? 'disabledGray' : '')} 
-                id = { i + 1 } 
-                onClick = { this.enableItem }>
-
-                <img alt = '' className = '' id = { i + 1 } src = { item.urlImgBtn }/>
-              </button>
-            </div>
-          }
+            <img alt = '' className = '' id = { i + 1 } src = { item.urlImgBtn }/>
+          </button>
         </div>
       );
     } );
-    return ITEM;
+    // return ITEM;
   }
 
   enableItem = (e) => {
@@ -80,15 +56,12 @@ class ModalCircle1 extends Component {
         if (idItem !== multimedia.length) {
           let nextItem = document.getElementById(idItem + 1);
           nextItem.classList.remove('disabledGray');
-          document.getElementById('title-' + (idItem + 1)).classList.remove('disabledGray');
           this.setState({ countItem: this.state.countItem + 1 });
         } else {
           this.setState({ countItem: this.state.countItem + 1 });
           this.props.isEnded(true); // SI LLEGA EL FINAL DE LA ACT ENVÍA EL TRUE
         }
       }
-
-
     }
 
     if (this.state.countItem === multimedia.length) {
@@ -105,7 +78,7 @@ class ModalCircle1 extends Component {
     });
 
     document.querySelector('.footer').classList.add('dNone'); // OCULTAR EL FONDO
-    document.querySelector('.menuContent').classList.add('dNone'); // OCULTAR EL FONDO
+    // document.querySelector('.menuContent').classList.add('dNone'); // OCULTAR EL FONDO
     document.querySelector('.instruction').classList.add('dNone'); // OCULTAR EL FONDO
   }
 
@@ -116,7 +89,7 @@ class ModalCircle1 extends Component {
     });
 
     document.querySelector('.footer').classList.remove('dNone'); // OCULTAR EL FONDO
-    document.querySelector('.menuContent').classList.remove('dNone'); // OCULTAR EL FONDO
+    // document.querySelector('.menuContent').classList.remove('dNone'); // OCULTAR EL FONDO
     document.querySelector('.instruction').classList.remove('dNone'); // OCULTAR EL FONDO
   }
 
@@ -130,19 +103,26 @@ class ModalCircle1 extends Component {
           // MOSTRAR LOS GLOBOS DE TEXTO
           this.state.openGlobe !== false ?
           <div className = 'bgItemGlobe animated fadeIn'>
-            <div className = { 'itemGlobe animated fadeIn d-Flex d-C j-C aI-C'} >
+            <div className = { 'itemGlobe animated fadeIn d-Flex d-C j-C aI-S'} >
 
-              <h2 className = 'mB-1 tCenter c-75' style = {{ 'color': multimedia[actualItem - 1].itemInfo.colorText }}>{ multimedia[actualItem - 1].itemInfo.title }</h2>
+              <img alt = '' className = 'mB-1' src = { multimedia[actualItem - 1].urlImgBtn }/>
 
-              <p className = 'mB-05 tCenter c-75' dangerouslySetInnerHTML = { { __html: multimedia[actualItem - 1].itemInfo.text1 } } />
-              <p className = 'tCenter c-75 enfasis-1' dangerouslySetInnerHTML = { { __html: multimedia[actualItem - 1].itemInfo.text2 } } />
+              <h3 className = 'mB-1 titulo2'>{ multimedia[actualItem - 1].itemInfo.title }</h3>
+
+              <p className = 'mB-1' dangerouslySetInnerHTML = { { __html: multimedia[actualItem - 1].itemInfo.text1 } } />
+              {
+                multimedia[actualItem - 1].itemInfo.text2 &&
+                <p className = 'c-75 enfasis-1' dangerouslySetInnerHTML = { { __html: multimedia[actualItem - 1].itemInfo.text2 } } />
+              }
+
+              <img alt = '' className = '' src = { multimedia[actualItem - 1].itemInfo.img2 }/>
 
               { 
                 multimedia[actualItem - 1].itemInfo.buttonClose.closedModal === true ?
                 <button
                   className = 'buttonClose'
                   onClick = { this.hideModal }
-                  style = { { 'top': multimedia[actualItem - 1].itemInfo.buttonClose.posY, 'left': (multimedia[actualItem - 1].itemInfo.buttonClose.posX + '%') } }
+                  style = { { 'top': multimedia[actualItem - 1].itemInfo.buttonClose.posY, 'right': (multimedia[actualItem - 1].itemInfo.buttonClose.posX) } }
                   >
                   <span className = 'fa-layers fa-fw iconButton' >
                     <FontAwesomeIcon icon="circle" />

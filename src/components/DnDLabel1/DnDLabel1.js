@@ -19,13 +19,18 @@ library.add(fas, fab, far);
 
 class DnDLabel1 extends Component {
   state = {
-    actualItem: 0
+    actualItem: 0,
+    countDrop1: 0,
+    countDrop2: 0,
+    countDrop3: 0,
+    countDrop4: 0,
+    countDrop5: 0,
+    countDrop6: 0,
   }
 
   trackScrolling = (e) => {
     e.preventDefault();
     const CONTENTBOX = document.getElementById('dropContent');
-    // console.log(CONTENTBOX);
     if (e.currentTarget.id === 'btnNavLeft') {
       CONTENTBOX.scrollLeft = CONTENTBOX.scrollLeft - 300;
     }
@@ -43,17 +48,62 @@ class DnDLabel1 extends Component {
     document.querySelector('.instructionMouse').classList.remove('dNone'); // OCULTAR EL FONDO
   }
 
-  countDrop = () => {
+  countDrop = (dropType, limit) => {
     const { multimedia } = this.props;
 
-    if (this.state.actualItem === multimedia.dropZone.drops.length - 1) {
-      document.querySelector('.bgItemGlobe').classList.remove('dNone'); // OCULTAR EL FONDO
-      document.getElementById('infoFinal').classList.remove('dNone');
-
-      document.querySelector('.footer').classList.add('dNone'); // OCULTAR EL FOOTER
-      document.querySelector('.menuContent').classList.add('dNone'); // OCULTAR EL MENU
-      document.querySelector('.instructionMouse').classList.add('dNone'); // OCULTAR EL INSTRUCTION
-
+    switch (dropType) {
+      case 'dropType-1':
+        this.setState({
+          countDrop1: this.state.countDrop1 + 1,
+        });
+        if (this.state.countDrop1 === limit) {
+          document.getElementById('check-0').classList.remove('dNone');
+        }
+        break;
+      case 'dropType-2':
+        this.setState({
+          countDrop2: this.state.countDrop2 + 1,
+        });
+        if (this.state.countDrop2 === limit) {
+          document.getElementById('check-1').classList.remove('dNone');
+        }
+        break;
+      case 'dropType-3':
+        this.setState({
+          countDrop3: this.state.countDrop3 + 1,
+        });
+        if (this.state.countDrop3 === limit) {
+          document.getElementById('check-2').classList.remove('dNone');
+        }
+        break;
+      case 'dropType-4':
+        this.setState({
+          countDrop4: this.state.countDrop4 + 1,
+        });
+        if (this.state.countDrop4 === limit) {
+          document.getElementById('check-3').classList.remove('dNone');
+        }
+        break;
+      case 'dropType-5':
+        this.setState({
+          countDrop5: this.state.countDrop5 + 1,
+        });
+        if (this.state.countDrop5 === limit) {
+          document.getElementById('check-4').classList.remove('dNone');
+        }
+        break;
+      case 'dropType-6':
+        this.setState({
+          countDrop6: this.state.countDrop6 + 1,
+        });
+        if (this.state.countDrop6 === limit) {
+          document.getElementById('check-5').classList.remove('dNone');
+        }
+        break;
+      default:
+        break;
+    }
+    if (this.state.actualItem === multimedia.dragItems.length - 1) {
       this.props.isEnded(true); // SI LLEGA EL FINAL DE LA ACT ENVÍA EL TRUE
     } else {
       this.setState({
@@ -65,16 +115,8 @@ class DnDLabel1 extends Component {
   render() {
     const { multimedia } = this.props;
 
-    // const style = {
-    //   backgroundImage: 'url(' + multimedia.bg + ')',
-    //   backgroundSize: 'auto',
-    //   backgroundPosition: 'top center',
-    //   backgroundRepeat: 'no-repeat'
-    // }
-
-    // console.log(this.state);
     return (
-      <div className = 'DnDLabel1 d-Flex d-C j-E aI-C' style = {{ }}>
+      <div className = 'DnDLabel1 d-Flex j-S aI-E' style = {{ }}>
         <audio
           className = 'audio'
           autoPlay = { '' }
@@ -82,95 +124,46 @@ class DnDLabel1 extends Component {
           src = { '' }
           ref = { (audio) => { this.audio = audio } } />
         <DndProvider backend={HTML5Backend}>    
-          <div className = 'trackContent d-Flex j-C aI-C'>
-            <button
-              className = { 'buttonNav'}
-              id = 'btnNavLeft'
-              onClick = { this.trackScrolling }>
-              <FontAwesomeIcon
-                className = 'iconButton'
-                icon = { ['fas', 'chevron-left'] }
-                size = 'lg' />
-            </button>
-
-            <div className = 'dropContent d-Flex j-S aI-E mL-1 mR-1' id = 'dropContent'>
-              {
-                multimedia.dropZone.drops.map( (item, i) => {
-                  return(
-                    <div className = 'dropInfo d-Flex j-C aI-C mL-05 mR-05'  key = { i }>
-                      <p className = 'tCenter labelDrop fw-7' dangerouslySetInnerHTML = { {__html: item.text} }/>
-                      <BoxDrop
-                        id = { item.target }
-                        img = { item.img }
-                        order = { i }
-                        posY = { item.posY }
-                        posX = { item.posX }
-                        type = { item.type } />
-                    </div>
-                  )
-                })
-              }
-            </div>
-
-            <button
-              className = { 'buttonNav pulse' }
-              id = 'btnNavRight'
-              onClick = { this.trackScrolling }>
-              <FontAwesomeIcon
-                className = 'iconButton'
-                icon = { ['fas', 'chevron-right'] }
-                size = 'lg' />
-            </button>
+          <div className = 'dropContent d-Flex j-S aI-E mR-1' id = 'dropContent'>
+            {
+              multimedia.dropZone.drops.map( (item, i) => {
+                return(
+                  <div className = 'dropInfo d-Flex d-C j-E aI-C mL-05 mR-05'  key = { i }>
+                    <img
+                      alt = 'Check'
+                      className = 'mB-1 dNone'
+                      id = { 'check-' + i }
+                      src = { item.text } />
+                    <BoxDrop
+                      id = { item.target }
+                      img = { item.img }
+                      order = { i }
+                      type = { item.type }
+                      limit={item.limit} />
+                  </div>
+                )
+              })
+            }
           </div>
 
-          <div className = 'line mB-1'></div>
-
-          <div className = 'dragContent d-Flex d-R j-C aI-E'>
+          <div className = 'dragContent d-Flex d-R j-C aI-C wW c-3'>
             {
               multimedia.dragItems.map( item => {
                 return(
-                  <div key = { item.drag } className = {'d-Flex d-C j-E aI-C mL-05 mR-05'}>
+                  <div key = { item.drag } className = {'d-Flex j-C aI-C mL-05 mR-05'}>
+                    <p className = 'textDrag tCenter' dangerouslySetInnerHTML = { {__html: item.text} }/>
                     <DragItem
                       countDrop = { this.countDrop }
                       id = { item.drag }
                       name = { item.data }
                       path = { item.img }
                       type = { item.type } />
-                    <p className = 'tCenter' dangerouslySetInnerHTML = { {__html: item.text} }/>
                   </div>
                 )
               })
             }
           </div>
         </DndProvider>
-
-        <div className = 'bgItemGlobe animated fadeIn dNone'>
-          {
-            multimedia.dropZone.infoBox.map( (item, i) => {
-              return(
-                <div
-                  className = { 'itemGlobe dF-C-cc animated fadeIn dNone' }
-                  id = { 'infoFinal' } 
-                  key = { i } >
-
-                  <h3 className = 'mB-1 tCenter blanco' dangerouslySetInnerHTML = { {__html: item.title} }/>
-                  <p className = 'tCenter blanco' dangerouslySetInnerHTML = { {__html: item.text} }/>
-
-                  <button
-                    className = 'buttonClose'
-                    onClick = { this.hideModal }
-                    id = { item.target }
-                    >
-                    <span className = 'fa-layers fa-fw iconButton' >
-                      <FontAwesomeIcon icon="circle" />
-                      <FontAwesomeIcon icon="times" inverse transform="shrink-6" />
-                    </span>
-                  </button>
-                </div>
-              )
-            })
-          }
-        </div>
       </div>
     );
   }

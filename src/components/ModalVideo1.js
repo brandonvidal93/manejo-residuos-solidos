@@ -40,13 +40,13 @@ class ModalVideo1 extends Component {
     });
 
     document.querySelector('.footer').classList.add('dNone');
-    document.querySelector('.menuContent').classList.add('dNone');
+    // document.querySelector('.menuContent').classList.add('dNone');
   }
 
   //FUNCION PARA CERRAR LA MODAL Y CAMBIAR EL STATE DE COVER
   hideModal = () => {
     document.querySelector('.footer').classList.remove('dNone');
-    document.querySelector('.menuContent').classList.remove('dNone');
+    // document.querySelector('.menuContent').classList.remove('dNone');
     this.props.showModal();
   }
 
