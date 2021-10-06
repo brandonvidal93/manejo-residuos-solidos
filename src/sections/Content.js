@@ -6,8 +6,7 @@ import './Content.scss'
 // IMPORTAR LOS COMPONENTES DE CADA PÁGINA
 import {
   Cover, Page1, Page2, Page3, Page4, Page5, Page6, Page7, Page8, Page9, Page10, Page11, Page12, Page13, Page14,
-  Page15, Page16, Page17, Page18, Page19, Page20, Page21, Page22, Page23, Page24, Page25, Page26, Page27, Page28, Page29,
-  Page30, Page31, Page32, Page33, Page34 
+  Page15, Page16, Page17, Page18, Page19, Page20, Page21, Page22, Page23, Page24
 } from './pages/Pages';
 
 class Content extends Component {
@@ -64,28 +63,8 @@ class Content extends Component {
 
       case 23: return( <Page23 dataPage = { data.page23 } endActivities = { endActivities[23] } checkEndActivity = { checkEndActivity } /> );
 
-      case 24: return( <Page24 dataPage = { data.page24 } endActivities = { endActivities[24] } checkEndActivity = { checkEndActivity } /> );
-
-      case 25: return( <Page25 dataPage = { data.page25 } endActivities = { endActivities[25] } checkEndActivity = { checkEndActivity } /> );
-
-      case 26: return( <Page26 dataPage = { data.page26 } endActivities = { endActivities[26] } checkEndActivity = { checkEndActivity } /> );
-
-      case 27: return( <Page27 dataPage = { data.page27 } endActivities = { endActivities[27] } checkEndActivity = { checkEndActivity } /> );
-
-      case 28: return( <Page28 dataPage = { data.page28 } endActivities = { endActivities[28] } checkEndActivity = { checkEndActivity } /> );
-      
-      case 29: return( <Page29 dataPage = { data.page29 } endActivities = { endActivities[29] } checkEndActivity = { checkEndActivity } /> );
-
-      case 30: return( <Page30 dataPage = { data.page30 } endActivities = { endActivities[30] } checkEndActivity = { checkEndActivity } /> );
-
-      case 31: return( <Page31 dataPage = { data.page31 } endActivities = { endActivities[31] } checkEndActivity = { checkEndActivity } /> );
-
-      case 32: return( <Page32 dataPage = { data.page32 } startQuiz = { clickNavigation } /> );
-
-      case 33: return( <Page33 dataPage = { data.page33 } endQuiz = { clickNavigation } setScore = { setScore } endActivities = { endActivities[33] } checkEndActivity = { checkEndActivity } checkEnabledUnit = { checkEnabledUnit } checkEndUnit = { checkEndUnit } /> );
-
       // END --------------------------------------------------------------------------------
-      case 34: return( <Page34 dataPage = { data.page34 } calificacion = { calificacion } /> );
+      case 24: return( <Page24 dataPage = { data.page24 } endActivities = { endActivities[24] } checkEndActivity = { checkEndActivity } /> );
 
       default:
         break;
