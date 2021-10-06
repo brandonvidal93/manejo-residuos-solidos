@@ -254,7 +254,7 @@ class Page2 extends Component {
     return (
       <div className = { 'pageContent animated fadeIn'}>
         <div className = 'c-10'>
-          <div className = 'mL-6 mT-6'> 
+          <div className = 'mL-5 mT-6'> 
             <img alt = 'Imagen' className = 'imageNPC pAbs' src = { dataPage.resources.img1 }/>
             {
               dataPage.title ? <h1 className = 'c-7 mB-05 F3' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h1> : null
@@ -768,6 +768,14 @@ class Page14 extends Component {
 }
 
 class Page15 extends Component {
+  state = {
+    openModal: false,
+  }
+
+  setModal = (open) => {
+    this.setState({ openModal: open });
+  }
+
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
@@ -789,12 +797,18 @@ class Page15 extends Component {
             }
           </div>
 
-          <div className = 'mL-5 pL-5 mT-2'>
-            <SlideLR2 multimedia = { dataPage.multimedia } handleClick = { this.handleClick } isEnded = { this.isEnded } />
+          <div className = 'mL-5'>
+            <InteractiveSubtitle dataPage={ dataPage.multimedia } isEnded = { this.isEnded } />
+          </div>
+
+          <div className = 'mL-6 pL-5'>
+            <SlideLR2 multimedia = { dataPage.multimedia } handleClick = { this.handleClick } isEnded = { this.isEnded } setModal={this.setModal} />
           </div>
         </div>
 
         <Instruction dataPage = { dataPage.instruction } />
+
+        { this.state.openModal && <ModalCircle3 dataPage = { dataPage.multimedia } setModal={this.setModal} />}
       </div>
     );
   }
@@ -1111,66 +1125,40 @@ class Page21 extends Component {
 }
 
 class Page22 extends Component {
-  state = {
-    openModal: false,
-    warningAnimation: true
-  }
-
-  // FUNCION PARA ABRIR MODAL
-  showModal = () => {
-    this.setState({
-      openModal: !this.state.openModal,
-      warningAnimation: !this.state.warningAnimation
-    });
-  }
-
-  // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
-  isEnded = (end) => {
-    const { checkEndActivity } = this.props;
-    // console.log('Recibí: ' + end);
-    checkEndActivity(22, end);
+  // FUNCION PARA ENVIAR EL INDEX ACTUALIZADO Y EMPEZAR EL QUIZ
+  startQuiz = e => {
+    e.preventDefault();
+    this.props.startQuiz(e.target.id);
   }
 
   render() {
     const { dataPage } = this.props;
-    const { boxInfo } = this.props.dataPage;
+
+    const style = {
+      backgroundImage: 'url(' + dataPage.bg + ')',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    };
 
     return (
-      <div className = { 'pageContent'}>
-        { /* MUESTRA LA MODAL DE ACUERDO AL ESTADO openModal */ }
-        { this.state.openModal !== false ? <ModalVideo1 dataModal={ dataPage } showModal={ this.showModal } isEnded = { this.isEnded } /> : null }
-
-        <div className = 'headerTitle d-Flex d-Rr j-E aI-C mB-1 mL-4 mT-2'>
-          <h2
-            className = 'textHeader F2'
-            dangerouslySetInnerHTML = {{ __html: dataPage.headerPage.textHeader }}
-            style = {{ 'borderColor': dataPage.headerPage.color }}></h2>
-
-          <FontAwesomeIcon icon="play" size = 'lg' className = 'mL-025 mR-05' style = {{ 'color': '#EAEAEA' }} />
-
-          <img alt = 'Imagen' className = '' src = { dataPage.headerPage.imgHeader }/>
-        </div>
-
-        <div className = 'c-10 animated fadeIn c-10 d-Flex j-Bt aI-C'>
-          <div className = 'mL-7 c-3 mT-3 mR-2'> 
+      <div className = {'pageContent'} style = { style }>
+        <div className = 'c-10 d-Flex j-S aI-S animated fadeIn pT-5 pL-2'>
+          <div className = 'mL-7 c-4 mT-6 mR-3 d-Flex d-C j-C aI-C'> 
             {
-              dataPage.title ? <h2 className = 'mB-1 fw-4' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h2> : null
+              dataPage.title ? <h2 className = 'mB-2 F2 tCenter' dangerouslySetInnerHTML = {{ __html: dataPage.title }}></h2> : null
             }
             {
-              dataPage.text ? <p className = 'mB-2 fw-3' dangerouslySetInnerHTML = {{ __html: dataPage.text }}></p> : null
+              dataPage.text ? <p className = 'mB-2 fw-3 tCenter' dangerouslySetInnerHTML = {{ __html: dataPage.text }}></p> : null
             }
-          </div>
-          <div className = 'd-Flex c-45 j-C aI-C mT-2'>
-            <button className = 'buttonVideo mR-6' onClick = { this.showModal }>
-              <img
-                alt = 'Imagen Corporativa'
-                className = 'imageFooter'
-                src = { boxInfo.imgBg }/>
+
+            <button
+              className = 'buttonQuiz pT-1 pB-1 pL-2 pR-2'
+              id = 'btnQuiz'
+              onClick = { this.startQuiz }>
+              { dataPage.button }
             </button>
           </div>
         </div>
-
-        <Instruction dataPage = { dataPage.instruction } />
       </div>
     );
   }

@@ -16,7 +16,7 @@ import './SlideLR2.scss';
 
 library.add(fas, fab, far);
 
-class SlideUpDown extends Component {
+class SlideLR2 extends Component {
   state = {
     page: 1
   }
@@ -33,7 +33,8 @@ class SlideUpDown extends Component {
       });
 
       if (this.state.page === this.props.multimedia.items.length - 1) {
-        this.props.isEnded(true); // SI LLEGA EL FINAL DE LA ACT ENVÍA EL TRUE
+        // this.props.isEnded(true); // SI LLEGA EL FINAL DE LA ACT ENVÍA EL TRUE
+        this.props.setModal(true); // MUESTRA EL MODAL
       }
     }
   }
@@ -74,4 +75,4 @@ class SlideUpDown extends Component {
   }
 }
 
-export default SlideUpDown;
+export default SlideLR2;

@@ -63,7 +63,7 @@ class Footer extends Component {
           </button>
 
           <button
-            className = { 'buttonNav ' + (actualIndex === limitNavigation || Object.values(data)[actualIndex].endCourse === true ? 'disabled ': '') + (actualIndex === 1 || actualIndex === 23 || actualIndex === 24 ? 'disabled ': '') }
+            className = { 'buttonNav ' + (actualIndex === limitNavigation || Object.values(data)[actualIndex].endCourse === true ? 'disabled ': '') + (actualIndex === 1 || actualIndex === 22 || actualIndex === 23 || actualIndex === 24 ? 'disabled ': '') }
             id = 'btnNavRight'
             onClick = { this.navigationCourse }>
             <FontAwesomeIcon
@@ -104,7 +104,7 @@ class Footer extends Component {
     // console.log(endActivities);
 
     return (
-      <div className = { (actualIndex === 0 || actualIndex === 34 ? 'footer-desc' : 'footer') + ' d-Flex j-S aI-C' }>
+      <div className = { (actualIndex === 0 || actualIndex === 24 ? 'footer-desc' : 'footer') + ' d-Flex j-S aI-C' }>
 
         { this.showLogo() }
         { this.showLabel() }

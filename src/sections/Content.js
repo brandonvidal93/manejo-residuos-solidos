@@ -35,7 +35,7 @@ class Content extends Component {
 
       case 9: return( <Page9 dataPage = { data.page9 } endActivities = { endActivities[9] } checkEndActivity = { checkEndActivity } /> );
 
-      case 10: return( <Page10 dataPage = { data.page10 } endActivities = { endActivities[10] } checkEndActivity = { checkEndActivity } /> );
+      case 10: return( <Page10 dataPage = { data.page10 } /> );
 
       case 11: return( <Page11 dataPage = { data.page11 } endActivities = { endActivities[11] } checkEndActivity = { checkEndActivity } /> );
 
@@ -59,12 +59,12 @@ class Content extends Component {
 
       case 21: return( <Page21 dataPage = { data.page21 } endActivities = { endActivities[21] } checkEndActivity = { checkEndActivity } /> );
 
-      case 22: return( <Page22 dataPage = { data.page22 } endActivities = { endActivities[22] } checkEndActivity = { checkEndActivity } /> );
+      case 22: return( <Page22 dataPage = { data.page22 } startQuiz = { clickNavigation } /> );
 
       case 23: return( <Page23 dataPage = { data.page23 } endActivities = { endActivities[23] } checkEndActivity = { checkEndActivity } /> );
 
       // END --------------------------------------------------------------------------------
-      case 24: return( <Page24 dataPage = { data.page24 } endActivities = { endActivities[24] } checkEndActivity = { checkEndActivity } /> );
+      case 24: return( <Page24 dataPage = { data.page24 } calificacion = { calificacion } /> );
 
       default:
         break;

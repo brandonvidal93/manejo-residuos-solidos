@@ -12,129 +12,49 @@ import './ModalCircle3.scss';
 library.add(fas, fab, far);
 
 class ModalCircle3 extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      actualItem: 0,
-      countItem: 0,
-      openGlobe: false
-    }
-  }
-
-  showItems = () => {
-    const { dataPage } = this.props;
-    const ITEM = dataPage.multimedia.map( (item, i) => {
-      return(
-        <div className = 'circleItems pAbs' key = { i } style = {{ 'top': item.posY, 'left': item.posX }}>
-          <div className = 'd-Flex d-R j-C aI-C itemButton'>
-            <button 
-              className = { 'circleButton ' + ( i + 1 !== 1 ? 'disabledGray' : '')} 
-              id = { i + 1 } 
-              onClick = { this.enableItem } >
-
-              <img alt = '' className = '' id = { i + 1 } src = { item.urlImgBtn }/>
-            </button>
-          </div>
-        </div>
-      );
-    } );
-    return ITEM;
-  }
-
-  enableItem = (e) => {
-    const { multimedia } = this.props.dataPage;
-    e.preventDefault();
-    const IDITEM = e.target.id;
-    let idItem = parseInt(IDITEM);
-    console.log(idItem);
-
-    document.getElementById(idItem).classList.add('visited');
-
-    if (idItem <= multimedia.length) {
-      if (idItem !== this.state.actualItem) {
-        this.setState({ actualItem : idItem });
-        if (idItem !== multimedia.length) {
-          let nextItem = document.getElementById(idItem + 1);
-          nextItem.classList.remove('disabledGray');
-          // document.getElementById('title-' + (idItem + 1)).classList.remove('disabledGray');
-          this.setState({ countItem: this.state.countItem + 1 });
-        } else {
-          this.setState({ countItem: this.state.countItem + 1 });
-          this.props.isEnded(true); // SI LLEGA EL FINAL DE LA ACT ENVÍA EL TRUE
-        }
-      }
-    }
-
-    if (this.state.countItem === multimedia.length) {
-      this.setState({ countItem: multimedia.length });
-    }
-
-    this.showGlobe();
-  }
-
-  showGlobe = () => {
-    this.setState({
-      openGlobe: !this.state.openGlobe
-    });
-
+  componentDidMount() {
     document.querySelector('.footer').classList.add('dNone'); // OCULTAR EL FONDO
-    document.querySelector('.menuContent').classList.add('dNone'); // OCULTAR EL FONDO
     document.querySelector('.instruction').classList.add('dNone'); // OCULTAR EL FONDO
   }
 
   //FUNCION PARA CERRAR LA MODAL Y CAMBIAR EL STATE DE COVER style = {{ 'marginTop': 40, 'marginLeft': -480 }}
   hideModal = () => { 
-    this.setState({
-      openGlobe: !this.state.openGlobe
-    });
+    this.props.setModal(false); // MUESTRA EL MODAL
 
     document.querySelector('.footer').classList.remove('dNone'); // OCULTAR EL FONDO
-    document.querySelector('.menuContent').classList.remove('dNone'); // OCULTAR EL FONDO
     document.querySelector('.instruction').classList.remove('dNone'); // OCULTAR EL FONDO
   }
 
   render() {
-    const { multimedia } = this.props.dataPage;
-    const { actualItem } = this.state;
-    const style = {
-      'backgroundImage': 'url(' + this.props.dataPage.resources.bgImg + ')',
-      'backgroundRepeat': 'no-repeat',
-      'backgroundPosition': 'center'
-    }
-    // console.log(this.state.countItem);
+    const { infoEnd } = this.props.dataPage;
+    console.log(infoEnd);
     return (
-      <div className = 'ModalCircle3 d-Flex d-C' style =  {{ ...style }}>
-        {
-          // MOSTRAR LOS GLOBOS DE TEXTO
-          this.state.openGlobe !== false ?
-          <div className = 'bgItemGlobe animated fadeIn'>
-            <div className = { 'itemGlobe animated fadeIn d-Flex d-C j-C aI-C'} >
+      <div className = 'ModalCircle3 d-Flex d-C'>
+        <div className = 'bgItemGlobe animated fadeIn'>
+          <div className = { 'itemGlobe animated fadeIn d-Flex d-C j-C aI-C'} >
 
-              <img alt = '' className = '' src = { multimedia[actualItem - 1].urlImgBtn }/>
+            <h3 className = 'mB-1 titulo2 tCenter'>{ infoEnd.title }</h3>
 
-              {/* <h2 className = 'mB-1 titleGlobe tCenter blanco d-Flex j-C aI-C' style = {{ 'backgroundColor': multimedia[actualItem - 1].itemInfo.colorText }}>{ multimedia[actualItem - 1].itemInfo.title }</h2> */}
+            <p className = 'mB-1 tCenter' dangerouslySetInnerHTML = { { __html: infoEnd.text1 } } />
+            {
+              infoEnd.text2 &&
+              <p className = 'c-75 enfasis-1' dangerouslySetInnerHTML = { { __html: infoEnd.text2 } } />
+            }
 
-              <p className = 'mB-05 tCenter c-75' dangerouslySetInnerHTML = { { __html: multimedia[actualItem - 1].itemInfo.text1 } } />
+            <img alt = '' className = '' src = { infoEnd.img2 }/>
 
-              { 
-                multimedia[actualItem - 1].itemInfo.buttonClose.closedModal === true ?
-                <button
-                  className = 'buttonClose'
-                  onClick = { this.hideModal }
-                  style = { { 'top': multimedia[actualItem - 1].itemInfo.buttonClose.posY, 'left': (multimedia[actualItem - 1].itemInfo.buttonClose.posX + '%') } }
-                  >
-                  <span className = 'fa-layers fa-fw iconButton' >
-                    <FontAwesomeIcon icon="circle" />
-                    <FontAwesomeIcon icon="times" inverse transform="shrink-6" />
-                  </span>
-                </button> : null
-              }
-            </div>
-          </div> : null
-        }
-
-        { this.showItems() }
+            <button
+              className = 'buttonClose'
+              onClick = { this.hideModal }
+              style = { { 'top': infoEnd.buttonClose.posY, 'right': (infoEnd.buttonClose.posX) } }
+              >
+              <span className = 'fa-layers fa-fw iconButton' >
+                <FontAwesomeIcon icon="circle" />
+                <FontAwesomeIcon icon="times" inverse transform="shrink-6" />
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

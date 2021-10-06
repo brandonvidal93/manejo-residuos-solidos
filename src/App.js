@@ -13,8 +13,7 @@ import DataCourse from './data/data.json';
 
 // DEFINICION DEL LIMITE CON LA CANTIDAD DE OBJETOS QUE HAY EN DataCourse
 // SE RESTAN 2 al LIMIT PARA SACAR EL BACK COVER QUE ES UNA MODAL DE FINALIZACION
-const LIMIT = 24;
-// const LIMIT = Object.keys(DataCourse).length - 2;
+const LIMIT = Object.keys(DataCourse).length - 1;
 const UNITS = DataCourse.coverPage.units;
 const LABELFOOTER = DataCourse.coverPage.footer.label;
 const BGFOOTER = DataCourse.coverPage.footer.bgImgs;
@@ -52,7 +51,7 @@ class App extends Component {
     this.state = {
       calificacion: 0,
       conectLMS: false,
-      index: 15,
+      index: 22,
       nextUnit: 1,
       pages: LIMIT,
       units: UNITS,
@@ -173,8 +172,6 @@ class App extends Component {
   // FUNCION PARA ACTUALIZAR EL INDEX Y NAVEGAR RECIBE PARAMETRO DE FOOTER EL ID DEL BOTON
   navigationCourse = (buttonPress) => {
     console.log('Recibo en App.js: ' + buttonPress);
-    // var goMenu;
-
     //SCORM
     if (this.state.index < 0) {
       this.setState({index: 0})
@@ -199,7 +196,7 @@ class App extends Component {
       // DROP PARA COMENZAR EL CURSO
       case 'btnIniciar':
         this.setState({
-          index: this.state.index + 1
+          index: 1
         });
         tracking.saveLocation(this.state.index);
         break;
@@ -215,7 +212,7 @@ class App extends Component {
       // INICIO DEL QUIZ
       case 'btnQuiz':
         this.setState({
-          index: 33
+          index: 23
         });
         tracking.saveLocation(this.state.index);
         break;
@@ -223,14 +220,14 @@ class App extends Component {
       // FINAL DEL QUIZ
       case 'buttonCloseQuizModal':
         this.setState({
-          index: 34
+          index: 24
         });
         tracking.saveLocation(this.state.index);
         break;
     
       default:
         this.setState({
-          index: 2
+          index: 0
         });
         tracking.saveLocation(this.state.index);
     }
@@ -284,14 +281,6 @@ class App extends Component {
     console.log(this.state.enableUnit);
 
     console.log(this.state.unitActual); // UNIDAD ACTUAL
-
-    /* for (var i = 0; i < 6; i++) {
-      document.getElementsByClassName('buttonMenu')[i].classList.remove('animation');
-      console.log(document.getElementsByClassName('buttonMenu')[i]);
-    }
-    if (this.state.unitActual < this.state.units) {
-     document.getElementById('btnUnit-' + this.state.nextUnit).classList.add('animation'); 
-    } */
 
     // GUARDA EL SUSPEND DATA CADA QUE SE HACE UN AVACE EN EL CURSO o UNA MODIFICACION
     this.setSuspend();

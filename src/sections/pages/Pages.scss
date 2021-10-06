@@ -186,16 +186,16 @@
   }
 
   .buttonQuiz {
-    background-color: $color1;
+    background-color: #085A3C;
+    border: 3px solid #fff;
     color: #ffffff;
-    border-radius: 15px;
-    font-size: 1.2em;
-    font-weight: 300;
-    font-style: italic;
+    border-radius: 50px;
+    font-size: 1.5em;
+    font-weight: 700;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     transition: all .3s;
     &:hover {
-      background-color: #04386D;
+      background-color: #0a6e4a;
     }
   }
 
@@ -358,8 +358,9 @@
   }
 
   .imageNPC {
-    top: 0px;
-    right: 30px;
+    top: 30px;
+    right: 20px;
+    width: 38%;
   }
 
   .imageNPC-2 {

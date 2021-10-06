@@ -513,11 +513,6 @@
 
   "page9": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-2.png",
-      "textHeader"  : "Amenazas",
-      "color"       : "#5C2481"
-    },
     "title"   : "2. Phishing o suplantación de identidad",
     "text"    : "Es la estafa más habitual en Internet. Se basa en hacerse pasar por una persona o empresa de confianza para obtener datos nuestros: contraseñas, información bancaria, entre otros. Para ello, el cibercriminal utiliza la ingeniería social para que el engaño sea creíble, es decir, diseñan correos electrónicos muy parecidos al de las empresas. Un correo phishing suele tener las siguientes características:",
     "instruction": {
@@ -903,7 +898,37 @@
             "width"   : 140
           }
         }
-      ]
+      ],
+      "audio": {
+        "src"         : "audio/codigo-colores.mp3",
+        "autoPlay"    : true
+      },
+      "subtitles": {
+        "5"           : "El Ministerio de Ambiente expidió la Resolución Nº 2184 de 2019,",
+        "11"           : "en ella unificó el código de colores para la separación",
+        "14"           : "de residuos en la fuente. Este código deberá ser adoptado",
+        "18"          : "por los municipios o distritos que adelanten programas",
+        "21"          : "de aprovechamiento conforme a sus Planes de Gestión Integral de ",
+        "24"          : "Residuos Sólidos (PGIRS) y permitirá simplificar la separación ",
+        "29"          : "en la fuente en los hogares, preparando al país para el desarrollo ",
+        "32"          : "e implementación de nuevos esquemas de aprovechamiento, en",
+        "36"          : "dónde se unifiquen los esfuerzos entre todos los actores de la cadena."
+      },
+      "infoEnd": {
+        "title"           : "Ten presente:",
+        "text1"           : "En <b>Grupo Familia</b> promovemos la circularidad, por esto vamos un paso más allá y al momento de separar los residuos aprovechables tenemos una clasificación por colores adicional: Gris para todos los residuos de papel y cartón, Azul para los residuos plásticos y Blanco para los demás aprovechables como vidrio y metal.",
+        "img2": "img/15/n-4.png",
+        "colorText"       : "#004991",
+        "pos": {
+          "top": 40,
+          "left": -222
+        },
+        "buttonClose": {
+          "closedModal"   : true,
+          "posY"          : -10,
+          "posX"          : -10
+        }
+      }
     }
   },
 
@@ -911,11 +936,6 @@
     "type": "pageCourse",
     "startUnit": true,
     "nameUnit": "unit3",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-3.png",
-      "textHeader"  : "Dispositivos móviles",
-      "color"       : "#5C2481"
-    },
     "title"   : "Dispositivos móviles",
     "text"    : "Visualiza el siguiente video y conoce la seguridad de la información en los dispositivos móviles.",
     "boxInfo": {
@@ -943,11 +963,6 @@
 
   "page17": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-3.png",
-      "textHeader"  : "Dispositivos móviles",
-      "color"       : "#5C2481"
-    },
     "title"   : "Sugerencias para el uso de dispositivos móviles",
     "text"    : "",
     "instruction": {
@@ -1097,11 +1112,6 @@
     "type": "pageCourse",
     "startUnit": true,
     "nameUnit": "unit4",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-4.png",
-      "textHeader"  : "Seguridad de la información",
-      "color"       : "#5C2481"
-    },
     "title"   : "Estaciones de trabajo",
     "text"    : "Ten presente estas indicaciones para implementarlas en tu equipo de cómputo.",
     "instruction": {
@@ -1184,11 +1194,6 @@
 
   "page19": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-4.png",
-      "textHeader"  : "Seguridad de la información",
-      "color"       : "#5C2481"
-    },
     "title"   : "Contraseñas",
     "text"    : "Mecanismo diseñado para proteger el acceso a las diferentes cuentas de aplicaciones, como correo electrónico, redes sociales, cuantas bancarias, computadores, entre otras. El mal uso de las contraseñas es igual a dejar las llaves pegadas en la cerradura externa de la puerta de la casa. <br><br>Las contraseñas protegen tu identidad y es información que solamente debe conocer el propietario. <br><br>A continuación, te presentamos algunos tips para el manejo de las contraseñas.",
     "instruction": {
@@ -1307,11 +1312,6 @@
 
   "page20": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-4.png",
-      "textHeader"  : "Seguridad de la información",
-      "color"       : "#5C2481"
-    },
     "title"   : "Seguridad en las conversaciones",
     "text"    : "Ser cauto y utilizar un tono de voz adecuado cuando se comparte información a través de conversaciones. Evita hablar de temas sensibles en estos escenarios:",
     "instruction": {
@@ -1414,43 +1414,14 @@
 
   "page22": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-4.png",
-      "textHeader"  : "Seguridad de la información",
-      "color"       : "#5C2481"
-    },
-    "title"   : "Redes WiFi públicas y sus riesgos",
-    "text"    : "Este tipo de redes son atractivas para los consumidores porque nos proporcionan una manera fácil de conectarnos a internet, sin embargo también es atractivo para los ciberdelincuentes debido a que éstas no requieren autenticación para establecer una conexión. <br><br>Visualiza el siguiente video y conoce los riesgos de las redes WiFi públicas.",
-    "boxInfo": {
-      "title"         : "Reproducir video",
-      "text"          : "",
-      "imgBg"         : "img/play-1.png"
-    },
-    "modal": {
-      "type"          : "videoModal",
-      "title"         : "",
-      "text"          : "",
-      "buttonModal"   : "",
-      "closedModal"   : true,
-      "urlVideo"      : "https://content.jwplatform.com/videos/76sTesIf-SpzKbqXP.mp4"
-    },
-    "instruction": {
-      "type"          : "mouse",
-      "text"          : "Visualiza el siguiente video y conoce los riesgos de las redes WiFi públicas.",
-      "posY"          : 50,
-      "posX"          : 660,
-      "size"          : 330,
-      "color"         : "#FFD15C"
-    }
+    "title"   : "Te invitamos a realizar la evaluación final del curso",
+    "text"    : "Responde a continuación las preguntas para que evaluemos el aprendizaje que hemos logrado en esta formación.",
+    "button": "Inicio de la evaluación",
+    "bg": "img/22/bgPage-22.png"
   },
 
   "page23": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-4.png",
-      "textHeader"  : "Seguridad de la información",
-      "color"       : "#5C2481"
-    },
     "title"   : "Puesto de trabajo",
     "text"    : "Proteger documentos en papel y dispositivos de almacenamiento removibles, a fin de reducir los riesgos de acceso no autorizado, pérdida y daño de la información.",
     "instruction": {
@@ -1572,11 +1543,6 @@
 
   "page24": {
     "type": "pageCourse",
-    "headerPage": {
-      "imgHeader"   : "img/menuCourse/n-4.png",
-      "textHeader"  : "Seguridad de la información",
-      "color"       : "#5C2481"
-    },
     "title"   : "Redes sociales",
     "text"    : "“Si no eres capaz de decirlo o hacerlo en un escenario, no lo digas ni lo hagas en las redes sociales”.",
     "boxInfo": {
