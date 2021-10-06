@@ -994,149 +994,184 @@
 
   "page17": {
     "type": "pageCourse",
-    "title"   : "Sugerencias para el uso de dispositivos móviles",
-    "text"    : "",
+    "title"   : "Paso 1 y 2. Educación e identificación de las bolsas",
+    "text"    : "Grupo Familia Colombia aprovecha el 95,6% de los residuos evitando que lleguen a rellenos sanitarios. A través de la siguiente actividad aprenderás a reconocer y clasificar los residuos a partir del color. Este será nuestro primer paso en nuestro proceso de transición.",
     "instruction": {
       "type"    : "mouse",
-      "text"    : "Haz clic en los botones para conocer la información",
+      "text"    : "Haz clic sostenido en cada ícono y llévalo al recipiente correcto de acuerdo con su color.",
       "posY"    : 50,
       "posX"    : 660,
-      "size"    : 330,
+      "size"    : 340,
       "color"   : "#FFD15C"
     },
-    "background": {
-      "bg": "img/17/bgPage-17.png"
-    },
-    "multimedia": [
-      {
-        "urlImgBtn"   : "img/17/n-1.png",
-        "pos": {
-          "top"       : 18,
-          "left"      : 237
+    "multimedia": {
+      "dragItems": [
+        {
+          "drag"    : 1,
+          "img"     : "img/17/drag-1.png",
+          "text"    : "Hojas de papel",
+          "type"    : "5",
+          "data"    : ""
         },
-        "itemInfo": {
-          "title"     : "",
-          "text"      : "Evita conectarte a redes desconocidas.",
-          "posGlobe": {
-            "posY"    : 70,
-            "posX"    : 380
-          },
-          "color"     : "#93C750"
+        {
+          "drag"    : 2,
+          "img"     : "img/17/drag-2.png",
+          "text"    : "Residuos de frutas",
+          "type"    : "1",
+          "data"    : ""
+        },
+        {
+          "drag"    : 3,
+          "img"     : "img/17/drag-3.png",
+          "text"    : "Envase plástico",
+          "type"    : "3",
+          "data"    : ""
+        },
+        {
+          "drag"    : 4,
+          "img"     : "img/17/drag-4.png",
+          "text"    : "Cajas de cartón",
+          "type"    : "5",
+          "data"    : ""
+        },
+        {
+          "drag"    : 5,
+          "img"     : "img/17/drag-5.png",
+          "text"    : "Jeringas",
+          "type"    : "4",
+          "data"    : ""
+        },
+        {
+          "drag"    : 6,
+          "img"     : "img/17/drag-6.png",
+          "text"    : "Sobras de comida",
+          "type"    : "1",
+          "data"    : ""
+        },
+        {
+          "drag"    : 7,
+          "img"     : "img/17/drag-7.png",
+          "text"    : "Tubo de aluminio",
+          "type"    : "3",
+          "data"    : ""
+        },
+        {
+          "drag"    : 8,
+          "img"     : "img/17/drag-8.png",
+          "text"    : "Empaque de mecato",
+          "type"    : "2",
+          "data"    : ""
+        },
+        {
+          "drag"    : 9,
+          "img"     : "img/17/drag-9.png",
+          "text"    : "Servilleta usada",
+          "type"    : "2",
+          "data"    : ""
+        },
+        {
+          "drag"    : 10,
+          "img"     : "img/17/drag-10.png",
+          "text"    : "Cuchillas desechables",
+          "type"    : "4",
+          "data"    : ""
+        },
+        {
+          "drag"    : 11,
+          "img"     : "img/17/drag-11.png",
+          "text"    : "Envase de vidrio",
+          "type"    : "6",
+          "data"    : ""
+        },
+        {
+          "drag"    : 12,
+          "img"     : "img/17/drag-12.png",
+          "text"    : "Delantal de plástico",
+          "type"    : "3",
+          "data"    : ""
         }
+      ],
+      "dropZone": {
+        "drops": [
+          {
+            "key"       : 1,
+            "img"       : "img/17/drop-1.png",
+            "text"      : "img/17/check-1.png",
+            "target"    : "1",
+            "size"      : 136,
+            "posY"      : 44,
+            "posX"      : 86,
+            "type"      : "1",
+            "limit"     : 2
+          },
+          {
+            "key"       : 2,
+            "img"       : "img/17/drop-2.png",
+            "text"      : "img/17/check-1.png",
+            "target"    : "2",
+            "size"      : 136,
+            "posY"      : 107,
+            "posX"      : 195,
+            "type"      : "2",
+            "limit"     : 2
+          },
+          {
+            "key"       : 3,
+            "img"       : "img/17/drop-3.png",
+            "text"      : "img/17/check-1.png",
+            "target"    : "3",
+            "size"      : 136,
+            "posY"      : 44,
+            "posX"      : 304,
+            "type"      : "3",
+            "limit"     : 3
+          },
+          {
+            "key"       : 4,
+            "img"       : "img/17/drop-4.png",
+            "text"      : "img/17/check-1.png",
+            "target"    : "4",
+            "size"      : 136,
+            "posY"      : 107,
+            "posX"      : 414,
+            "type"      : "4",
+            "limit"     : 2
+          },
+          {
+            "key"       : 5,
+            "img"       : "img/17/drop-5.png",
+            "text"      : "img/17/check-1.png",
+            "target"    : "5",
+            "size"      : 136,
+            "posY"      : 44,
+            "posX"      : 524,
+            "type"      : "5",
+            "limit"     : 2
+          },
+          {
+            "key"       : 6,
+            "img"       : "img/17/drop-6.png",
+            "text"      : "img/17/check-1.png",
+            "target"    : "6",
+            "size"      : 136,
+            "posY"      : 107,
+            "posX"      : 633,
+            "type"      : "6",
+            "limit"     : 1
+          }
+        ],
+        "infoBox": [
+          {
+            "target"        : "1",
+            "title"         : "¡Bien hecho!",
+            "colorTitle"    : "",
+            "subTitle"      : "",
+            "text"          : "Has recordado y asociado correctamente cada una de las amenazas de acuerdo con su definición."
+          }
+        ]
       },
-      {
-        "urlImgBtn"   : "img/17/n-2.png",
-        "pos": {
-          "top"       : 179,
-          "left"      : 430
-        },
-        "itemInfo": {
-          "title"     : "",
-          "text"      : "Descarga aplicaciones únicamente desde fuentes confiables y antes de descargarlas verifica los comentarios y calificación. ",
-          "posGlobe": {
-            "posY"    : 217,
-            "posX"    : 47
-          },
-          "color"     : "#0A4D94"
-        }
-      },
-      {
-        "urlImgBtn"   : "img/17/n-3.png",
-        "pos": {
-          "top"       : 343,
-          "left"      : 236
-        },
-        "itemInfo": {
-          "title"     : "",
-          "text"      : "Instala un antivirus.",
-          "posGlobe": {
-            "posY"    : 401,
-            "posX"    : 374
-          },
-          "color"     : "#347DB9"
-        }
-      },
-      {
-        "urlImgBtn"   : "img/17/n-4.png",
-        "pos": {
-          "top"       : 503,
-          "left"      : 430
-        },
-        "itemInfo": {
-          "title"     : "",
-          "text"      : "Activa funcionalidades de autenticación y cifrado.",
-          "posGlobe": {
-            "posY"    : 559,
-            "posX"    : 50
-          },
-          "color"     : "#33A0D6"
-        }
-      },
-      {
-        "urlImgBtn"   : "img/17/n-5.png",
-        "pos": {
-          "top"       : 667,
-          "left"      : 236
-        },
-        "itemInfo": {
-          "title"     : "",
-          "text"      : "Haz regularmente copias de seguridad.",
-          "posGlobe": {
-            "posY"    : 712,
-            "posX"    : 374
-          },
-          "color"     : "#643B8D"
-        }
-      },
-      {
-        "urlImgBtn"   : "img/17/n-6.png",
-        "pos": {
-          "top"       : 826,
-          "left"      : 431
-        },
-        "itemInfo": {
-          "title"     : "",
-          "text"      : "Evita abrir enlaces y archivos virales que circulan en redes  sociales, pueden contener malware.",
-          "posGlobe": {
-            "posY"    : 873,
-            "posX"    : 63
-          },
-          "color"     : "#643B8D"
-        }
-      },
-      {
-        "urlImgBtn"   : "img/17/n-7.png",
-        "pos": {
-          "top"       : 989,
-          "left"      : 237
-        },
-        "itemInfo": {
-          "title"     : "",
-          "text"      : "Configura la opción de bloqueo de pantalla por inactividad y contraseña para desbloquearlo.",
-          "posGlobe": {
-            "posY"    : 1023,
-            "posX"    : 373
-          },
-          "color"     : "#643B8D"
-        }
-      },
-      {
-        "urlImgBtn"   : "img/17/n-8.png",
-        "pos": {
-          "top"       : 1148,
-          "left"      : 431
-        },
-        "itemInfo": {
-          "title"     : "",
-          "text"      : "Mantén actualizado el sistema operativo y las aplicaciones",
-          "posGlobe": {
-            "posY"    : 1200,
-            "posX"    : 83
-          },
-          "color"     : "#643B8D"
-        }
-      }
-    ]
+      "bg": "img/8/bgPage-8.png"
+    }
   },
 
   "page18": {

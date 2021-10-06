@@ -1,15 +1,10 @@
 import React from 'react';
 import { useDrop } from 'react-dnd';
 
-// const style = {
-//   position: 'absolute'
-// }
-
-const BoxDrop = ({ id, img, order, posY, posX, type }) => {
+const BoxDrop = ({ id, img, order, type, limit }) => {
   const [{ canDrop, isOver }, drop] = useDrop({
-  // const [drop] = useDrop({
     accept: type,
-    drop: () => ({ name: 'Artículos' }),
+    drop: () => ({ name: 'Artículos', limit: limit }),
     collect: monitor => ({
       isOver: monitor.isOver(),
       canDrop: monitor.canDrop(),
@@ -26,7 +21,7 @@ const BoxDrop = ({ id, img, order, posY, posX, type }) => {
     <div className = {'dF-C-cc itemDrop'} id = {'itemDrop-' + (order)} ref = { drop } style = {{ }} >
       <img
         alt = 'Drop'
-        className = 'dNone'
+        className = ''
         id = { 'imgDrop-' + id }
         src = { img } />
 
