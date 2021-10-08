@@ -41,7 +41,7 @@ class InteractivePath1 extends Component {
     e.preventDefault();
     const IDITEM = e.target.id;
     let idItem = parseInt(IDITEM);
-    console.log(e.target);
+    // console.log(e.target);
 
     document.getElementById(idItem).classList.add('visited');
     document.querySelector('#itemGlobe-' + (idItem)).classList.remove('itemGlobeDisabled');

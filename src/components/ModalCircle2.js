@@ -47,7 +47,7 @@ class ModalCircle2 extends Component {
     e.preventDefault();
     const IDITEM = e.target.id;
     let idItem = parseInt(IDITEM);
-    console.log(idItem);
+    // console.log(idItem);
 
     document.getElementById(idItem).classList.add('visited');
 
@@ -95,7 +95,7 @@ class ModalCircle2 extends Component {
     const { multimedia } = this.props.dataPage;
     const { actualItem } = this.state;
 
-    console.log(multimedia);
+    // console.log(multimedia);
     // console.log(this.state.countItem);
     return (
       <div className = 'ModalCircle2 d-Flex d-C'>

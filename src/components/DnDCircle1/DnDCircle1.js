@@ -30,7 +30,7 @@ class DnDCircle1 extends Component {
     document.querySelector('.menuContent').classList.remove('dNone'); // OCULTAR EL FONDO
     document.querySelector('.instructionMouse').classList.remove('dNone'); // OCULTAR EL FONDO
 
-    console.log(this.state.actualItem);
+    // console.log(this.state.actualItem);
 
     if (this.state.actualItem === 5) {
       this.props.isEnded(true); // SI LLEGA EL FINAL DE LA ACT ENVÍA EL TRUE

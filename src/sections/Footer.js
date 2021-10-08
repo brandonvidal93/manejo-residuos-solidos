@@ -19,7 +19,7 @@ class Footer extends Component {
     const { actualIndex } = this.props;
     e.preventDefault();
     if (e.target.id === 'btnNavRight') {
-      console.log(actualIndex);
+      // console.log(actualIndex);
 
       document.getElementById('btnNavRight').classList.remove('animationBtnNav');
 

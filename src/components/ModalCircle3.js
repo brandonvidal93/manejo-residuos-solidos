@@ -27,7 +27,7 @@ class ModalCircle3 extends Component {
 
   render() {
     const { infoEnd } = this.props.dataPage;
-    console.log(infoEnd);
+    // console.log(infoEnd);
     return (
       <div className = 'ModalCircle3 d-Flex d-C'>
         <div className = 'bgItemGlobe animated fadeIn'>

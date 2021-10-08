@@ -46,7 +46,7 @@ class InteractivePath4 extends Component {
 
     if (idItem < multimedia.length - 1) {
 
-      console.log('Menor');
+      // console.log('Menor');
 
       let nextItem = document.getElementById(idItem + 1);
       nextItem.classList.remove('disabledGray');

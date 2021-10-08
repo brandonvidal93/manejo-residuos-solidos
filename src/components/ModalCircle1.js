@@ -25,7 +25,7 @@ class ModalCircle1 extends Component {
   showItems = () => {
     const { dataPage } = this.props;
     return dataPage.multimedia.map( (item, i) => {
-      console.log(item);
+      // console.log(item);
       return(
         <div className = 'circleItems pAbs' key = { i } style={{top: item.itemInfo.pos.top, left: item.itemInfo.pos.left}}>
           <button 
@@ -46,7 +46,7 @@ class ModalCircle1 extends Component {
     e.preventDefault();
     const IDITEM = e.target.id;
     let idItem = parseInt(IDITEM);
-    console.log(idItem);
+    // console.log(idItem);
 
     document.getElementById(idItem).classList.add('visited');
 

@@ -57,8 +57,6 @@ class Quiz1 extends Component {
 
     document.querySelector('.footer').classList.remove('dNone');
 
-    console.log();
-
     this.showModal();
 
     this.props.endQuiz(document.getElementById('buttonCloseQuizModal').id); // VA EN EL BOTON DE FINALIZACIÓN
@@ -108,7 +106,6 @@ class Quiz1 extends Component {
         break;
 
       default:
-        console.log();
         break;
     }
   }

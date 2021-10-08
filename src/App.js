@@ -24,7 +24,7 @@ const tracking = new Tracking(new SCORMLib(), LIMIT);
 //// FUNCION PARA HACER EL CÁLCULO DEL TIEMPO DE CADA SESIÓN ////
 
 const timeSession = new Date();
-console.log('Hora inicial de la sesión: ' + timeSession.toLocaleTimeString());
+// console.log('Hora inicial de la sesión: ' + timeSession.toLocaleTimeString());
 
 const setTimeSession = () => {
   let endTime, hours, minutes, seconds, duration, timeToSCO;
@@ -39,8 +39,8 @@ const setTimeSession = () => {
 
   timeToSCO = (hours < 10 ? ( '000' + hours ) : ('00' + hours)) + ":" + (minutes < 10 ? ( '0' + minutes ) : (minutes)) + ":" + (seconds < 10 ? ( '0' + seconds ) : (seconds));
 
-  console.log('Hora formateada para guardar en SCORM');
-  console.log(timeToSCO);
+  // console.log('Hora formateada para guardar en SCORM');
+  // console.log(timeToSCO);
 
   tracking._setSessionTime(timeToSCO);
 }
@@ -76,24 +76,24 @@ class App extends Component {
       // SEPARA LOS DIFERENTES TIPOS DE DATOS POR #
       let arrayInfoSuspend = tracking._getSuspendData().split('#');
 
-      console.log('Array separado por #');
-      console.log(arrayInfoSuspend);
+      // console.log('Array separado por #');
+      // console.log(arrayInfoSuspend);
 
       // SEPARO CADA ELEMENTO DEL ARRAY EN UN NUEVO ARRAY HIJO
       for (var i = 0; i < arrayInfoSuspend.length; i++) {
         arrayInfoSuspend[i] = arrayInfoSuspend[i].split(',');
       }
 
-      console.log('Array hijos separados por ,');
-      console.log(arrayInfoSuspend);
+      // console.log('Array hijos separados por ,');
+      // console.log(arrayInfoSuspend);
 
       // CONVIERTO LOS TRES PRIMEROS ELEMENTOS DEL ARRAY EN INT
       for (var j = 0; j < 3; j++) {
         arrayInfoSuspend[j] = parseInt(arrayInfoSuspend[j]);
       }
 
-      console.log('Elementos de NUMBER hijos convertidos a INT');
-      console.log(arrayInfoSuspend);
+      // console.log('Elementos de NUMBER hijos convertidos a INT');
+      // console.log(arrayInfoSuspend);
 
       // PASO AL STATE LOS DOS PRIMEROS ELEMENTOS QUE SON INT
       this.setState({
@@ -109,8 +109,8 @@ class App extends Component {
         }
       }
 
-      console.log('Elementos de Array hijos convertidos a Bool');
-      console.log(arrayInfoSuspend);
+      // console.log('Elementos de Array hijos convertidos a Bool');
+      // console.log(arrayInfoSuspend);
 
       // PASO AL STATE LOS TRES ULTIMOS ELEMENTOS QUE SON ARRAY CON BOOLEANOS
       this.setState({
@@ -125,8 +125,8 @@ class App extends Component {
   // Calificación INVOCADA CUANDO SE COMPLETAN ACTIVIDADES O SE AVANZA DE PAGINA
 
   setScore = (raw) => {
-    console.log('Recibo: ' + raw);
-    console.log('Calificación en el estado: ' + this.state.calificacion);
+    // console.log('Recibo: ' + raw);
+    // console.log('Calificación en el estado: ' + this.state.calificacion);
 
     this.setState({
       calificacion: raw
@@ -145,7 +145,7 @@ class App extends Component {
 
     let dataConcat = index + "#" + unitActual + "#" + nextUnit + "#" + unitFinal + "#" + enableUnit + "#" + endActivities;
 
-    console.log('Información concatenada: ' + dataConcat);
+    // console.log('Información concatenada: ' + dataConcat);
 
     tracking._setSuspendData(dataConcat);
   }
@@ -170,7 +170,7 @@ class App extends Component {
 
   // FUNCION PARA ACTUALIZAR EL INDEX Y NAVEGAR RECIBE PARAMETRO DE FOOTER EL ID DEL BOTON
   navigationCourse = (buttonPress) => {
-    console.log('Recibo en App.js: ' + buttonPress);
+    // console.log('Recibo en App.js: ' + buttonPress);
     //SCORM
     if (this.state.index < 0) {
       this.setState({index: 0})
@@ -261,11 +261,11 @@ class App extends Component {
 
   // MARCAR CADA UNIDAD COMO FINALIZADA
   checkEndUnit = (idUnit) => {
-    console.log('Unidad: ' + idUnit);
+    // console.log('Unidad: ' + idUnit);
     let checkArray = this.state.unitFinal;
     checkArray[idUnit] = true;
     this.setState({unitFinal: checkArray})
-    console.log(this.state.unitFinal);
+    // console.log(this.state.unitFinal);
 
     // GUARDA EL SUSPEND DATA CADA QUE SE HACE UN AVACE EN EL CURSO o UNA MODIFICACION
     this.setSuspend();
@@ -273,13 +273,13 @@ class App extends Component {
 
   // HABILITAR LA SIGUIENTE UNIDAD
   checkEnabledUnit = (idUnit) => {
-    console.log('Unidad: ' + idUnit);
+    // console.log('Unidad: ' + idUnit);
     let enabledArray = this.state.enableUnit;
     enabledArray[idUnit] = true;
     this.setState({enableUnit: enabledArray})
-    console.log(this.state.enableUnit);
+    // console.log(this.state.enableUnit);
 
-    console.log(this.state.unitActual); // UNIDAD ACTUAL
+    // console.log(this.state.unitActual); // UNIDAD ACTUAL
 
     // GUARDA EL SUSPEND DATA CADA QUE SE HACE UN AVACE EN EL CURSO o UNA MODIFICACION
     this.setSuspend();
@@ -290,7 +290,7 @@ class App extends Component {
     let nActivityArray = this.state.endActivities;
     nActivityArray[idActivity] = actEnd;
     this.setState({endActivities: nActivityArray})
-    console.log(this.state.endActivities);
+    // console.log(this.state.endActivities);
 
     const {index} = this.state;
 

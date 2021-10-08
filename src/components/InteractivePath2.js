@@ -18,7 +18,7 @@ class InteractivePath2 extends Component {
   }
 
   handleClick = (e) => {
-    console.log(e.target.id);
+    // console.log(e.target.id);
 
     switch (e.target.id) {
       case 'btnN1':
@@ -76,7 +76,7 @@ class InteractivePath2 extends Component {
       height: '276px'
     };
 
-    console.log(multimedia);
+    // console.log(multimedia);
     return(
       <div className = 'interactivePath2 d-Flex d-C j-S aI-S' style={style}>
         <div className = 'row d-Flex j-S aI-St c-10 mT-1 mL-4'>

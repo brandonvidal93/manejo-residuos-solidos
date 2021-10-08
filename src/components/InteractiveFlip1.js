@@ -57,7 +57,7 @@ class InteractiveFlip extends Component {
           let idErrors=[];
           for (let i = 0; i < itemsSelected.length; i++) {
             idErrors = [...idErrors, itemsSelected[i].getAttribute('id')];
-            console.log(idErrors);
+            // console.log(idErrors);
           }
 
           for (let i = 0; i < allItems.length; i++) {
