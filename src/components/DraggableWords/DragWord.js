@@ -17,8 +17,6 @@ const DragWord = ({ countDrop, countOk, name, type, id, bgColor }) => {
 
         document.getElementById('dragWord-' + id).classList.add('dNone');
         if (item.name === dropResult.correct) {
-          console.log('correct');
-
           document.getElementById('boxDrop-' + dropResult.correct).classList.add('WordDropped');
           document.getElementById('boxDrop-' + dropResult.correct).style.backgroundColor = bgColor;
           document.getElementById('boxDrop-' + dropResult.correct).innerHTML = '<p class = "">' + name + '</p>';
@@ -27,8 +25,6 @@ const DragWord = ({ countDrop, countOk, name, type, id, bgColor }) => {
           document.getElementById('audioNotification').src = 'audio/check.mp3';
           document.getElementById('audioNotification').play();
         } else {
-          console.log('incorrect');
-
           document.getElementById('boxDrop-' + dropResult.correct).classList.add('WordDropped');
           document.getElementById('boxDrop-' + dropResult.correct).innerHTML = '<p class = "">' + name + '</p>';
           document.getElementById('boxDrop-' + dropResult.correct).style.backgroundColor = bgColor;

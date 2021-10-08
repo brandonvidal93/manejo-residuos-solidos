@@ -18,7 +18,7 @@ class Quiz1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      question: 1,
+      question: 0,
       accumulatedPoints: 0,
       totalPoints: props.multimedia.questions.length,
       raw: 0,
@@ -105,13 +105,20 @@ class Quiz1 extends Component {
           document.getElementById('option-' + numId).classList.add('labelTrue');
 
           this.accumulatedPoints(1);
+
+          document.getElementById('audioNotification').src = 'audio/check.mp3';
+          document.getElementById('audioNotification').play();
         } else {
           document.getElementById('icon-' + numId).classList.add('dNone');
           document.getElementById('iError-' + numId).classList.remove('dNone');
           document.getElementById('option-' + numId).classList.add('labelFalse');
+
+          document.getElementById('audioNotification').src = 'audio/error.mp3';
+          document.getElementById('audioNotification').play();
         }
 
         document.getElementById('btnNextQuiz').classList.remove('disabled');
+        document.getElementById('BoxQuestions').classList.add('disabledSolid2');
         break;
 
       default:
@@ -134,10 +141,10 @@ class Quiz1 extends Component {
     })
     console.log('Final no va más');
 
-    // this.setState({
-    //   showModal: !this.state.showModal
-    // })
-    // document.querySelector('.footer').classList.add('dNone');
+    this.setState({
+      showModal: !this.state.showModal
+    })
+    document.querySelector('.footer').classList.add('dNone');
   }
 
   render() {
@@ -147,6 +154,12 @@ class Quiz1 extends Component {
 
     return (
       <div className = 'Quiz1 c-10 '>
+        <audio
+          className = 'audio'
+          autoPlay = { '' }
+          id = 'audioNotification'
+          src = { '' }
+          ref = { (audio) => { this.audio = audio } } />
         {
           this.state.showModal !== false &&
           <div className = 'modalQuiz animated fadeIn'>
@@ -183,7 +196,7 @@ class Quiz1 extends Component {
           {
             multimedia.questions[this.state.question].type === 'single' &&
             <div className='d-Flex aI-C'>
-              <div>
+              <div id='BoxQuestions'>
                 {
                   multimedia.questions[this.state.question].options.map((choice, i) => {
                     return(

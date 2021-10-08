@@ -35,10 +35,10 @@ class DraggableWords extends Component {
 
     if (this.state.countDrop === 5) {
       this.props.accumulatedPoints(this.state.countOk/5);
-      //funcion setTimeout
-      // setTimeout(() => {
-      //   this.props.nextQuestion();
-      // }, 1000);
+      // funcion setTimeout
+      setTimeout(() => {
+        this.props.nextQuestion();
+      }, 1000);
     }
   }
 
