@@ -51,7 +51,7 @@ class App extends Component {
     this.state = {
       calificacion: 0,
       conectLMS: false,
-      index: 22,
+      index: 0,
       nextUnit: 1,
       pages: LIMIT,
       units: UNITS,
@@ -135,6 +135,7 @@ class App extends Component {
     //SCORM
     tracking._scoreSet(raw);
     // tracking.closeCourse(); // CUANDO SE COMPLETA INVOCA LA FINALAZACION EN EL SCORM
+    this.setSuspend();
   }
 
   ///////////////////////////////////////////////////////////

@@ -66,7 +66,7 @@ class ModalGallery2 extends Component {
     return (
       <div className = 'ModalGallery2 animated fadeIn d-Flex j-C aI-C'>
         <div className = 'showModal'>
-          <div className = 'itemGallery d-Flex j-C aI-C'>
+          <div className = 'itemGallery d-Flex j-C aI-S'>
             {
               dataPage.length > 1 ?
               <button className = { 'buttonSlide mR-3 ' + (this.state.slide === 1 ? 'disabled' : 'pulse') } id = 'btnAnt' onClick = { this.mSlides }>
