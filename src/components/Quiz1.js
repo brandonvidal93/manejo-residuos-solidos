@@ -167,6 +167,7 @@ class Quiz1 extends Component {
               <div className = 'c-10 d-Flex d-C j-C aI-C'>
                 <img alt = 'Imagen' className = 'mB-2' src = { this.state.raw >= 70 ? multimedia.modal.check.img : multimedia.modal.error.img }/>
                 <h2 className = 'mB-1 tCenter' dangerouslySetInnerHTML = {{ __html: this.state.raw >= 70 ? multimedia.modal.check.title : multimedia.modal.error.title }}></h2>
+                <h3 className = 'mB-1 tCenter'>{ Math.round(this.state.raw) }%</h3>
                 <p className = 'tCenter mB-2' dangerouslySetInnerHTML = {{ __html: this.state.raw >= 70 ? multimedia.modal.check.text : multimedia.modal.error.text }}></p>
 
                 <button
