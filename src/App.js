@@ -51,7 +51,7 @@ class App extends Component {
     this.state = {
       calificacion: 0,
       conectLMS: false,
-      index: 0,
+      index: 22,
       nextUnit: 1,
       pages: LIMIT,
       units: UNITS,
@@ -165,6 +165,7 @@ class App extends Component {
     - Unidades o Temas       -> ${this.state.units}
     - Unidad Actual          -> ${this.state.unitActual} `;
     console.log(messageState);
+    console.log(this.state.endActivities);
     console.log();
   }
 

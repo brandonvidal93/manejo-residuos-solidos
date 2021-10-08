@@ -52,6 +52,10 @@ class InteractiveFlip extends Component {
         if (this.state.countPair === dataPage.items.length / 2) {
           this.props.isEnded(true);
         }
+
+        setTimeout(() => {
+          document.querySelector('.interactiveFlip').style.pointerEvents = 'all';
+        }, 1000);
       } else {
         setTimeout(() => {
           let idErrors=[];
@@ -64,12 +68,9 @@ class InteractiveFlip extends Component {
             allItems[i].classList.remove('show');
           }
           this.flipHide(idErrors);
-        }, 1000);
+          document.querySelector('.interactiveFlip').style.pointerEvents = 'all';
+        }, 3000);
       }
-      
-      setTimeout(() => {
-        document.querySelector('.interactiveFlip').style.pointerEvents = 'all';
-      }, 1000);
 
       this.setState({
         count: 1

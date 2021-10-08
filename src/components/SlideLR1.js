@@ -61,7 +61,7 @@ class SlideUpDown extends Component {
                 <FontAwesomeIcon icon="arrow-left" inverse transform="shrink-6" />
               </span>
             </button>
-            <button className = { 'buttonSlide ' + (this.state.page === multimedia.items.length ? 'disabled' : '') } id = 'btnSig' onClick = { this.mSlides }>
+            <button className = { 'buttonSlide ' + (this.state.page === multimedia.items.length ? 'disabled' : 'pulse-signal') } id = 'btnSig' onClick = { this.mSlides }>
               <span className = 'fa-layers fa-fw iconButton' >
                 <FontAwesomeIcon icon="circle" />
                 <FontAwesomeIcon icon="arrow-right" inverse transform="shrink-6" />

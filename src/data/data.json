@@ -100,7 +100,7 @@
   "page3": {
     "type": "pageCourse",
     "title"   : "Estrategia de sostenibilidad corporativa",
-    "text"    : "El Grupo Familia está comprometido como organización para llevar la gestión de sostenibilidad del step 1 al 3. De acuerdo con las implementaciones y avances que tenemos actualmente, nos podemos visualizar en el 3.",
+    "text"    : "Grupo Familia está comprometida como organización para llevar la gestión de sostenibilidad del step 1 al 3. De acuerdo con las implementaciones y avances que tenemos actualmente, nos podemos visualizar en el 3.",
     "background": {
       "bg": "img/4/bgPage-4.png"
     },
@@ -129,9 +129,9 @@
         },
         "itemInfo": {
           "title"     : "",
-          "text"      : "<b>Step 2: Gestión empresarial</b><br>Lo mínimo que exige la ley o el mercado.",
+          "text"      : "<b>Step 2: Gestión empresarial</b><br>Sostenibilidad en las empresas de una forma natural sin ser declarados como tal.",
           "posGlobe": {
-            "posY"    : 140,
+            "posY"    : 129,
             "posX"    : 47
           },
           "color"     : "#2097D3"
@@ -196,7 +196,7 @@
         "color"             : "#004991",
         "itemInfo": {
           "title"           : "Generamos bienestar: “rompiendo barreras para el bienestar”",
-          "text1"           : "• Soluciones superiores de higiene y aseo.<br>• Estrategias de educación y sensibilización que permitan romper tabúes para el bienestar.<br>• Incrementar en nivel de bienestar a poblaciones vulnerables a través del acompañamiento de la Fundación Grupo Familia.<br>• Oportunidades y bienestar para todos los empleados de la Compañía.",
+          "text1"           : "• Soluciones superiores de higiene y aseo.<br>• Estrategias de educación y sensibilización que permitan romper tabúes para el bienestar.<br>• Incremento en el nivel de bienestar de poblaciones vulnerables a través del acompañamiento de la Fundación Grupo Familia.<br>• Oportunidades y bienestar para todos los empleados de la Compañía.",
           "text2"           : "",
           "img2": "img/5/n-1-1.png",
           "colorText"       : "#004991",
@@ -217,7 +217,7 @@
         "color"             : "#683E92",
         "itemInfo": {
           "title"           : "Promovemos la circularidad: “Diseño y desarrollo de productos y procesos pensados para una economía circular”",
-          "text1"           : "• Asumir la responsabilidad de nuestros productos a lo largo de todo el ciclo de vida.<br>• Gestión responsable del plástico y el papel en nuestros empaques y productos.<br>• Desarrollar alternativas de aprovechamiento para productos al final del ciclo de vida.",
+          "text1"           : "• Asumir la responsabilidad de nuestros productos a lo largo de todo el ciclo de vida.<br>• Gestionar responsablemente el plástico y el papel en nuestros empaques y productos.<br>• Desarrollar alternativas de aprovechamiento para productos al final del ciclo de vida.",
           "text2"           : "",
           "img2": "img/5/n-2-1.png",
           "colorText"       : "#683E92",
@@ -361,7 +361,7 @@
         },
         {
           "img"       : "img/6/n-10.png",
-          "text"      : "Además, Juan me está contando que para la próxima década, se hará una <b>estrategia de cambio climático</b> coherente con la agenda 2030 que se está dando en el contexto y en el mundo.",
+          "text"      : "Además, Juan me está contando que para la próxima década, se hará una <b>estrategia de cambio climático</b> coherente con la agenda 2030 que se está dando en el contexto mundial.",
           "textPos": {
             "posY"    : 56,
             "posX"    : 220,
@@ -370,7 +370,7 @@
         },
         {
           "img"       : "img/6/n-11.png",
-          "text"      : "Mis queridos amigos, he finalizado este recorrido y me voy enamorado de esta Compañía, de su gente y de las <b>buenas prácticas de sostenibilidad ambiental</b> que practican aquí, nos vemos en una próxima oportunidad.",
+          "text"      : "Mis queridos amigos, he finalizado este recorrido y me voy enamorada de esta Compañía, de su gente y de las <b>buenas prácticas de sostenibilidad ambiental</b> que ejercen aquí, nos vemos en una próxima oportunidad.",
           "textPos": {
             "posY"    : 74,
             "posX"    : 194,
@@ -384,10 +384,10 @@
   "page6": {
     "type": "pageCourse",
     "title"   : "Consecuencias del manejo incorrecto de los residuos sólidos",
-    "text"    : "Las siguientes imágenes pueden herir susceptibilidades, recomendamos discreción. Nuestro objetivo es visualizar y concientizar sobre las consecuencias de disponer de los residuos sólidos de una forma incorrecta.",
+    "text"    : "Nuestro objetivo es crear conciencia sobre el impacto que le generamos al medio ambiente cuando disponemos de forma incorrecta los residuos sólidos.",
     "instruction": {
       "type"    : "mouse",
-      "text"    : "Haz clic en cada ícono siguiente para ver las imágenes.",
+      "text"    : "Visualiza toda la galería de imágenes para continuar con la formación.",
       "posY"    : 50,
       "posX"    : 660,
       "size"    : 330,
@@ -484,7 +484,7 @@
   "page8": {
     "type": "pageCourse",
     "title"   : "Sabías que...",
-    "text"    : "A continuación, te daremos más datos interesantes sobre nuestro contexto.<br> “Todo junto es basura, separado es un recurso”.",
+    "text"    : "A continuación, te daremos datos interesantes sobre nuestro contexto.<br> “Todo junto es basura, separado es un recurso”.",
     "instruction": {
       "type"    : "mouse",
       "text"    : "Haz clic sostenido en el ícono y llévalo en orden consecutivo. ",
@@ -710,7 +710,7 @@
   "page11": {
     "type": "pageCourse",
     "title"   : "Manejo Integral de Residuos (MIR)",
-    "text"    : "El Manejo Integral de Residuos tiene como meta el que todos los colaboradores de las diferentes áreas de la Compañía manejen adecuadamente sus residuos sólidos peligrosos y no peligrosos, a través del uso de la escala de colores definida para clasificar los residuos sólidos generados.<br><br>Lleva en orden consecutivo cada círculo para concer la información.",
+    "text"    : "El Manejo Integral de Residuos tiene como meta que todos los colaboradores de las diferentes áreas de la Compañía manejen adecuadamente sus residuos sólidos peligrosos y no peligrosos, a través del uso de la escala de colores definida para clasificar los residuos sólidos generados.",
     "img"     : "img/12/n-1.png"
   },
 
@@ -864,7 +864,7 @@
     "text"    : "",
     "instruction": {
       "type"    : "mouse",
-      "text"    : "Haz clic en cada ícono siguiente para ver las imágenes.",
+      "text"    : "Haz clic en la flecha lateral para descubrir el nuevo código de colores.",
       "posY"    : 50,
       "posX"    : 660,
       "size"    : 330,
@@ -936,13 +936,13 @@
   "page15": {
     "type": "pageCourse",
     "title"   : "¿Cómo estamos implementando este cambio?",
-    "text"    : "En Grupo Familia somos conscientes que los cambios son importantes y planear cada paso para implementar las mejoras es más importante. Es por esto que te presentamos “La Ruta del Cambio - Residuos Sólidos”. Acompáñanos para aprender, identificar y aplicar este conocimiento no solamente en la Compañía sino también en tu hogar. Esta es nuestra ruta:",
+    "text"    : "En Grupo Familia somos conscientes que los cambios son importantes y planear cada paso para implementar las mejoras es más fundamental. Es por esto que te presentamos “La Ruta del Cambio - Residuos Sólidos”. Acompáñanos para aprender, identificar y aplicar este conocimiento no solamente en la Compañía sino también en tu hogar. Esta es nuestra ruta:",
     "instruction": {
       "type"    : "mouse",
-      "text"    : "Haz clic sostenido en cada ícono y llévalo al recipiente correcto de acuerdo con su color.",
+      "text"    : "Haz clic donde dice 2021 y luego sigue con los siguientes botones para conocer la información.",
       "posY"    : 50,
-      "posX"    : 660,
-      "size"    : 340,
+      "posX"    : 620,
+      "size"    : 360,
       "color"   : "#FFD15C"
     },
     "multimedia": {
@@ -1029,7 +1029,7 @@
   "page16": {
     "type": "pageCourse",
     "title"   : "Paso 1 y 2. Educación e identificación de las bolsas",
-    "text"    : "Grupo Familia Colombia aprovecha el 95,6% de los residuos evitando que lleguen a rellenos sanitarios. A través de la siguiente actividad aprenderás a reconocer y clasificar los residuos a partir del color. Este será nuestro primer paso en nuestro proceso de transición.",
+    "text"    : "Grupo Familia Colombia aprovecha el 95,6% de los residuos evitando que lleguen a rellenos sanitarios. A través de la siguiente actividad aprenderás a reconocer y clasificar los residuos a partir del color. Éste será nuestro primer paso en nuestro proceso de transición.",
     "instruction": {
       "type"    : "mouse",
       "text"    : "Haz clic sostenido en cada ícono y llévalo al recipiente correcto de acuerdo con su color.",
@@ -1043,28 +1043,28 @@
         {
           "drag"    : 1,
           "img"     : "img/17/drag-1.png",
-          "text"    : "Hojas de papel",
+          "text"    : "Hojas de<br>papel",
           "type"    : "5",
           "data"    : ""
         },
         {
           "drag"    : 2,
           "img"     : "img/17/drag-2.png",
-          "text"    : "Residuos de frutas",
+          "text"    : "Residuos<br>de frutas",
           "type"    : "1",
           "data"    : ""
         },
         {
           "drag"    : 3,
           "img"     : "img/17/drag-3.png",
-          "text"    : "Envase plástico",
+          "text"    : "Envase<br>plástico",
           "type"    : "3",
           "data"    : ""
         },
         {
           "drag"    : 4,
           "img"     : "img/17/drag-4.png",
-          "text"    : "Cajas de cartón",
+          "text"    : "Cajas de<br>cartón",
           "type"    : "5",
           "data"    : ""
         },
@@ -1078,28 +1078,28 @@
         {
           "drag"    : 6,
           "img"     : "img/17/drag-6.png",
-          "text"    : "Sobras de comida",
+          "text"    : "Sobras de<br>comida",
           "type"    : "1",
           "data"    : ""
         },
         {
           "drag"    : 7,
           "img"     : "img/17/drag-7.png",
-          "text"    : "Tubo de aluminio",
+          "text"    : "Tubo de<br>aluminio",
           "type"    : "3",
           "data"    : ""
         },
         {
           "drag"    : 8,
           "img"     : "img/17/drag-8.png",
-          "text"    : "Empaque de mecato",
+          "text"    : "Empaque<br>de mecato",
           "type"    : "2",
           "data"    : ""
         },
         {
           "drag"    : 9,
           "img"     : "img/17/drag-9.png",
-          "text"    : "Servilleta usada",
+          "text"    : "Servilleta<br>usada",
           "type"    : "2",
           "data"    : ""
         },
@@ -1113,7 +1113,7 @@
         {
           "drag"    : 11,
           "img"     : "img/17/drag-11.png",
-          "text"    : "Envase de vidrio",
+          "text"    : "Envase de<br>vidrio",
           "type"    : "6",
           "data"    : ""
         },
@@ -1210,8 +1210,8 @@
 
   "page17": {
     "type": "pageCourse",
-    "title"   : "Sabías que...",
-    "text"    : "Cada año Colombia genera cerca de 12 millones de toneladas de residuos, de los cuales solo el 17% es reciclado, lo que deja un amplio margen de crecimiento para la reutilización. <b>(Cempre, 2020)</b><br><br>Para ayudar a incrementar esta cifra, te explicaremos cuál es la clasificación de los residuos para que lo empieces a aplicar en tu vida cotidiana.",
+    "title"   : "Paso 3. Contenedores",
+    "text"    : "Iremos ajustando poco a poco los colores de los contenedores para reflejar la norma, por ahora recuerda:<br><br><b>Papel y cartón:</b> contenedor gris<br><b>Plástico:</b> contenedor azul<br><b>Otros reciclables:</b> contenedor blanco<br><b>Ordinarios:</b> contenedor con bolsa negra<br><b>Residuos orgánicos:</b> contenedor con bolsa verde",
     "instruction": {
       "type"    : "mouse",
       "text"    : "Haz clic sobre cada ícono para descubrir cuáles son.",
@@ -1278,13 +1278,28 @@
           "trian"     : "trian-2"
         }
       }
-    ]
+    ],
+    "infoEnd": {
+      "title"           : "Recuerda",
+      "text1"           : "En tu planta, el <b>color de las bolsas</b> nos indicará cómo hacer la <b>correcta separación</b>.",
+      "img2": "",
+      "colorText"       : "#004991",
+      "pos": {
+        "top": 40,
+        "left": -222
+      },
+      "buttonClose": {
+        "closedModal"   : true,
+        "posY"          : -10,
+        "posX"          : -10
+      }
+    }
   },
 
   "page18": {
     "type": "pageCourse",
-    "title"   : "Seguridad en las conversaciones",
-    "text"    : "Ser cauto y utilizar un tono de voz adecuado cuando se comparte información a través de conversaciones. Evita hablar de temas sensibles en estos escenarios:",
+    "title"   : "Paso 4. Métricas",
+    "text"    : "Queremos medir <b>el cambio en tu cultura y participación</b> en la separación de residuos sólidos en cada una de las plantas, ver poco a poco cómo somos parte del este cambio. <b>¡Espéralo!</b>",
     "instruction": {
       "type"    : "mouse",
       "text"    : "Haz clic en los círculos inferiores para conocer los demás ítems",

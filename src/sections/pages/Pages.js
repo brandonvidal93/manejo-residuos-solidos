@@ -17,6 +17,7 @@ import InteractivePath3 from '../../components/InteractivePath3';
 import InteractivePath4 from '../../components/InteractivePath4';
 import InteractivePath5 from '../../components/InteractivePath5';
 import InteractiveSubtitle from '../../components/InteractiveSubtitle';
+import InteractiveSubtitle2 from '../../components/InteractiveSubtitle2';
 import ModalCircle1 from '../../components/ModalCircle1';
 import ModalCircle2 from '../../components/ModalCircle2';
 import ModalCircle3 from '../../components/ModalCircle3';
@@ -732,7 +733,7 @@ class Page14 extends Component {
           </div>
 
           <div className = 'mL-5'>
-            <InteractiveSubtitle dataPage={ dataPage.multimedia } isEnded = { this.isEnded } />
+            <InteractiveSubtitle2 dataPage={ dataPage.multimedia } isEnded = { this.isEnded } />
           </div>
 
           <div className = 'mL-6 pL-5'>
@@ -815,6 +816,14 @@ class Page16 extends Component {
 }
 
 class Page17 extends Component {
+  state = {
+    openModal: false,
+  }
+
+  setModal = (open) => {
+    this.setState({ openModal: open });
+  }
+
   // FUNCION QUE RECIBE EL TRUE CUANDO FINALIZA LA ACTIVIDAD
   isEnded = (end) => {
     const { checkEndActivity } = this.props;
@@ -823,6 +832,8 @@ class Page17 extends Component {
 
   render() {
     const { dataPage } = this.props;
+
+    console.log(dataPage);
 
     return (
       <div className = { 'pageContent'}>
@@ -837,11 +848,13 @@ class Page17 extends Component {
           </div>
 
           <div className = 'c-5 d-Flex j-C aI-S mT-6'>
-            <InteractivePath5 dataPage = { dataPage } isEnded = { this.isEnded } />
+            <InteractivePath5 dataPage = { dataPage } isEnded = { this.isEnded } setModal={this.setModal} />
           </div>
         </div>
 
         <Instruction dataPage = { dataPage.instruction } />
+
+        { this.state.openModal && <ModalCircle3 dataPage = { dataPage } setModal={this.setModal} />}
       </div>
     );
   }

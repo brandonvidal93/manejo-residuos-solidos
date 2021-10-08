@@ -122,6 +122,12 @@ button {
 
 .pulse { animation: pulse-2 2s infinite; }
 
+.pulse-signal {
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 .imageCenter {
   margin: 0 auto;
 }

@@ -55,7 +55,10 @@ class InteractivePath4 extends Component {
     } else {
       
       this.setState({ countItem: this.state.countItem + 1 });
-      this.props.isEnded(true); // SI LLEGA EL FINAL DE LA ACT ENVÍA EL TRUE
+      setTimeout(() => {
+        this.props.isEnded(true); // SI LLEGA EL FINAL DE LA ACT ENVÍA EL TRUE
+        this.props.setModal(true); // MUESTRA EL MODAL
+      }, 3000);
     }
 
     if (this.state.countItem === multimedia.length - 1) {

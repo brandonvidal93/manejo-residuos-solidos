@@ -33,8 +33,10 @@ class SlideLR2 extends Component {
       });
 
       if (this.state.page === this.props.multimedia.items.length - 1) {
-        // this.props.isEnded(true); // SI LLEGA EL FINAL DE LA ACT ENVÍA EL TRUE
-        this.props.setModal(true); // MUESTRA EL MODAL
+        setTimeout(() => {
+          this.props.isEnded(true); // SI LLEGA EL FINAL DE LA ACT ENVÍA EL TRUE
+          this.props.setModal(true); // MUESTRA EL MODAL
+        }, 5000);
       }
     }
   }
@@ -62,7 +64,7 @@ class SlideLR2 extends Component {
                 <FontAwesomeIcon icon="arrow-left" inverse transform="shrink-6" />
               </span>
             </button>
-            <button className = { 'buttonSlide ' + (this.state.page === multimedia.items.length ? 'disabled' : '') } id = 'btnSig' onClick = { this.mSlides }>
+            <button className = { 'buttonSlide ' + (this.state.page === multimedia.items.length ? 'disabled' : 'pulse-signal') } id = 'btnSig' onClick = { this.mSlides }>
               <span className = 'fa-layers fa-fw iconButton' >
                 <FontAwesomeIcon icon="circle" />
                 <FontAwesomeIcon icon="arrow-right" inverse transform="shrink-6" />
