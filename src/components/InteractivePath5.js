@@ -43,11 +43,9 @@ class InteractivePath4 extends Component {
     let idItem = parseInt(IDITEM);
 
     this.setState({ actualItem : idItem });
+    document.getElementById('trash-' + idItem).classList.remove('dNone');
 
     if (idItem < multimedia.length - 1) {
-
-      // console.log('Menor');
-
       let nextItem = document.getElementById(idItem + 1);
       nextItem.classList.remove('disabledGray');
       
@@ -79,7 +77,6 @@ class InteractivePath4 extends Component {
 
   render() {
     const { multimedia } = this.props.dataPage;
-    const { actualItem } = this.state;
 
     const style = {
       backgroundImage: 'url(' + this.props.dataPage.background.bg + ')',
@@ -88,41 +85,30 @@ class InteractivePath4 extends Component {
       backgroundRepeat: 'no-repeat'
     }
 
-    // console.log(this.state.countItem);
     return (
       <div className = 'InteractivePath5' style = {{ ...style }}>
         { this.showItems() }
+        <div className = 'bgItemGlobe'>
         {
-          // MOSTRAR LOS GLOBOS DE TEXTO
-          this.state.openGlobe !== false ?
-          <div className = 'bgItemGlobe'>
-            <div
-              className = { 'itemGlobe dF-C-cs animated fadeIn' } style = {{ 'borderColor': multimedia[actualItem].itemInfo.color, 'top': multimedia[actualItem].itemInfo.posGlobe.posY, 'left': multimedia[actualItem].itemInfo.posGlobe.posX }}>
+          multimedia.map( (item, i) => {
+            return(
+              <div key={i} id={'trash-' + i} className = { 'itemGlobe dF-C-cs animated fadeIn dNone' } style = {{ 'borderColor': item.itemInfo.color, 'top': item.itemInfo.posGlobe.posY, 'left': item.itemInfo.posGlobe.posX }}>
+                {
+                  item.itemInfo.title && <h4 className = 'mB-05' dangerouslySetInnerHTML = {{ __html: item.itemInfo.title }}></h4>
+                }
 
-              {
-                multimedia[actualItem].itemInfo.title && <h4 className = 'mB-05' dangerouslySetInnerHTML = {{ __html: multimedia[actualItem].itemInfo.title }}></h4>
-              }
+                {
+                  item.itemInfo.text && <p className = 'tCenter' dangerouslySetInnerHTML = {{ __html: item.itemInfo.text }}></p>
+                }
 
-              {
-                multimedia[actualItem].itemInfo.text && <p className = 'tCenter' dangerouslySetInnerHTML = {{ __html: multimedia[actualItem].itemInfo.text }}></p>
-              }
-
-              {
-                multimedia[actualItem].itemInfo.img && <img alt = '' className = '' src = { multimedia[actualItem].itemInfo.img }/>
-              }
-
-              <button
-                className = 'buttonClose'
-                onClick = { this.hideModal }
-                >
-                <span className = 'fa-layers fa-fw iconButton' >
-                  <FontAwesomeIcon icon="circle" />
-                  <FontAwesomeIcon icon="times" inverse transform="shrink-6" />
-                </span>
-                </button>
-            </div>
-          </div> : null
+                {
+                  item.itemInfo.img && <img alt = '' className = '' src = { item.itemInfo.img }/>
+                }
+              </div>
+            )
+          })
         }
+        </div>
       </div>
     );
   }

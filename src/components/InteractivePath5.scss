@@ -16,8 +16,11 @@
   .bgItemGlobe {
     z-index: 4;
     height: 180px;
+    top: 258px;
+    left: 0;
 
     .itemGlobe {
+      width: auto;
       .buttonClose {
         position: absolute;
         background-color: transparent;

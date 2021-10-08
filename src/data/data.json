@@ -384,7 +384,7 @@
   "page6": {
     "type": "pageCourse",
     "title"   : "Consecuencias del manejo incorrecto de los residuos sólidos",
-    "text"    : "Nuestro objetivo es crear conciencia sobre el impacto que le generamos al medio ambiente cuando disponemos de forma incorrecta los residuos sólidos.",
+    "text"    : "Las siguientes imágenes pueden herir susceptibilidades, recomendamos discreción. <br><br>Nuestro objetivo es crear conciencia sobre el impacto que le generamos al medio ambiente cuando disponemos de forma incorrecta los residuos sólidos.",
     "instruction": {
       "type"    : "mouse",
       "text"    : "Visualiza toda la galería de imágenes para continuar con la formación.",
@@ -936,7 +936,7 @@
   "page15": {
     "type": "pageCourse",
     "title"   : "¿Cómo estamos implementando este cambio?",
-    "text"    : "En Grupo Familia somos conscientes que los cambios son importantes y planear cada paso para implementar las mejoras es más fundamental. Es por esto que te presentamos “La Ruta del Cambio - Residuos Sólidos”. Acompáñanos para aprender, identificar y aplicar este conocimiento no solamente en la Compañía sino también en tu hogar. Esta es nuestra ruta:",
+    "text"    : "En Grupo Familia somos conscientes que los cambios son importantes y planear cada paso para implementar las mejoras es fundamental. Es por esto que te presentamos “La Ruta del Cambio - Residuos Sólidos”. Acompáñanos para aprender, identificar y aplicar este conocimiento no solamente en la Compañía sino también en tu hogar. Esta es nuestra ruta:",
     "instruction": {
       "type"    : "mouse",
       "text"    : "Haz clic donde dice 2021 y luego sigue con los siguientes botones para conocer la información.",
@@ -1106,7 +1106,7 @@
         {
           "drag"    : 10,
           "img"     : "img/17/drag-10.png",
-          "text"    : "Cuchillas desechables",
+          "text"    : "Cuchillas<br>desechables",
           "type"    : "4",
           "data"    : ""
         },
@@ -1235,7 +1235,7 @@
           "text"      : "",
           "img"         : "img/18/n-1.png",
           "posGlobe": {
-            "posY"    : 256,
+            "posY"    : 0,
             "posX"    : 0
           },
           "color"     : "#085A3C",
@@ -1253,7 +1253,7 @@
           "text"      : "",
           "img"         :"img/18/n-2.png",  
           "posGlobe": {
-            "posY"    : 256,
+            "posY"    : -137,
             "posX"    : 276
           },
           "color"     : "#BA0505",
@@ -1271,7 +1271,7 @@
           "text"      : "",
           "img"         :"img/18/n-3.png",  
           "posGlobe": {
-            "posY"    : 256,
+            "posY"    : -275,
             "posX"    : 399
           },
           "color"     : "#BA0505",
