@@ -10,27 +10,34 @@ const DragWord = ({ countDrop, countOk, name, type, id, bgColor }) => {
     item: { name, type: type },
     end: (item, monitor) => {
       const dropResult = monitor.getDropResult()
-      
-      if (item && dropResult) {
-        // alert(`You dropped ${item.name} into ${dropResult.name}!`);
-        // console.log(`You dropped ${type} item`);
-        // AQUI ES DONDE VA EL CODIGO PARA MOSTRAR EL GLOBO INFO
 
-        // console.log(document.getElementById('infoDrop-' + id));
-        // console.log(document.getElementById('dragBox-' + id));
+      if (item && dropResult) {
+        // console.log(`You dropped ${item.name} into ${dropResult.name}!`);
+        // console.log(`You dropped ${type} item`);
+
         document.getElementById('dragWord-' + id).classList.add('dNone');
-        document.getElementById('boxDrop-' + type).classList.add('WordDropped');
-        document.getElementById('boxDrop-' + type).style.backgroundColor = bgColor;
-        document.getElementById('boxDrop-' + type).innerHTML = '<p class = "">' + type + '</p>';
+        if (item.name === dropResult.correct) {
+          console.log('correct');
+
+          document.getElementById('boxDrop-' + dropResult.correct).classList.add('WordDropped');
+          document.getElementById('boxDrop-' + dropResult.correct).style.backgroundColor = bgColor;
+          document.getElementById('boxDrop-' + dropResult.correct).innerHTML = '<p class = "">' + name + '</p>';
+
+          countOk();
+          document.getElementById('audioNotification').src = 'audio/check.mp3';
+          document.getElementById('audioNotification').play();
+        } else {
+          console.log('incorrect');
+
+          document.getElementById('boxDrop-' + dropResult.correct).classList.add('WordDropped');
+          document.getElementById('boxDrop-' + dropResult.correct).innerHTML = '<p class = "">' + name + '</p>';
+          document.getElementById('boxDrop-' + dropResult.correct).style.backgroundColor = bgColor;
+
+          document.getElementById('audioNotification').src = 'audio/error.mp3';
+          document.getElementById('audioNotification').play();
+        }
 
         countDrop();
-        countOk();
-
-        document.getElementById('audioNotification').src = 'audio/check.mp3';
-        document.getElementById('audioNotification').play();
-      } else {
-        document.getElementById('audioNotification').src = 'audio/error.mp3';
-        document.getElementById('audioNotification').play();
       }
     },
     collect: monitor => ({
@@ -43,7 +50,7 @@ const DragWord = ({ countDrop, countOk, name, type, id, bgColor }) => {
 
   return (
     <div className = 'dragWord d-Flex j-C aI-C' ref = { drag } style = {{ ...STYLE, 'opacity': OPACTITY, 'backgroundColor': BACKGROUNDCOLOR }} id = {'dragWord-' + id }>
-      <p>{ type }</p>
+      <p>{ name }</p>
     </div>
   )
 }

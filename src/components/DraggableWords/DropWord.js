@@ -5,10 +5,10 @@ const style = {
   position: 'absolute'
 }
 
-const DropWord = ({ posY, posX, type, size, id }) => {
+const DropWord = ({ posY, posX, type, size, id, correct }) => {
   const [{ canDrop, isOver }, drop] = useDrop({
     accept: type,
-    drop: () => ({ name: 'Artículos' }),
+    drop: () => ({ type: type, correct: correct }),
     collect: monitor => ({
       isOver: monitor.isOver(),
       canDrop: monitor.canDrop(),
@@ -19,7 +19,7 @@ const DropWord = ({ posY, posX, type, size, id }) => {
   } else if (canDrop) {
   }
   return (
-    <div className = 'dF-C-cc boxDrop' ref = { drop } style = {{ ...style, 'top': posY, 'left': posX, 'width': size }} id = { 'boxDrop-' + type } >
+    <div className = 'dF-C-cc boxDrop' ref = { drop } style = {{ ...style, 'top': posY, 'left': posX, 'width': size }} id = { 'boxDrop-' + correct } >
 
     </div>
   )

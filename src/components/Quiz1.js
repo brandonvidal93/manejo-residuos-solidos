@@ -18,13 +18,22 @@ class Quiz1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      question: 0,
+      question: 1,
       accumulatedPoints: 0,
       totalPoints: props.multimedia.questions.length,
       raw: 0,
       showModal: false,
       isNext: false,
     }
+  }
+
+  statusQuiz = () => {
+    console.log(
+      `
+      Question          : ${this.state.question}
+      Accumulated Points: ${this.state.accumulatedPoints}
+      Total Points      : ${this.state.totalPoints}`
+    );
   }
 
   isEnded = () => {
@@ -125,14 +134,16 @@ class Quiz1 extends Component {
     })
     console.log('Final no va más');
 
-    this.setState({
-      showModal: !this.state.showModal
-    })
-    document.querySelector('.footer').classList.add('dNone');
+    // this.setState({
+    //   showModal: !this.state.showModal
+    // })
+    // document.querySelector('.footer').classList.add('dNone');
   }
 
   render() {
     const { multimedia } = this.props;
+
+    this.statusQuiz();
 
     return (
       <div className = 'Quiz1 c-10 '>

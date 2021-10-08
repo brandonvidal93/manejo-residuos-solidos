@@ -1453,42 +1453,42 @@
               {
                 "drag"    : 1,
                 "img"     : "img/23/drag-1.png",
-                "text"    : "Cajas de cartón",
+                "text"    : "Cajas de<br>cartón",
                 "type"    : "3",
                 "data"    : ""
               },
               {
                 "drag"    : 2,
                 "img"     : "img/23/drag-2.png",
-                "text"    : "Empaque de mecato",
+                "text"    : "Empaque<br>de mecato",
                 "type"    : "2",
                 "data"    : ""
               },
               {
                 "drag"    : 3,
                 "img"     : "img/23/drag-3.png",
-                "text"    : "Servilleta usada",
+                "text"    : "Servilleta<br>usada",
                 "type"    : "2",
                 "data"    : ""
               },
               {
                 "drag"    : 4,
                 "img"     : "img/23/drag-4.png",
-                "text"    : "Sobras de comida",
+                "text"    : "Sobras de<br>comida",
                 "type"    : "1",
                 "data"    : ""
               },
               {
                 "drag"    : 5,
                 "img"     : "img/23/drag-5.png",
-                "text"    : "Hojas de papel",
+                "text"    : "Hojas de<br>papel",
                 "type"    : "3",
                 "data"    : ""
               },
               {
                 "drag"    : 6,
                 "img"     : "img/23/drag-6.png",
-                "text"    : "Envase plástico",
+                "text"    : "Envase<br>plástico",
                 "type"    : "3",
                 "data"    : ""
               }
@@ -1556,53 +1556,62 @@
         {
           "type": "LabelDnD",
           "instruction"   : "",
-          "statement"     : "<b>2.</b> Selecciona correctamente el color de las bolsas para cada tipo de residuo.",
+          "statement"     : "<b>2.</b> Arrastra con clic sostenido el complemento de la oración, de acuerdo con los conocimientos adquiridos en el curso.",
           "labelDnD": {
             "dragItem": [
               {
                 "id": 1,
                 "text": "color de las bolsas",
-                "color": "#004991"
+                "color": "#004991",
+                "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
               },
               {
                 "id": 2,
                 "text": "Bolsa antigua",
-                "color": "#E31F83"
+                "color": "#E31F83",
+                "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
               },
               {
                 "id": 3,
                 "text": "Bolsa",
-                "color": "#085A3C"
+                "color": "#085A3C",
+                "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
               },
               {
                 "id": 4,
                 "text": "código de colores",
-                "color": "#86BF41"
+                "color": "#86BF41",
+                "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
               },
               {
                 "id": 5,
                 "text": "color de los contenedores",
-                "color": "#002C57"
+                "color": "#002C57",
+                "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
               },
               {
                 "id": 6,
                 "text": "contenedores nuevos",
-                "color": "#F18E32"
+                "color": "#F18E32",
+                "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
               },
               {
                 "id": 7,
                 "text": "contenedores antiguos",
-                "color": "#189BDB"
+                "color": "#189BDB",
+                "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
               },
               {
                 "id": 8,
                 "text": "correcta separación",
-                "color": "#683E92"
+                "color": "#683E92",
+                "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
               },
               {
                 "id": 9,
-                "text": "Incorrecta correcta separación",
-                "color": "#F8B328"
+                "text": "Incorrecta separación",
+                "color": "#F8B328",
+                "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
               }
             ],
             "dropZone": {
@@ -1624,8 +1633,9 @@
                       "box": "<div class = 'boxDrop'></div>",
                       "posY": 20,
                       "posX": 476,
-                      "size": 150,
-                      "type": "código de colores"
+                      "size": 170,
+                      "correct": "código de colores",
+                      "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
                     }
                   ]
                 },
@@ -1645,8 +1655,9 @@
                       "box": "<div class = 'boxDrop'></div>",
                       "posY": 0,
                       "posX": 515,
-                      "size": 150,
-                      "type": "Bolsa"
+                      "size": 170,
+                      "correct": "Bolsa",
+                      "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
                     }
                   ]
                 },
@@ -1666,8 +1677,9 @@
                       "box": "<div class = 'boxDrop'></div>",
                       "posY": -19,
                       "posX": 556,
-                      "size": 150,
-                      "type": "contenedores nuevos"
+                      "size": 170,
+                      "correct": "contenedores antiguos",
+                      "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
                     }
                   ]
                 },
@@ -1684,7 +1696,7 @@
                       "key": 2,
                       "text": "nos indicará cómo hacer la",
                       "posY": -30,
-                      "posX": 285
+                      "posX": 305
                     }
                   ],
                   "drops": [
@@ -1693,16 +1705,18 @@
                       "box": "<div class = 'boxDrop'></div>",
                       "posY": -39,
                       "posX": 125,
-                      "size": 150,
-                      "type": "color de las bolsas"
+                      "size": 170,
+                      "correct": "color de las bolsas",
+                      "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
                     },
                     {
                       "key": 2,
                       "box": "<div class = 'boxDrop'></div>",
                       "posY": -39,
-                      "posX": 455,
-                      "size": 150,
-                      "type": "correcta separación"
+                      "posX": 475,
+                      "size": 170,
+                      "correct": "correcta separación",
+                      "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
                     }
                   ]
                 }

@@ -20,7 +20,7 @@ library.add(fas, fab, far);
 class DnDLabel2 extends Component {
   state = {
     countDrop: 0,
-    countOk: 1,
+    countOk: 0,
   }
 
   countOk = () => {
@@ -30,18 +30,18 @@ class DnDLabel2 extends Component {
   }
 
   countDrop = () => {
+    console.log('Cuántas buenas? ' + this.state.countOk);
     this.setState({
       countDrop: this.state.countDrop + 1,
     });
 
     if (this.state.countDrop === 6) {
-      this.props.accumulatedPoints(this.state.countOk/6);
-      //funcion setTimeout
+      console.log(this.state.countOk);
+      this.props.accumulatedPoints(this.state.countOk/6);    
+      // funcion setTimeout
       setTimeout(() => {
         this.props.nextQuestion();
       }, 1000);
-
-      
     }
   }
 

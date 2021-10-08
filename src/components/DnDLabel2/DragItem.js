@@ -22,7 +22,6 @@ const DragItem = ({ countDrop, countOk, name, path, type, id }) => {
     item: { name, type: type },
     end: (item, monitor) => {
       const dropResult = monitor.getDropResult()
-      countDrop();
       if (item && dropResult) {
         // console.log(`You dropped ${item.name} into ${dropResult.limit}!`);
         // console.log(`You dropped ${id} item`);
@@ -39,6 +38,8 @@ const DragItem = ({ countDrop, countOk, name, path, type, id }) => {
         document.getElementById('audioNotification').src = 'audio/error.mp3';
         document.getElementById('audioNotification').play();
       }
+
+      countDrop();
     },
     collect: monitor => ({
       isDragging: monitor.isDragging(),

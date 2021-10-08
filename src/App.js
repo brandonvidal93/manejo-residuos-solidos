@@ -125,8 +125,8 @@ class App extends Component {
   // Calificación INVOCADA CUANDO SE COMPLETAN ACTIVIDADES O SE AVANZA DE PAGINA
 
   setScore = (raw) => {
-    // console.log('Recibo: ' + raw);
-    // console.log('Calificación en el estado: ' + this.state.calificacion);
+    console.log('Recibo: ' + raw);
+    console.log('Calificación en el estado: ' + this.state.calificacion);
 
     this.setState({
       calificacion: raw

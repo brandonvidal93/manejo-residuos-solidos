@@ -19,7 +19,7 @@ library.add(fas, fab, far);
 class DraggableWords extends Component {
   state = {
     countDrop: 0,
-    countOk: 1,
+    countOk: 0,
   }
 
   countOk = () => {
@@ -36,11 +36,9 @@ class DraggableWords extends Component {
     if (this.state.countDrop === 5) {
       this.props.accumulatedPoints(this.state.countOk/5);
       //funcion setTimeout
-      setTimeout(() => {
-        this.props.nextQuestion();
-      }, 1000);
-
-      
+      // setTimeout(() => {
+      //   this.props.nextQuestion();
+      // }, 1000);
     }
   }
 
@@ -67,7 +65,7 @@ class DraggableWords extends Component {
                     id = { item.id }
                     key = { item.id }
                     name = { item.text }
-                    type = { item.text }/>
+                    type = { item.type }/>
                 )
               })
             }
@@ -90,11 +88,12 @@ class DraggableWords extends Component {
                         return(
                           <DropWord
                             key = { boxDrop.key }
-                            id = { boxDrop.key }
+                            id = { i }
                             size = { boxDrop.size }
                             posY = { boxDrop.posY }
                             posX = { boxDrop.posX }
-                            type = { boxDrop.type } />
+                            type = { boxDrop.type }
+                            correct = { boxDrop.correct } />
                         )
                       })
                     }
