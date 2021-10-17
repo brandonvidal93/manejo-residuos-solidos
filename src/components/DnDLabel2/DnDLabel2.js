@@ -34,8 +34,8 @@ class DnDLabel2 extends Component {
       countDrop: this.state.countDrop + 1,
     });
 
-    if (this.state.countDrop === 6) {
-      this.props.accumulatedPoints(this.state.countOk/6);    
+    if (this.state.countDrop === 8) {
+      this.props.accumulatedPoints(this.state.countOk/8);    
       // funcion setTimeout
       setTimeout(() => {
         this.props.nextQuestion();
