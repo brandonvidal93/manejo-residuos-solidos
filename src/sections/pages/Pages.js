@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
-// import StartDrop from '../../components/DnDStart/dropBoard';
-// import StartDrag from '../../components/DnDStart/dragButton';
-import Accordion1 from '../../components/Accordion1';
-import DnDCircle1 from '../../components/DnDCircle1/DnDCircle1';
-import DnDCircle2 from '../../components/DnDCircle2/DnDCircle2';
-import DnDCircle3 from '../../components/DnDCircle3/DnDCircle3';
 import DnDLabel1 from '../../components/DnDLabel1/DnDLabel1';
-import DnDIcon1 from '../../components/DnDIcon1/DnDIcon1';
 import DnDSwipe1 from '../../components/DnDSwipe1/DnDSwipe1';
 import Instruction from '../../components/Instruction';
-import InteractiveAudio1 from '../../components/InteractiveAudio1/InteractiveAudio1';
 import InteractiveFlip1 from '../../components/InteractiveFlip1';
 import InteractivePath1 from '../../components/InteractivePath1';
 import InteractivePath2 from '../../components/InteractivePath2';
-import InteractivePath3 from '../../components/InteractivePath3';
 import InteractivePath4 from '../../components/InteractivePath4';
 import InteractivePath5 from '../../components/InteractivePath5';
 import InteractiveSubtitle from '../../components/InteractiveSubtitle';
@@ -22,26 +13,14 @@ import ModalCircle1 from '../../components/ModalCircle1';
 import ModalCircle2 from '../../components/ModalCircle2';
 import ModalCircle3 from '../../components/ModalCircle3';
 import ModalVideo1 from '../../components/ModalVideo1';
-import ModalGallery1 from '../../components/ModalGallery1';
 import ModalGallery2 from '../../components/ModalGallery2';
-import Pyramid1 from '../../components/Pyramid1';
 import Quiz1 from '../../components/Quiz1';
 import SlideDot1 from '../../components/SlideDot1';
 import SlideLR1 from '../../components/SlideLR1';
 import SlideLR2 from '../../components/SlideLR2';
 import SlideUpDown from '../../components/SlideUpDown';
 
-import { FontAwesomeIcon } from'@fortawesome/react-fontawesome';
-
-// IMPORT FONT AWESOME LIBRARY
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
-
 import './Pages.scss';
-
-library.add(fas, fab, far);
 
 class Cover extends Component {
   // FUNCION PARA ENVIAR EL INDEX ACTUALIZADO Y EMPEZAR EL CURSO

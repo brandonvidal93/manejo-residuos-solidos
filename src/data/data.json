@@ -267,7 +267,7 @@
   "page5": {
     "type": "pageCourse",
     "title"   : "Metas de sostenibilidad ambiental",
-    "text"    : "Conoce las metas de sostenibilidad ambiental del Grupo Familia 2017-2021 y los resultados que se obtuvieron en el 2020. Para ello, te invitamos a seguir la siguiente historia de un youtuber ambientalista que conoció una de nuestras plantas y quedó asombrado con los indicadores que tenemos. Presta mucha atención.",
+    "text"    : "Conoce las metas de sostenibilidad ambiental de Grupo Familia 2017-2021 y los resultados que se obtuvieron en el 2020. Para ello, te invitamos a seguir la siguiente historia de una youtuber ambientalista que conoció una de nuestras plantas y quedó asombrada con los indicadores que tenemos. Presta mucha atención.",
     "instruction": {
       "type"    : "mouse",
       "text"    : "Sigue la conversación dando clic en en botón con dirección hacia abajo.",
@@ -447,7 +447,7 @@
   "page7": {
     "type": "pageCourse",
     "title"   : "Sabías que...",
-    "text"    : "En el pacífico existe una isla de basura también conocida como el continente de plástico, isla tóxica, gran mancha de basura en el pacífico, gran zona de basura en el pacífico y otros nombre similares, es una zona del océano cubierta de desechos y plásticos en el centro del océano pacífico norte. Las cifras están en las siguientes imágenes. ",
+    "text"    : "En el pacífico existe una isla de basura también conocida como el continente de plástico, isla tóxica, gran mancha de basura en el pacífico, gran zona de basura en el pacífico y otros nombres similares, es una zona del océano cubierta de desechos y plásticos en el centro del océano pacífico norte. Las cifras están en las siguientes imágenes. ",
     "instruction": {
       "type"    : "mouse",
       "text"    : "Haz clic en las imágenes para conocerlas.",
@@ -617,7 +617,7 @@
           {
             "target"    : "4",
             "color"     : "#9DD528",
-            "text"      : "Por cada tonelada de papel que se recicla se salvan 18 árboles.",
+            "text"      : "Una gota de aceite puede contaminar 1.000 litros de agua.",
             "posY"      : -60,
             "posX"      : 240,
             "trian"     : "trian-4"
@@ -625,7 +625,7 @@
           {
             "target"    : "5",
             "color"     : "#72A82F",
-            "text"      : "Una gota de aceite puede contaminar 1.000 litros de agua.",
+            "text"      : "Solo el 5 % de las bolsas plásticas son reciclables.",
             "posY"      : 185,
             "posX"      : 320,
             "trian"     : "trian-5"
@@ -633,7 +633,7 @@
           {
             "target"    : "6",
             "color"     : "#085A3C",
-            "text"      : "Solo el 5 % de las bolsas plásticas son reciclables.",
+            "text"      : "Casi el 30 % de la basura que se genera termina en botaderos clandestinos o cuerpos de agua. ",
             "posY"      : -83,
             "posX"      : 405,
             "trian"     : "trian-6"
@@ -649,7 +649,7 @@
           {
             "target"    : "8",
             "color"     : "#F8B328",
-            "text"      : "Casi el 30 % de la basura que se genera termina en botaderos clandestinos o cuerpos de agua. ",
+            "text"      : "El 80% de la basura que hay en el mar es plástico.",
             "posY"      : -40,
             "posX"      : 353,
             "trian"     : "trian-8"
@@ -657,7 +657,7 @@
           {
             "target"    : "9",
             "color"     : "#F18E32",
-            "text"      : "El 80% de la basura que hay en el mar es plástico.",
+            "text"      : "Por cada tonelada de papel que se recicla se salvan 18 árboles.",
             "posY"      : 95,
             "posX"      : 494,
             "trian"     : "trian-9"
@@ -1057,7 +1057,7 @@
         {
           "drag"    : 3,
           "img"     : "img/17/drag-3.png",
-          "text"    : "Envase<br>plástico",
+          "text"    : "Envase de<br>vidrio",
           "type"    : "3",
           "data"    : ""
         },
@@ -1113,7 +1113,7 @@
         {
           "drag"    : 11,
           "img"     : "img/17/drag-11.png",
-          "text"    : "Envase de<br>vidrio",
+          "text"    : "Envase<br>plástico",
           "type"    : "6",
           "data"    : ""
         },
@@ -1121,7 +1121,7 @@
           "drag"    : 12,
           "img"     : "img/17/drag-12.png",
           "text"    : "Delantal de plástico",
-          "type"    : "3",
+          "type"    : "6",
           "data"    : ""
         }
       ],
@@ -1158,7 +1158,7 @@
             "posY"      : 44,
             "posX"      : 304,
             "type"      : "3",
-            "limit"     : 3
+            "limit"     : 2
           },
           {
             "key"       : 4,
@@ -1191,7 +1191,7 @@
             "posY"      : 107,
             "posX"      : 633,
             "type"      : "6",
-            "limit"     : 1
+            "limit"     : 2
           }
         ],
         "infoBox": [
@@ -1454,42 +1454,56 @@
                 "drag"    : 1,
                 "img"     : "img/23/drag-1.png",
                 "text"    : "Cajas de<br>cartón",
-                "type"    : "3",
+                "type"    : "1",
                 "data"    : ""
               },
               {
                 "drag"    : 2,
                 "img"     : "img/23/drag-2.png",
                 "text"    : "Empaque<br>de mecato",
-                "type"    : "2",
+                "type"    : "5",
                 "data"    : ""
               },
               {
                 "drag"    : 3,
                 "img"     : "img/23/drag-3.png",
                 "text"    : "Servilleta<br>usada",
-                "type"    : "2",
+                "type"    : "5",
                 "data"    : ""
               },
               {
                 "drag"    : 4,
                 "img"     : "img/23/drag-4.png",
                 "text"    : "Sobras de<br>comida",
-                "type"    : "1",
+                "type"    : "4",
                 "data"    : ""
               },
               {
                 "drag"    : 5,
                 "img"     : "img/23/drag-5.png",
                 "text"    : "Hojas de<br>papel",
-                "type"    : "3",
+                "type"    : "1",
                 "data"    : ""
               },
               {
                 "drag"    : 6,
                 "img"     : "img/23/drag-6.png",
                 "text"    : "Envase<br>plástico",
+                "type"    : "2",
+                "data"    : ""
+              },
+              {
+                "drag"    : 7,
+                "img"     : "img/23/drag-7.png",
+                "text"    : "Envase de<br>vidrio",
                 "type"    : "3",
+                "data"    : ""
+              },
+              {
+                "drag"    : 8,
+                "img"     : "img/23/drag-8.png",
+                "text"    : "Delantal de<br>plástico",
+                "type"    : "2",
                 "data"    : ""
               }
             ],
@@ -1526,7 +1540,7 @@
                   "posY"      : 44,
                   "posX"      : 304,
                   "type"      : "3",
-                  "limit"     : 3
+                  "limit"     : 1
                 },
                 {
                   "key"       : 4,
@@ -1537,6 +1551,17 @@
                   "posY"      : 107,
                   "posX"      : 414,
                   "type"      : "4",
+                  "limit"     : 1
+                },
+                {
+                  "key"       : 5,
+                  "img"       : "img/23/drop-5.png",
+                  "text"      : "img/23/check-1.png",
+                  "target"    : "4",
+                  "size"      : 136,
+                  "posY"      : 107,
+                  "posX"      : 414,
+                  "type"      : "5",
                   "limit"     : 2
                 }
               ],
@@ -1567,13 +1592,13 @@
               },
               {
                 "id": 2,
-                "text": "Bolsa antigua",
+                "text": "bolsa antigua",
                 "color": "#E31F83",
                 "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
               },
               {
                 "id": 3,
-                "text": "Bolsa",
+                "text": "la bolsa y el contendor",
                 "color": "#085A3C",
                 "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
               },
@@ -1644,7 +1669,7 @@
                   "lines": [
                     {
                       "key": 1,
-                      "text": "La separación de residuos debe empezar por la identificación del color de la ",
+                      "text": "La separación de residuos debe empezar por la identificación del color de ",
                       "posY": 10,
                       "posX": 40
                     }
@@ -1654,9 +1679,9 @@
                       "key": 1,
                       "box": "<div class = 'boxDrop'></div>",
                       "posY": 0,
-                      "posX": 515,
+                      "posX": 500,
                       "size": 170,
-                      "correct": "Bolsa",
+                      "correct": "la bolsa y el contendor",
                       "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
                     }
                   ]
@@ -1688,15 +1713,9 @@
                   "lines": [
                     {
                       "key": 1,
-                      "text": "En tu planta el",
+                      "text": "En tu planta el color de las bolsas y los contenedores nos indicarán cómo hacer la ",
                       "posY": -30,
                       "posX": 40
-                    },
-                    {
-                      "key": 2,
-                      "text": "nos indicará cómo hacer la",
-                      "posY": -30,
-                      "posX": 305
                     }
                   ],
                   "drops": [
@@ -1704,16 +1723,7 @@
                       "key": 1,
                       "box": "<div class = 'boxDrop'></div>",
                       "posY": -39,
-                      "posX": 125,
-                      "size": 170,
-                      "correct": "color de las bolsas",
-                      "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"
-                    },
-                    {
-                      "key": 2,
-                      "box": "<div class = 'boxDrop'></div>",
-                      "posY": -39,
-                      "posX": 475,
+                      "posX": 555,
                       "size": 170,
                       "correct": "correcta separación",
                       "type": "código de colores Bolsa contenedores antiguos color de las bolsas correcta separación"

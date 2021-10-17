@@ -33,6 +33,8 @@ const DragItem = ({ name, type, id, color, img }) => {
         document.getElementById('dragItemPath').style.left = (dropResult.left - 5) + 'px';
 
         document.getElementById('infoDrop-' + dropResult.id).classList.remove('dNone');
+        document.querySelector('.footer').classList.add('dNone');
+        document.querySelector('.instruction ').classList.add('dNone');
 
         document.getElementById('audioNotification').src = 'audio/check.mp3';
         document.getElementById('audioNotification').play();
