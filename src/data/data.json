@@ -267,7 +267,7 @@
   "page5": {
     "type": "pageCourse",
     "title"   : "Metas de sostenibilidad ambiental",
-    "text"    : "Conoce las metas de sostenibilidad ambiental del Grupo Familia 2017-2021 y los resultados que se obtuvieron en el 2020. Para ello, te invitamos a seguir la siguiente historia de un youtuber ambientalista que conoció una de nuestras plantas y quedó asombrado con los indicadores que tenemos. Presta mucha atención.",
+    "text"    : "Conoce las metas de sostenibilidad ambiental de Grupo Familia 2017-2021 y los resultados que se obtuvieron en el 2020. Para ello, te invitamos a seguir la siguiente historia de una youtuber ambientalista que conoció una de nuestras plantas y quedó asombrada con los indicadores que tenemos. Presta mucha atención.",
     "instruction": {
       "type"    : "mouse",
       "text"    : "Sigue la conversación dando clic en en botón con dirección hacia abajo.",
@@ -447,7 +447,7 @@
   "page7": {
     "type": "pageCourse",
     "title"   : "Sabías que...",
-    "text"    : "En el pacífico existe una isla de basura también conocida como el continente de plástico, isla tóxica, gran mancha de basura en el pacífico, gran zona de basura en el pacífico y otros nombre similares, es una zona del océano cubierta de desechos y plásticos en el centro del océano pacífico norte. Las cifras están en las siguientes imágenes. ",
+    "text"    : "En el pacífico existe una isla de basura también conocida como el continente de plástico, isla tóxica, gran mancha de basura en el pacífico, gran zona de basura en el pacífico y otros nombres similares, es una zona del océano cubierta de desechos y plásticos en el centro del océano pacífico norte. Las cifras están en las siguientes imágenes. ",
     "instruction": {
       "type"    : "mouse",
       "text"    : "Haz clic en las imágenes para conocerlas.",
@@ -617,7 +617,7 @@
           {
             "target"    : "4",
             "color"     : "#9DD528",
-            "text"      : "Por cada tonelada de papel que se recicla se salvan 18 árboles.",
+            "text"      : "Una gota de aceite puede contaminar 1.000 litros de agua.",
             "posY"      : -60,
             "posX"      : 240,
             "trian"     : "trian-4"
@@ -625,7 +625,7 @@
           {
             "target"    : "5",
             "color"     : "#72A82F",
-            "text"      : "Una gota de aceite puede contaminar 1.000 litros de agua.",
+            "text"      : "Solo el 5 % de las bolsas plásticas son reciclables.",
             "posY"      : 185,
             "posX"      : 320,
             "trian"     : "trian-5"
@@ -633,7 +633,7 @@
           {
             "target"    : "6",
             "color"     : "#085A3C",
-            "text"      : "Solo el 5 % de las bolsas plásticas son reciclables.",
+            "text"      : "Casi el 30 % de la basura que se genera termina en botaderos clandestinos o cuerpos de agua. ",
             "posY"      : -83,
             "posX"      : 405,
             "trian"     : "trian-6"
@@ -649,7 +649,7 @@
           {
             "target"    : "8",
             "color"     : "#F8B328",
-            "text"      : "Casi el 30 % de la basura que se genera termina en botaderos clandestinos o cuerpos de agua. ",
+            "text"      : "El 80% de la basura que hay en el mar es plástico.",
             "posY"      : -40,
             "posX"      : 353,
             "trian"     : "trian-8"
@@ -657,7 +657,7 @@
           {
             "target"    : "9",
             "color"     : "#F18E32",
-            "text"      : "El 80% de la basura que hay en el mar es plástico.",
+            "text"      : "Por cada tonelada de papel que se recicla se salvan 18 árboles.",
             "posY"      : 95,
             "posX"      : 494,
             "trian"     : "trian-9"

@@ -23,6 +23,9 @@ class DnDSwipe1 extends Component {
 
   hideModal = (e) => {
     document.getElementById('infoDrop-' + (e.currentTarget.id)).classList.add('dNone');
+    document.querySelector('.footer').classList.remove('dNone');
+    document.querySelector('.instruction ').classList.remove('dNone');
+    
     console.log(this.state.actualItem);
 
     if (this.state.actualItem === 8) {
@@ -98,24 +101,27 @@ class DnDSwipe1 extends Component {
         {
           multimedia.dropZone.infoBox.map( (item, i) => {
             return(
-              <div
-                className = { 'itemGlobe pAbs dF-C-cs animated fadeIn dNone ' + item.trian }
-                id = { 'infoDrop-' + (item.target) } 
-                key = { i }
-                style = {{ 'color': item.color, 'top': item.posY, 'left': item.posX }} >
+              <div className='bgItemGlobe dNone animated fadeIn' id = { 'infoDrop-' + (item.target) } >
+                <div
+                  className = { 'itemGlobe d-Flex d-C j-C aI-C' }
+                  key = { i }>
 
-                <p className = '' dangerouslySetInnerHTML = { {__html: item.text} }/>
+                  <div className = { 'numType d-Flex j-C aI-C mB-1' } style={{'backgroundColor': item.color}}>
+                    <h1 className = 'tCenter F2 blanco'>0{ item.target }</h1>
+                  </div>
+                  <p className = 'tCenter' dangerouslySetInnerHTML = { {__html: item.text} }/>
 
-                <button
-                  className = 'buttonClose'
-                  onClick = { this.hideModal }
-                  id = { item.target }
-                  >
-                  <span className = 'fa-layers fa-fw iconButton' >
-                    <FontAwesomeIcon icon="circle" />
-                    <FontAwesomeIcon icon="times" inverse transform="shrink-6" />
-                  </span>
-                </button>
+                  <button
+                    className = 'buttonClose'
+                    onClick = { this.hideModal }
+                    id = { item.target }
+                    >
+                    <span className = 'fa-layers fa-fw iconButton' >
+                      <FontAwesomeIcon icon="circle" />
+                      <FontAwesomeIcon icon="times" inverse transform="shrink-6" />
+                    </span>
+                  </button>
+                </div>
               </div>
             )
           })
